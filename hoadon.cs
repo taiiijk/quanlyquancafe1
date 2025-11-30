@@ -37,11 +37,11 @@ namespace quanlyquancafe
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("                 HÓA ĐƠN THANH TOÁN");
-            sb.AppendLine("--------------------------------------------------------------");
+            sb.AppendLine("------------------------------------------------");
             sb.AppendLine($"Bàn: {table.Name,-10} Ngày: {datecheckout:dd/MM/yyyy}");
             sb.AppendLine();
-            sb.AppendLine("Tên món ăn           SL       Giá        Thành tiền");
-            sb.AppendLine("--------------------------------------------------------------");
+            sb.AppendLine("Tên món ăn          SL    Giá        Thành tiền");
+            sb.AppendLine("------------------------------------------------");
 
             double total = 0;
             foreach (menu item in listbillif)
@@ -52,13 +52,13 @@ namespace quanlyquancafe
 
                 string sl = item.Count.ToString().PadLeft(3);
                 string gia = item.Price.ToString("0,0").PadLeft(10);
-                string thanhTien = item.Totalprice.ToString("0,0").PadLeft(13);
+                string thanhTien = item.Totalprice.ToString("0,0").PadLeft(15);
 
                 sb.AppendLine($"{ten}{sl}{gia}{thanhTien}");
                 total += item.Totalprice;
             }
 
-            sb.AppendLine("--------------------------------------------------------------");
+            sb.AppendLine("------------------------------------------------");
             string tong = total.ToString("0,0") + " VNĐ";
             sb.AppendLine("Tổng cộng:".PadRight(48 - tong.Length) + tong);
             sb.AppendLine();

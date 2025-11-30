@@ -63,9 +63,89 @@ namespace quanlyquancafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] accounting_9409664 {
+            get {
+                object obj = ResourceManager.GetObject("accounting_9409664", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] accounting_9409665 {
+            get {
+                object obj = ResourceManager.GetObject("accounting_9409665", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bin {
+            get {
+                object obj = ResourceManager.GetObject("bin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] ForRetailers {
             get {
                 object obj = ResourceManager.GetObject("ForRetailers", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] menu_button {
+            get {
+                object obj = ResourceManager.GetObject("menu-button", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] menus {
+            get {
+                object obj = ResourceManager.GetObject("menus", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] more {
+            get {
+                object obj = ResourceManager.GetObject("more", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] password_protection {
+            get {
+                object obj = ResourceManager.GetObject("password-protection", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] presentation_9586204 {
+            get {
+                object obj = ResourceManager.GetObject("presentation_9586204", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -77,6 +157,26 @@ namespace quanlyquancafe.Properties {
             get {
                 object obj = ResourceManager.GetObject("side_table", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap support {
+            get {
+                object obj = ResourceManager.GetObject("support", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

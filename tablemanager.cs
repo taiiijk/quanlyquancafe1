@@ -16,6 +16,7 @@ namespace quanlyquancafe
         {
             InitializeComponent();
             loadtable();
+            loadtablelist();
             loadcategory();
         }
 
@@ -144,10 +145,11 @@ namespace quanlyquancafe
         #endregion
 
         
-        void loadtablelist(ComboBox cb)
+       
+        void loadtablelist()
         {
-            cb.DataSource=tabledao.Inststace.Loadtablelist();
-            cb.DisplayMember = "Name";
+            cbxtable.DataSource=tabledao.Inststace.Loadtablelist();
+            cbxtable.DisplayMember = "Name";
         }
       
 

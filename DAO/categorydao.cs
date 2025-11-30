@@ -37,6 +37,23 @@ namespace quanlyquancafe.DAO
 
             return list;
         }
+        public bool insertcategory(string name)
+        {
+          return  DataProvider.Instance.ExecuteNonQuery("insert into foodcategory (name) values (N'" + name + "')")>0;
+        }
+       public bool updatecategory(int id,string name)
+        {
+          return  DataProvider.Instance.ExecuteNonQuery("update foodcategory set name=N'"+name+"' where id="+id)>0;
+        }
+        public bool deletecategory(int id)
+        {
+          return  DataProvider.Instance.ExecuteNonQuery("delete from foodcategory where id="+id)>0;
+        }
+        public bool categoryhavefood(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from food where idcategory=" + id);
+            return data.Rows.Count > 0;
 
+        }
     }
 }

@@ -70,5 +70,9 @@ namespace quanlyquancafe.DAO
         {
             return (int)DataProvider.Instance.ExecuteScalar("select Max(id) from bill");
         }
+        public DataTable doanhthu(DateTime date1,DateTime date2)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec doanhthu @date1, @date2", new object[] { date1, date2 });
+        }
     }
 }

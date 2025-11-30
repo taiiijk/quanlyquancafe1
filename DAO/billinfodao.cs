@@ -37,6 +37,10 @@ namespace quanlyquancafe.DAO
             }
             return list;
         }
+        public DataTable phantramfood(DateTime date1, DateTime date2)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec phantramfood @date1, @date2", new object[] { date1, date2 });
+        }
         public void insertbillinfo(int idbill, int idfood, int count)
         {
             food f = fooddao.Instance.getfoodbyid(idfood);
