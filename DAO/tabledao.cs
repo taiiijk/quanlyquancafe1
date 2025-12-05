@@ -61,5 +61,19 @@ namespace quanlyquancafe.DAO
                 return list;
 
         }
+        public bool inserttable(string name)
+        {
+          return  DataProvider.Instance.ExecuteNonQuery("insert into tablefood(ten,trangthai) values (N'"+name+"',N'Trống')")>0;
+        }
+        public bool deletetable(int id)
+        {
+          return  DataProvider.Instance.ExecuteNonQuery("delete from tablefood where id="+id)>0;
+        }
+      public bool tablehavebill(int id)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from bill where idtable=" + id + " and status=0");
+            return data.Rows.Count > 0;
+        }
+        
     }
 }

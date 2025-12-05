@@ -48,7 +48,7 @@ namespace quanlyquancafe
                 // Màu trạng thái
                 switch (tb.Status)
                 {
-                    case "trong":
+                    case "Trống":
                         btn.FillColor = Color.Gray;
                         break;
                     default:

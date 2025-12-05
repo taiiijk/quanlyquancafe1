@@ -19,6 +19,7 @@ namespace quanlyquancafe
 {
     public partial class admin : Form
     {
+        BindingSource tablelist = new BindingSource();
         BindingSource foodlist = new BindingSource();
         BindingSource foodcategorylist = new BindingSource();
         private tablemanager tm;
@@ -30,7 +31,7 @@ namespace quanlyquancafe
             this.tm = tm;
             dtgwfood.DataSource = foodlist;
             dtgwct.DataSource = foodcategorylist;
-
+            dtgwtable.DataSource = tablelist;
             load();
 
         }
@@ -38,17 +39,23 @@ namespace quanlyquancafe
         void load()
         {
 
-            loadchart();
+           
             tm.loadcategory();
             tm.ReloadFoodBySelectedCategory();
             loadcategory();
+            loadtablelist();
             loadlistfood();
             loadlistcategory();
             foodbinding();
+            tablebinding();
             categorybinding();
+            datetu.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            dateden.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
             guna2DateTimePicker1checkin.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             guna2DateTimePickercheckout.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
             loadlistbillbydate(guna2DateTimePicker1checkin.Value, guna2DateTimePickercheckout.Value);
+            loadchart();
+            loadnguyenlieu();
         }
 
         void loadlistbillbydate(DateTime checkin, DateTime checkout)
@@ -84,6 +91,19 @@ namespace quanlyquancafe
             txtcategory.DataBindings.Add(new Binding("Text", foodcategorylist, "name", true, DataSourceUpdateMode.Never));
 
         }
+        void tablebinding()
+        {
+            txttable.DataBindings.Clear();
+            txttable.DataBindings.Add(new Binding("Text", tablelist, "name", true, DataSourceUpdateMode.Never));
+            txtstatus.DataBindings.Clear();
+            txtstatus.DataBindings.Add(new Binding("Text", tablelist, "status", true, DataSourceUpdateMode.Never));
+
+
+        }
+        void loadtablelist()
+        {
+            tablelist.DataSource = tabledao.Inststace.Loadtablelist();
+        }
         void loadlistfood()
         {
             foodlist.DataSource = fooddao.Instance.getfood();
@@ -92,7 +112,10 @@ namespace quanlyquancafe
         {
             foodcategorylist.DataSource = categorydao.Instance.getlistcategory();
         }
-
+        public void loadnguyenlieu()
+        {
+            dtgwnl.DataSource = nguyenlieudao.Instance.getnguyenlieu();
+        }
         void loadcategory()
         {
             comboBox1.DataSource = categorydao.Instance.getlistcategory();
@@ -109,19 +132,23 @@ namespace quanlyquancafe
 
 
         private void guna2foodmenuButton_Click(object sender, EventArgs e)
-
         {
             foodmenutransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.VertSlide;
 
-            if (guna2Panelfoodmenu1.Height == 70)
+            // ép transition "ghi nhớ" trạng thái ban đầu
+            foodmenutransition.ShowSync(guna2Panelfoodmenu1);
+
+            if (guna2Panelfoodmenu1.Height == 57)
             {
-                guna2Panelfoodmenu1.Height = 226;
+                guna2Panelfoodmenu1.Height = 178;
             }
             else
             {
-                guna2Panelfoodmenu1.Height = 70;
+                guna2Panelfoodmenu1.Height = 57;
             }
         }
+
+
 
 
 
@@ -184,6 +211,7 @@ namespace quanlyquancafe
             panelfoodmenu.Hide();
             paneldanhmucmon.Hide();
             panelthongke.Hide();
+            paneltable.Hide();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -192,6 +220,7 @@ namespace quanlyquancafe
             panelcontrol.Hide();
             paneldanhmucmon.Hide();
             panelthongke.Show();
+            paneltable.Hide();
         }
 
         private void btnadd_Click(object sender, EventArgs e)
@@ -218,6 +247,7 @@ namespace quanlyquancafe
             panelcontrol.Hide();
             panelthongke.Hide();
             paneldanhmucmon.Hide();
+            paneltable.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -468,6 +498,57 @@ namespace quanlyquancafe
             panelcontrol.Hide();
             panelthongke.Hide();
             paneldanhmucmon.Show();
+            paneltable.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btndeletetable_Click(object sender, EventArgs e)
+
+
+        {
+            int id = Convert.ToInt32(dtgwtable.CurrentRow.Cells["id"].Value);
+            if (tabledao.Inststace.tablehavebill(id))
+            {
+                MessageBox.Show("Bàn đang có người không thể xóa");
+            }
+            else
+            {
+                if (tabledao.Inststace.deletetable(Convert.ToInt32(dtgwtable.CurrentRow.Cells["id"].Value)))
+                    MessageBox.Show("Xóa bàn thành công");
+            }
+            load();
+        }
+
+        private void btnaddtb_Click(object sender, EventArgs e)
+        {
+            string name = txtnewtable.Text;
+            if (tabledao.Inststace.inserttable(name))
+                MessageBox.Show("Thêm bàn thành công");
+            load();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            panelfoodmenu.Hide();
+            panelcontrol.Hide();
+            panelthongke.Hide();
+            paneldanhmucmon.Hide();
+            paneltable.Show();
+        }
+
+      void insertphieunhap()
+        {
+            phieunhapkhodao.Instance.insertphieunhapkho();
+        }
+        private void guna2ImageButton3_Click(object sender, EventArgs e)
+        {
+            insertphieunhap();
+           Nhaphang f = new Nhaphang(this);
+            f.ShowDialog();
         }
     }
-    }
+}
