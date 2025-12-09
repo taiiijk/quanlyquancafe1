@@ -22,6 +22,8 @@ namespace quanlyquancafe
         BindingSource tablelist = new BindingSource();
         BindingSource foodlist = new BindingSource();
         BindingSource foodcategorylist = new BindingSource();
+        BindingSource nguyenlieu = new BindingSource();
+
         private tablemanager tm;
         public admin(tablemanager tm)
         {
@@ -32,6 +34,7 @@ namespace quanlyquancafe
             dtgwfood.DataSource = foodlist;
             dtgwct.DataSource = foodcategorylist;
             dtgwtable.DataSource = tablelist;
+            dtgwnguyenlieu.DataSource = nguyenlieu;
             load();
 
         }
@@ -39,7 +42,7 @@ namespace quanlyquancafe
         void load()
         {
 
-           
+
             tm.loadcategory();
             tm.ReloadFoodBySelectedCategory();
             loadcategory();
@@ -49,6 +52,7 @@ namespace quanlyquancafe
             foodbinding();
             tablebinding();
             categorybinding();
+            nguyenlieubinding();
             datetu.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
             dateden.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
             guna2DateTimePicker1checkin.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
@@ -91,6 +95,16 @@ namespace quanlyquancafe
             txtcategory.DataBindings.Add(new Binding("Text", foodcategorylist, "name", true, DataSourceUpdateMode.Never));
 
         }
+        void nguyenlieubinding()
+        {
+            txtnguyenlieu.DataBindings.Clear();
+
+            txtnguyenlieu.DataBindings.Add(new Binding("Text", nguyenlieu, "TenNL", true, DataSourceUpdateMode.Never));
+            txtdonvi.DataBindings.Clear();
+
+            txtdonvi.DataBindings.Add(new Binding("Text", nguyenlieu, "DonVi", true, DataSourceUpdateMode.Never));
+
+        }
         void tablebinding()
         {
             txttable.DataBindings.Clear();
@@ -115,6 +129,7 @@ namespace quanlyquancafe
         public void loadnguyenlieu()
         {
             dtgwnl.DataSource = nguyenlieudao.Instance.getnguyenlieu();
+            nguyenlieu.DataSource = nguyenlieudao.Instance.getnguyenlieu();
         }
         void loadcategory()
         {
@@ -223,15 +238,7 @@ namespace quanlyquancafe
             paneltable.Hide();
         }
 
-        private void btnadd_Click(object sender, EventArgs e)
-        {
-            string name = txtname.Text;
-            int id = (comboBox1.SelectedItem as category).Id;
-            float price = Convert.ToSingle(txtprice.Text);
-            if (fooddao.Instance.insertfood(name, id, price))
-                MessageBox.Show("Thông báo ", "Thêm món thành công");
-            load();
-        }
+     
 
 
 
@@ -274,7 +281,7 @@ namespace quanlyquancafe
         private void btndelete_Click_1(object sender, EventArgs e)
         {
 
-            int idfood = Convert.ToInt32(txtid.Text);
+            int idfood = dtgwfood.CurrentCell == null ? 0 : Convert.ToInt32(dtgwfood.CurrentRow.Cells["id"].Value);
 
             if (!billdao.Instance.billhaveidfood(idfood))
             {
@@ -287,19 +294,43 @@ namespace quanlyquancafe
 
         private void btnrepair_Click_1(object sender, EventArgs e)
         {
-
             string name = txtname.Text;
             int id = (comboBox1.SelectedItem as category).Id;
-            int idfood = Convert.ToInt32(txtid.Text);
+            int idfood = dtgwfood.CurrentCell == null ? 0 : Convert.ToInt32(dtgwfood.CurrentRow.Cells["id"].Value);
             float price = Convert.ToSingle(txtprice.Text);
+
             if (!billdao.Instance.billhaveidfood(idfood))
             {
                 if (fooddao.Instance.updatefood(name, id, price, idfood))
+                {
+                    DataTable dt = congthucdao.Instance.getcongthucbyidfood(idfood);
+                    congthuc c = new congthuc(idfood);
+                    c.flowLayoutPanel1.Controls.Clear();
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        UserControl2 uc = new UserControl2();
+                        uc.idfood = idfood;
+
+                        // THÊM control trước rồi mới gọi LoadFull
+                        c.flowLayoutPanel1.Controls.Add(uc);
+
+                        // Load dữ liệu vào control
+                        uc.LoadFull(
+                            Convert.ToInt32(row["MaNL"]),
+                            Convert.ToDecimal(row["SoLuongCan"])
+                        );
+                    }
+                    c.ShowDialog();
                     MessageBox.Show("Sửa món thành công");
+                }
                 loadcategory();
                 loadlistfood();
             }
-            else MessageBox.Show("Bill đang có món không thể sửa");
+            else
+            {
+                MessageBox.Show("Bill đang có món không thể sửa");
+            }
         }
         //void loadchart()
         //{
@@ -540,15 +571,95 @@ namespace quanlyquancafe
             paneltable.Show();
         }
 
-      void insertphieunhap()
+        void insertphieunhap()
         {
             phieunhapkhodao.Instance.insertphieunhapkho();
         }
         private void guna2ImageButton3_Click(object sender, EventArgs e)
         {
             insertphieunhap();
-           Nhaphang f = new Nhaphang(this);
+            Nhaphang f = new Nhaphang(this);
             f.ShowDialog();
+        }
+
+        private void guna2Panel14_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnaddnl_Click(object sender, EventArgs e)
+        {
+
+            string tennl = txtnguyenlieu.Text;
+            string donvi = txtdonvi.Text;
+            int tonkho = 0;
+            if (nguyenlieudao.Instance.insertnguyenlieu(tennl, donvi, tonkho))
+            {
+                MessageBox.Show("Thêm nguyên liệu thành công");
+                loadnguyenlieu();
+
+            }
+        }
+
+        private void btnupdatenl_Click(object sender, EventArgs e)
+        {
+
+            int manl = Convert.ToInt32(dtgwnl.CurrentRow.Cells["MaNL"].Value);
+            string tennl = txtnguyenlieu.Text;
+            string donvi = txtdonvi.Text;
+            if (nguyenlieudao.Instance.updatenguyenlieu(manl, tennl, donvi))
+            {
+                MessageBox.Show("Sửa nguyên liệu thành công");
+                loadnguyenlieu();
+            }
+        }
+
+        private void btndeletenl_Click(object sender, EventArgs e)
+        {
+
+            int manl = Convert.ToInt32(dtgwnl.CurrentRow.Cells["MaNL"].Value);
+
+
+            if (nguyenlieudao.Instance.deletenguyenlieu(manl))
+            {
+                MessageBox.Show("Xóa nguyên liệu thành công");
+                loadnguyenlieu();
+            }
+
+        }
+
+        private void btnadd_Click_1(object sender, EventArgs e)
+        {
+            string name = txtname.Text;
+            int id = (comboBox1.SelectedItem as category).Id;
+            float price = Convert.ToSingle(txtprice.Text);
+            int idfood=fooddao.Instance.maxidfood();
+            if (fooddao.Instance.insertfood(name, id, price))
+            {
+                congthuc congthuc = new congthuc(idfood);
+                UserControl2 dong = new UserControl2();
+                congthuc.flowLayoutPanel1.Controls.Add(dong);
+
+              
+                congthuc.ShowDialog();
+                MessageBox.Show("Thông báo ", "Thêm món thành công");
+            }
+            load();
+            
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+            Panelkho.Show();
+            panelthongke.Hide();
+            panelfoodmenu.Hide();
+            panelcontrol.Hide();
+            paneldanhmucmon.Hide();
+            paneltable.Hide();
+
         }
     }
 }
+
+

@@ -42,6 +42,28 @@ namespace quanlyquancafe.DAO
             }
             return -1;
         }
-
+        public bool insertnguyenlieu(string tenNL, string donVi, decimal tonKho)
+        {
+            
+            return DataProvider.Instance.ExecuteNonQuery("insert into nguyenlieu (TenNL, DonVi, TonKho) values (N'" + tenNL + "', N'" + donVi + "', " + tonKho + ")") > 0;
+        }
+        public bool updatenguyenlieu(int maNL, string tenNL, string donVi)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("update nguyenlieu set TenNL=N'" + tenNL + "', DonVi=N'" + donVi + "' where MaNL=" + maNL) > 0;
+        }
+        public bool deletenguyenlieu(int maNL)
+        {
+            return DataProvider.Instance.ExecuteNonQuery("delete from nguyenlieu where MaNL=" + maNL) > 0;
+        }
+        public string getnamenguyenlieubyid(int maNL)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from nguyenlieu where MaNL=" + maNL);
+            if (data.Rows.Count > 0)
+            {
+                NguyenLieu nl = new NguyenLieu(data.Rows[0]);
+                return nl.TenNL;
+            }
+            return "";
+        }
     }
 }

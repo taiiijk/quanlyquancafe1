@@ -34,17 +34,17 @@ namespace quanlyquancafe.DAO
         }
         public food getfoodbyid(int id)
         {
-           DataTable dt= DataProvider.Instance.ExecuteQuery("select * from food where id=@id", new object[] { id });
+            DataTable dt = DataProvider.Instance.ExecuteQuery("select * from food where id=@id", new object[] { id });
             food f = new food(dt.Rows[0]);
             return f;
-                
+
         }
-        public bool insertfood(string name,int id,float price)
+        public bool insertfood(string name, int id, float price)
         {
-            int result=DataProvider.Instance.ExecuteNonQuery("insert food(name,idcategory,price) values ( @name, @id, @price)",new object[]  {name,id,price});
+            int result = DataProvider.Instance.ExecuteNonQuery("insert food(name,idcategory,price) values ( @name, @id, @price)", new object[] { name, id, price });
             return result > 0;
         }
-        public bool updatefood(string name, int id, float price,int idfood)
+        public bool updatefood(string name, int id, float price, int idfood)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("update food set name=@name,idcategory=@id,price=@price where id=@idfood", new object[] { name, id, price, idfood });
             return result > 0;
@@ -57,7 +57,7 @@ namespace quanlyquancafe.DAO
         public List<food> getlistfood(int id)
         {
             List<food> list = new List<food>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from food where idcategory="+id);
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from food where idcategory=" + id);
             foreach (DataRow row in data.Rows)
             {
                 food food = new food(row);
@@ -66,6 +66,15 @@ namespace quanlyquancafe.DAO
 
             return list;
         }
-
+        public int maxidfood()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select max(id) from food");
+            if (data.Rows.Count > 0)
+            {
+                int maxid = (int)data.Rows[0][0];
+                return maxid;
+            }
+            return -1;
+        } }
     }
-}
+

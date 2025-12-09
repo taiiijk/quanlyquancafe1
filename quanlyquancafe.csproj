@@ -100,10 +100,17 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="congthuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="congthuc.Designer.cs">
+      <DependentUpon>congthuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\accountdao.cs" />
     <Compile Include="DAO\billdao.cs" />
     <Compile Include="DAO\billinfodao.cs" />
     <Compile Include="DAO\categorydao.cs" />
+    <Compile Include="DAO\congthucdao.cs" />
     <Compile Include="DAO\Dataprovider.cs" />
     <Compile Include="DAO\fooddao.cs" />
     <Compile Include="DAO\menudao.cs" />
@@ -155,8 +162,17 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="congthuc.resx">
+      <DependentUpon>congthuc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="hoadon.resx">
       <DependentUpon>hoadon.cs</DependentUpon>
@@ -185,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

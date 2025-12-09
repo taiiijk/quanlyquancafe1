@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,6 +44,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -54,8 +58,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            Guna.UI2.AnimatorNS.Animation animation3 = new Guna.UI2.AnimatorNS.Animation();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin));
+            Guna.UI2.AnimatorNS.Animation animation4 = new Guna.UI2.AnimatorNS.Animation();
             this.guna2Panelfoodmenu1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2foodmenuButton = new Guna.UI2.WinForms.Guna2Button();
@@ -105,11 +108,40 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.panelcontent = new Guna.UI2.WinForms.Guna2Panel();
             this.Panelkho = new Guna.UI2.WinForms.Guna2Panel();
+            this.dtgwnl = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2ImageButton3 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.dtgwnl = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.paneldanhmucmon = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtnewcategory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btndeletect = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtcategory = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnrepairct = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnaddct = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.dtgwct = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btndeletenl = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.guna2Panel31 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtdonvi = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel30 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.guna2Panel14 = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtnguyenlieu = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel28 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.guna2Panel29 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnaddnl = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnupdatenl = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.dtgwnguyenlieu = new Guna.UI2.WinForms.Guna2DataGridView();
             this.paneltable = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgwtable = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -127,20 +159,6 @@
             this.txtstatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel27 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.paneldanhmucmon = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.dtgwct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.guna2Panel21 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtnewcategory = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel22 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btndeletect = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.guna2Panel23 = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtcategory = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnrepairct = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnaddct = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelcontrol = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel12 = new Guna.UI2.WinForms.Guna2Panel();
             this.chartPie = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -175,19 +193,25 @@
             this.flowLayoutPanel1.SuspendLayout();
             this.panelcontent.SuspendLayout();
             this.Panelkho.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgwnl)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.paneldanhmucmon.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.guna2Panel21.SuspendLayout();
+            this.guna2Panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgwct)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.guna2Panel31.SuspendLayout();
+            this.guna2Panel14.SuspendLayout();
+            this.guna2Panel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgwnguyenlieu)).BeginInit();
             this.paneltable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgwtable)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
             this.guna2Panel20.SuspendLayout();
             this.guna2Panel18.SuspendLayout();
             this.guna2Panel26.SuspendLayout();
-            this.paneldanhmucmon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgwct)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.guna2Panel21.SuspendLayout();
-            this.guna2Panel23.SuspendLayout();
             this.panelcontrol.SuspendLayout();
             this.guna2Panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartPie)).BeginInit();
@@ -204,10 +228,10 @@
             this.guna2Panelfoodmenu1.Controls.Add(this.guna2foodButton4);
             this.guna2Transition1.SetDecoration(this.guna2Panelfoodmenu1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panelfoodmenu1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panelfoodmenu1.Location = new System.Drawing.Point(2, 124);
-            this.guna2Panelfoodmenu1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panelfoodmenu1.Location = new System.Drawing.Point(3, 150);
+            this.guna2Panelfoodmenu1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panelfoodmenu1.Name = "guna2Panelfoodmenu1";
-            this.guna2Panelfoodmenu1.Size = new System.Drawing.Size(199, 57);
+            this.guna2Panelfoodmenu1.Size = new System.Drawing.Size(265, 70);
             this.guna2Panelfoodmenu1.TabIndex = 4;
             // 
             // guna2Button5
@@ -225,10 +249,10 @@
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button5.Location = new System.Drawing.Point(2, 124);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button5.Location = new System.Drawing.Point(3, 153);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(199, 57);
+            this.guna2Button5.Size = new System.Drawing.Size(265, 70);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "Danh mục món";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
@@ -249,10 +273,10 @@
             this.guna2foodmenuButton.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2foodmenuButton.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2foodmenuButton.Location = new System.Drawing.Point(0, 0);
-            this.guna2foodmenuButton.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2foodmenuButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2foodmenuButton.Name = "guna2foodmenuButton";
-            this.guna2foodmenuButton.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.guna2foodmenuButton.Size = new System.Drawing.Size(199, 57);
+            this.guna2foodmenuButton.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.guna2foodmenuButton.Size = new System.Drawing.Size(265, 70);
             this.guna2foodmenuButton.TabIndex = 4;
             this.guna2foodmenuButton.Text = "Món ăn";
             this.guna2foodmenuButton.Click += new System.EventHandler(this.guna2foodmenuButton_Click);
@@ -272,10 +296,10 @@
             this.guna2foodButton4.Image = ((System.Drawing.Image)(resources.GetObject("guna2foodButton4.Image")));
             this.guna2foodButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2foodButton4.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2foodButton4.Location = new System.Drawing.Point(2, 64);
-            this.guna2foodButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2foodButton4.Location = new System.Drawing.Point(3, 79);
+            this.guna2foodButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2foodButton4.Name = "guna2foodButton4";
-            this.guna2foodButton4.Size = new System.Drawing.Size(199, 57);
+            this.guna2foodButton4.Size = new System.Drawing.Size(265, 70);
             this.guna2foodButton4.TabIndex = 6;
             this.guna2foodButton4.Text = "Danh sách món";
             this.guna2foodButton4.Click += new System.EventHandler(this.guna2foodButton4_Click);
@@ -289,9 +313,9 @@
             this.foodmenutransition.SetDecoration(this.panel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(778, 46);
+            this.panel7.Size = new System.Drawing.Size(1037, 57);
             this.panel7.TabIndex = 5;
             // 
             // guna2TextBox1
@@ -310,12 +334,12 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(203, -6);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(271, -7);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(314, 50);
+            this.guna2TextBox1.Size = new System.Drawing.Size(419, 62);
             this.guna2TextBox1.TabIndex = 5;
             // 
             // guna2Buttonmenu
@@ -332,10 +356,10 @@
             this.guna2Buttonmenu.ForeColor = System.Drawing.Color.DimGray;
             this.guna2Buttonmenu.Image = ((System.Drawing.Image)(resources.GetObject("guna2Buttonmenu.Image")));
             this.guna2Buttonmenu.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Buttonmenu.Location = new System.Drawing.Point(4, 2);
-            this.guna2Buttonmenu.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Buttonmenu.Location = new System.Drawing.Point(5, 2);
+            this.guna2Buttonmenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Buttonmenu.Name = "guna2Buttonmenu";
-            this.guna2Buttonmenu.Size = new System.Drawing.Size(49, 38);
+            this.guna2Buttonmenu.Size = new System.Drawing.Size(65, 47);
             this.guna2Buttonmenu.TabIndex = 4;
             this.guna2Buttonmenu.Click += new System.EventHandler(this.guna2Buttonmenu_Click);
             // 
@@ -343,22 +367,22 @@
             // 
             this.foodmenutransition.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Custom;
             this.foodmenutransition.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 1;
-            animation4.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0.4F;
-            animation4.TransparencyCoeff = 0F;
-            this.foodmenutransition.DefaultAnimation = animation4;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 1;
+            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0.4F;
+            animation3.TransparencyCoeff = 0F;
+            this.foodmenutransition.DefaultAnimation = animation3;
             this.foodmenutransition.Interval = 25;
             // 
             // panelthongke
@@ -369,9 +393,9 @@
             this.foodmenutransition.SetDecoration(this.panelthongke, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelthongke.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelthongke.Location = new System.Drawing.Point(0, 0);
-            this.panelthongke.Margin = new System.Windows.Forms.Padding(2);
+            this.panelthongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelthongke.Name = "panelthongke";
-            this.panelthongke.Size = new System.Drawing.Size(575, 493);
+            this.panelthongke.Size = new System.Drawing.Size(766, 606);
             this.panelthongke.TabIndex = 6;
             this.panelthongke.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel3_Paint);
             // 
@@ -384,9 +408,9 @@
             this.foodmenutransition.SetDecoration(this.guna2Panel7, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel7.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(575, 81);
+            this.guna2Panel7.Size = new System.Drawing.Size(766, 100);
             this.guna2Panel7.TabIndex = 12;
             this.guna2Panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel7_Paint);
             // 
@@ -397,12 +421,12 @@
             this.foodmenutransition.SetDecoration(this.guna2DateTimePickercheckout, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2DateTimePickercheckout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePickercheckout.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePickercheckout.Location = new System.Drawing.Point(409, 22);
-            this.guna2DateTimePickercheckout.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DateTimePickercheckout.Location = new System.Drawing.Point(545, 27);
+            this.guna2DateTimePickercheckout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePickercheckout.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePickercheckout.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePickercheckout.Name = "guna2DateTimePickercheckout";
-            this.guna2DateTimePickercheckout.Size = new System.Drawing.Size(150, 29);
+            this.guna2DateTimePickercheckout.Size = new System.Drawing.Size(200, 36);
             this.guna2DateTimePickercheckout.TabIndex = 9;
             this.guna2DateTimePickercheckout.Value = new System.DateTime(2025, 11, 18, 16, 18, 52, 178);
             // 
@@ -416,10 +440,10 @@
             this.btnthongke.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnthongke.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnthongke.ForeColor = System.Drawing.Color.White;
-            this.btnthongke.Location = new System.Drawing.Point(233, 15);
-            this.btnthongke.Margin = new System.Windows.Forms.Padding(2);
+            this.btnthongke.Location = new System.Drawing.Point(311, 18);
+            this.btnthongke.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnthongke.Name = "btnthongke";
-            this.btnthongke.Size = new System.Drawing.Size(135, 37);
+            this.btnthongke.Size = new System.Drawing.Size(180, 46);
             this.btnthongke.TabIndex = 10;
             this.btnthongke.Text = "Thống kê";
             this.btnthongke.Click += new System.EventHandler(this.btnthongke_Click);
@@ -431,65 +455,65 @@
             this.foodmenutransition.SetDecoration(this.guna2DateTimePicker1checkin, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2DateTimePicker1checkin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2DateTimePicker1checkin.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1checkin.Location = new System.Drawing.Point(16, 22);
-            this.guna2DateTimePicker1checkin.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DateTimePicker1checkin.Location = new System.Drawing.Point(21, 27);
+            this.guna2DateTimePicker1checkin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DateTimePicker1checkin.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1checkin.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1checkin.Name = "guna2DateTimePicker1checkin";
-            this.guna2DateTimePicker1checkin.Size = new System.Drawing.Size(150, 29);
+            this.guna2DateTimePicker1checkin.Size = new System.Drawing.Size(200, 36);
             this.guna2DateTimePicker1checkin.TabIndex = 8;
             this.guna2DateTimePicker1checkin.Value = new System.DateTime(2025, 11, 18, 16, 18, 49, 275);
             // 
             // guna2DataGridView1
             // 
             this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.guna2DataGridView1.ColumnHeadersHeight = 18;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.chitiet});
             this.guna2Transition1.SetDecoration(this.guna2DataGridView1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2DataGridView1, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle22;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(575, 493);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(766, 606);
             this.guna2DataGridView1.TabIndex = 11;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -529,9 +553,9 @@
             this.panelfoodmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelfoodmenu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelfoodmenu.Location = new System.Drawing.Point(0, 0);
-            this.panelfoodmenu.Margin = new System.Windows.Forms.Padding(2);
+            this.panelfoodmenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelfoodmenu.Name = "panelfoodmenu";
-            this.panelfoodmenu.Size = new System.Drawing.Size(575, 493);
+            this.panelfoodmenu.Size = new System.Drawing.Size(766, 606);
             this.panelfoodmenu.TabIndex = 13;
             this.panelfoodmenu.SizeChanged += new System.EventHandler(this.panelfoodmenu_SizeChanged);
             // 
@@ -543,45 +567,45 @@
             this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 63);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(0, 78);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(575, 429);
+            this.panel1.Size = new System.Drawing.Size(766, 528);
             this.panel1.TabIndex = 29;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dtgwfood
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            this.dtgwfood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            this.dtgwfood.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle24;
             this.dtgwfood.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgwfood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgwfood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dtgwfood.ColumnHeadersHeight = 4;
             this.dtgwfood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2Transition1.SetDecoration(this.dtgwfood, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.dtgwfood, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgwfood.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dtgwfood.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgwfood.DefaultCellStyle = dataGridViewCellStyle26;
             this.dtgwfood.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwfood.Location = new System.Drawing.Point(0, 57);
+            this.dtgwfood.Location = new System.Drawing.Point(0, 70);
+            this.dtgwfood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgwfood.Name = "dtgwfood";
             this.dtgwfood.RowHeadersVisible = false;
             this.dtgwfood.RowHeadersWidth = 51;
-            this.dtgwfood.Size = new System.Drawing.Size(575, 372);
+            this.dtgwfood.Size = new System.Drawing.Size(767, 458);
             this.dtgwfood.TabIndex = 30;
             this.dtgwfood.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgwfood.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -611,7 +635,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.53191F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.46809F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 237F));
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel15, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel16, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.guna2Panel17, 2, 0);
@@ -619,10 +643,11 @@
             this.foodmenutransition.SetDecoration(this.tableLayoutPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(575, 57);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(766, 70);
             this.tableLayoutPanel1.TabIndex = 58;
             // 
             // guna2Panel15
@@ -635,9 +660,10 @@
             this.guna2Panel15.Controls.Add(this.label1);
             this.guna2Transition1.SetDecoration(this.guna2Panel15, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel15, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel15.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel15.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel15.Name = "guna2Panel15";
-            this.guna2Panel15.Size = new System.Drawing.Size(185, 50);
+            this.guna2Panel15.Size = new System.Drawing.Size(247, 62);
             this.guna2Panel15.TabIndex = 68;
             // 
             // comboBox1
@@ -647,10 +673,10 @@
             this.guna2Transition1.SetDecoration(this.comboBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.comboBox1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 11);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Location = new System.Drawing.Point(113, 14);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(91, 23);
+            this.comboBox1.Size = new System.Drawing.Size(120, 28);
             this.comboBox1.TabIndex = 56;
             // 
             // label4
@@ -661,10 +687,9 @@
             this.guna2Transition1.SetDecoration(this.label4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.IndianRed;
-            this.label4.Location = new System.Drawing.Point(2, 18);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(3, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
+            this.label4.Size = new System.Drawing.Size(91, 23);
             this.label4.TabIndex = 67;
             this.label4.Text = "Danh mục";
             // 
@@ -685,12 +710,12 @@
             this.txtid.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtid.Location = new System.Drawing.Point(79, 8);
-            this.txtid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtid.Location = new System.Drawing.Point(105, 10);
+            this.txtid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtid.Name = "txtid";
             this.txtid.PlaceholderText = "";
             this.txtid.SelectedText = "";
-            this.txtid.Size = new System.Drawing.Size(98, 28);
+            this.txtid.Size = new System.Drawing.Size(131, 34);
             this.txtid.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtid.TabIndex = 57;
             this.txtid.Visible = false;
@@ -702,10 +727,10 @@
             this.guna2Transition1.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel1.Enabled = false;
-            this.guna2Panel1.Location = new System.Drawing.Point(85, 38);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Location = new System.Drawing.Point(113, 47);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(92, 2);
+            this.guna2Panel1.Size = new System.Drawing.Size(123, 2);
             this.guna2Panel1.TabIndex = 58;
             this.guna2Panel1.Visible = false;
             // 
@@ -715,10 +740,10 @@
             this.guna2Panel4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel4, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel4, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel4.Location = new System.Drawing.Point(85, 39);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Location = new System.Drawing.Point(113, 48);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(92, 2);
+            this.guna2Panel4.Size = new System.Drawing.Size(123, 2);
             this.guna2Panel4.TabIndex = 61;
             // 
             // label1
@@ -730,10 +755,9 @@
             this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(2, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 19);
+            this.label1.Size = new System.Drawing.Size(28, 23);
             this.label1.TabIndex = 64;
             this.label1.Text = "ID";
             this.label1.Visible = false;
@@ -745,9 +769,10 @@
             this.guna2Panel16.Controls.Add(this.label2);
             this.guna2Transition1.SetDecoration(this.guna2Panel16, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel16, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel16.Location = new System.Drawing.Point(205, 3);
+            this.guna2Panel16.Location = new System.Drawing.Point(271, 4);
+            this.guna2Panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel16.Name = "guna2Panel16";
-            this.guna2Panel16.Size = new System.Drawing.Size(181, 50);
+            this.guna2Panel16.Size = new System.Drawing.Size(241, 62);
             this.guna2Panel16.TabIndex = 67;
             // 
             // txtname
@@ -766,12 +791,12 @@
             this.txtname.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtname.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtname.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtname.Location = new System.Drawing.Point(80, 5);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtname.Location = new System.Drawing.Point(107, 6);
+            this.txtname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtname.Name = "txtname";
             this.txtname.PlaceholderText = "";
             this.txtname.SelectedText = "";
-            this.txtname.Size = new System.Drawing.Size(92, 29);
+            this.txtname.Size = new System.Drawing.Size(123, 36);
             this.txtname.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtname.TabIndex = 62;
             // 
@@ -781,10 +806,10 @@
             this.guna2Panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel5, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel5.Location = new System.Drawing.Point(80, 36);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel5.Location = new System.Drawing.Point(107, 44);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(92, 2);
+            this.guna2Panel5.Size = new System.Drawing.Size(123, 2);
             this.guna2Panel5.TabIndex = 63;
             // 
             // label2
@@ -795,10 +820,9 @@
             this.guna2Transition1.SetDecoration(this.label2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.IndianRed;
-            this.label2.Location = new System.Drawing.Point(3, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(4, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 19);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 65;
             this.label2.Text = "Tên món";
             // 
@@ -811,9 +835,10 @@
             this.guna2Panel17.Controls.Add(this.label3);
             this.guna2Transition1.SetDecoration(this.guna2Panel17, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel17, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel17.Location = new System.Drawing.Point(403, 3);
+            this.guna2Panel17.Location = new System.Drawing.Point(532, 4);
+            this.guna2Panel17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel17.Name = "guna2Panel17";
-            this.guna2Panel17.Size = new System.Drawing.Size(169, 50);
+            this.guna2Panel17.Size = new System.Drawing.Size(230, 62);
             this.guna2Panel17.TabIndex = 68;
             // 
             // txtprice
@@ -832,12 +857,12 @@
             this.txtprice.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtprice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtprice.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtprice.Location = new System.Drawing.Point(64, 11);
-            this.txtprice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtprice.Location = new System.Drawing.Point(90, 14);
+            this.txtprice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtprice.Name = "txtprice";
             this.txtprice.PlaceholderText = "";
             this.txtprice.SelectedText = "";
-            this.txtprice.Size = new System.Drawing.Size(94, 29);
+            this.txtprice.Size = new System.Drawing.Size(125, 36);
             this.txtprice.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtprice.TabIndex = 59;
             // 
@@ -847,10 +872,10 @@
             this.guna2Panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel3.Location = new System.Drawing.Point(67, 42);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel3.Location = new System.Drawing.Point(94, 52);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(92, 2);
+            this.guna2Panel3.Size = new System.Drawing.Size(123, 2);
             this.guna2Panel3.TabIndex = 60;
             // 
             // label3
@@ -861,10 +886,9 @@
             this.guna2Transition1.SetDecoration(this.label3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.IndianRed;
-            this.label3.Location = new System.Drawing.Point(16, 17);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 19);
+            this.label3.Size = new System.Drawing.Size(36, 23);
             this.label3.TabIndex = 66;
             this.label3.Text = "Giá";
             // 
@@ -882,9 +906,9 @@
             this.foodmenutransition.SetDecoration(this.panel5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(575, 63);
+            this.panel5.Size = new System.Drawing.Size(766, 78);
             this.panel5.TabIndex = 4;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
             // 
@@ -899,10 +923,10 @@
             this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(400, 15);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnlogin.Location = new System.Drawing.Point(532, 18);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(105, 27);
+            this.btnlogin.Size = new System.Drawing.Size(140, 33);
             this.btnlogin.TabIndex = 15;
             this.btnlogin.Text = "Tìm kiếm";
             // 
@@ -917,10 +941,10 @@
             this.lbllogin.Enabled = false;
             this.lbllogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllogin.ForeColor = System.Drawing.Color.Black;
-            this.lbllogin.Location = new System.Drawing.Point(185, 5);
-            this.lbllogin.Margin = new System.Windows.Forms.Padding(2);
+            this.lbllogin.Location = new System.Drawing.Point(247, 6);
+            this.lbllogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbllogin.Name = "lbllogin";
-            this.lbllogin.Size = new System.Drawing.Size(159, 37);
+            this.lbllogin.Size = new System.Drawing.Size(211, 46);
             this.lbllogin.TabIndex = 12;
             this.lbllogin.Text = "Từ khóa";
             this.lbllogin.TextAlignment = System.Drawing.ContentAlignment.BottomLeft;
@@ -933,10 +957,10 @@
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel2.Location = new System.Drawing.Point(185, 46);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel2.Location = new System.Drawing.Point(247, 57);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(203, 2);
+            this.guna2Panel2.Size = new System.Drawing.Size(270, 2);
             this.guna2Panel2.TabIndex = 14;
             // 
             // txtlogin
@@ -957,12 +981,12 @@
             this.txtlogin.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtlogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtlogin.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtlogin.Location = new System.Drawing.Point(175, 15);
-            this.txtlogin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtlogin.Location = new System.Drawing.Point(233, 18);
+            this.txtlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.PlaceholderText = "";
             this.txtlogin.SelectedText = "";
-            this.txtlogin.Size = new System.Drawing.Size(221, 37);
+            this.txtlogin.Size = new System.Drawing.Size(294, 46);
             this.txtlogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtlogin.TabIndex = 13;
             // 
@@ -976,11 +1000,11 @@
             this.btnrepair.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnrepair.ImageRotate = 0F;
             this.btnrepair.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnrepair.Location = new System.Drawing.Point(114, 14);
-            this.btnrepair.Margin = new System.Windows.Forms.Padding(2);
+            this.btnrepair.Location = new System.Drawing.Point(152, 17);
+            this.btnrepair.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnrepair.Name = "btnrepair";
             this.btnrepair.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrepair.Size = new System.Drawing.Size(48, 44);
+            this.btnrepair.Size = new System.Drawing.Size(64, 54);
             this.btnrepair.TabIndex = 10;
             this.btnrepair.Click += new System.EventHandler(this.btnrepair_Click_1);
             // 
@@ -994,11 +1018,11 @@
             this.btndelete.ImageOffset = new System.Drawing.Point(0, 0);
             this.btndelete.ImageRotate = 0F;
             this.btndelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btndelete.Location = new System.Drawing.Point(62, 13);
-            this.btndelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btndelete.Location = new System.Drawing.Point(83, 16);
+            this.btndelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndelete.Name = "btndelete";
             this.btndelete.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btndelete.Size = new System.Drawing.Size(48, 44);
+            this.btndelete.Size = new System.Drawing.Size(64, 54);
             this.btndelete.TabIndex = 11;
             this.btndelete.Click += new System.EventHandler(this.btndelete_Click_1);
             // 
@@ -1012,12 +1036,13 @@
             this.btnadd.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnadd.ImageRotate = 0F;
             this.btnadd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnadd.Location = new System.Drawing.Point(9, 13);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnadd.Location = new System.Drawing.Point(12, 16);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnadd.Name = "btnadd";
             this.btnadd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnadd.Size = new System.Drawing.Size(48, 44);
+            this.btnadd.Size = new System.Drawing.Size(64, 54);
             this.btnadd.TabIndex = 9;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click_1);
             // 
             // flowLayoutPanel1
             // 
@@ -1030,10 +1055,10 @@
             this.foodmenutransition.SetDecoration(this.flowLayoutPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Transition1.SetDecoration(this.flowLayoutPanel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 46);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 57);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(203, 493);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(271, 606);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -1052,11 +1077,11 @@
             this.guna2controlButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2controlButton1.Image")));
             this.guna2controlButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2controlButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2controlButton1.Location = new System.Drawing.Point(2, 2);
-            this.guna2controlButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2controlButton1.Location = new System.Drawing.Point(3, 2);
+            this.guna2controlButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2controlButton1.Name = "guna2controlButton1";
-            this.guna2controlButton1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.guna2controlButton1.Size = new System.Drawing.Size(199, 57);
+            this.guna2controlButton1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.guna2controlButton1.Size = new System.Drawing.Size(265, 70);
             this.guna2controlButton1.TabIndex = 3;
             this.guna2controlButton1.Text = "Bảng điều khiển";
             this.guna2controlButton1.Click += new System.EventHandler(this.guna2controlButton1_Click);
@@ -1077,11 +1102,11 @@
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(2, 63);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button3.Location = new System.Drawing.Point(3, 76);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.guna2Button3.Size = new System.Drawing.Size(199, 57);
+            this.guna2Button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.guna2Button3.Size = new System.Drawing.Size(265, 70);
             this.guna2Button3.TabIndex = 5;
             this.guna2Button3.Text = "Thống kê hóa đơn";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -1102,11 +1127,11 @@
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(2, 185);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Location = new System.Drawing.Point(3, 224);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.guna2Button1.Size = new System.Drawing.Size(199, 57);
+            this.guna2Button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.guna2Button1.Size = new System.Drawing.Size(265, 70);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Quản lý bàn";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -1127,29 +1152,30 @@
             this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(2, 246);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 298);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.guna2Button2.Size = new System.Drawing.Size(199, 57);
+            this.guna2Button2.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.guna2Button2.Size = new System.Drawing.Size(265, 70);
             this.guna2Button2.TabIndex = 7;
             this.guna2Button2.Text = "Quản lý kho";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // panelcontent
             // 
-            this.panelcontent.Controls.Add(this.Panelkho);
-            this.panelcontent.Controls.Add(this.panelfoodmenu);
-            this.panelcontent.Controls.Add(this.paneltable);
-            this.panelcontent.Controls.Add(this.paneldanhmucmon);
             this.panelcontent.Controls.Add(this.panelcontrol);
+            this.panelcontent.Controls.Add(this.panelfoodmenu);
+            this.panelcontent.Controls.Add(this.Panelkho);
+            this.panelcontent.Controls.Add(this.paneldanhmucmon);
+            this.panelcontent.Controls.Add(this.paneltable);
             this.panelcontent.Controls.Add(this.panelthongke);
             this.guna2Transition1.SetDecoration(this.panelcontent, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.panelcontent, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelcontent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelcontent.Location = new System.Drawing.Point(203, 46);
-            this.panelcontent.Margin = new System.Windows.Forms.Padding(2);
+            this.panelcontent.Location = new System.Drawing.Point(271, 57);
+            this.panelcontent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelcontent.Name = "panelcontent";
-            this.panelcontent.Size = new System.Drawing.Size(575, 493);
+            this.panelcontent.Size = new System.Drawing.Size(766, 606);
             this.panelcontent.TabIndex = 7;
             // 
             // Panelkho
@@ -1160,97 +1186,44 @@
             this.foodmenutransition.SetDecoration(this.Panelkho, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Panelkho.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelkho.Location = new System.Drawing.Point(0, 0);
+            this.Panelkho.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Panelkho.Name = "Panelkho";
-            this.Panelkho.Size = new System.Drawing.Size(575, 493);
+            this.Panelkho.Size = new System.Drawing.Size(766, 606);
             this.Panelkho.TabIndex = 60;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.guna2ImageButton3);
-            this.guna2Transition1.SetDecoration(this.panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(575, 63);
-            this.panel2.TabIndex = 62;
-            // 
-            // label11
-            // 
-            this.foodmenutransition.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 14);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(257, 33);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Quản lý nguồn hàng";
-            // 
-            // label6
-            // 
-            this.foodmenutransition.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(405, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 33);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Nhập hàng";
-            // 
-            // guna2ImageButton3
-            // 
-            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2Transition1.SetDecoration(this.guna2ImageButton3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.guna2ImageButton3, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
-            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton3.ImageRotate = 0F;
-            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton3.Location = new System.Drawing.Point(514, 6);
-            this.guna2ImageButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ImageButton3.Name = "guna2ImageButton3";
-            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton3.Size = new System.Drawing.Size(48, 44);
-            this.guna2ImageButton3.TabIndex = 9;
-            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
             // 
             // dtgwnl
             // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            this.dtgwnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
+            this.dtgwnl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dtgwnl.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgwnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgwnl.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dtgwnl.ColumnHeadersHeight = 4;
             this.dtgwnl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2Transition1.SetDecoration(this.dtgwnl, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.dtgwnl, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgwnl.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgwnl.DefaultCellStyle = dataGridViewCellStyle29;
             this.dtgwnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgwnl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwnl.Location = new System.Drawing.Point(0, 63);
+            this.dtgwnl.Location = new System.Drawing.Point(0, 78);
+            this.dtgwnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgwnl.Name = "dtgwnl";
             this.dtgwnl.RowHeadersVisible = false;
             this.dtgwnl.RowHeadersWidth = 51;
-            this.dtgwnl.Size = new System.Drawing.Size(575, 430);
+            this.dtgwnl.Size = new System.Drawing.Size(766, 528);
             this.dtgwnl.TabIndex = 61;
             this.dtgwnl.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgwnl.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1274,6 +1247,629 @@
             this.dtgwnl.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgwnl.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.guna2ImageButton3);
+            this.guna2Transition1.SetDecoration(this.panel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.panel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(766, 78);
+            this.panel2.TabIndex = 62;
+            // 
+            // label11
+            // 
+            this.foodmenutransition.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label11, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 17);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(343, 41);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Quản lý nguồn hàng";
+            // 
+            // label6
+            // 
+            this.foodmenutransition.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label6, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(540, 21);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 41);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Nhập hàng";
+            // 
+            // guna2ImageButton3
+            // 
+            this.guna2ImageButton3.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.guna2ImageButton3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2ImageButton3, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2ImageButton3.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton3.Image")));
+            this.guna2ImageButton3.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton3.ImageRotate = 0F;
+            this.guna2ImageButton3.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton3.Location = new System.Drawing.Point(685, 7);
+            this.guna2ImageButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ImageButton3.Name = "guna2ImageButton3";
+            this.guna2ImageButton3.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton3.Size = new System.Drawing.Size(64, 54);
+            this.guna2ImageButton3.TabIndex = 9;
+            this.guna2ImageButton3.Click += new System.EventHandler(this.guna2ImageButton3_Click);
+            // 
+            // paneldanhmucmon
+            // 
+            this.paneldanhmucmon.Controls.Add(this.flowLayoutPanel2);
+            this.guna2Transition1.SetDecoration(this.paneldanhmucmon, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.paneldanhmucmon, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.paneldanhmucmon.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.paneldanhmucmon.Location = new System.Drawing.Point(0, 0);
+            this.paneldanhmucmon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.paneldanhmucmon.Name = "paneldanhmucmon";
+            this.paneldanhmucmon.Size = new System.Drawing.Size(766, 606);
+            this.paneldanhmucmon.TabIndex = 59;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel2);
+            this.flowLayoutPanel2.Controls.Add(this.dtgwct);
+            this.flowLayoutPanel2.Controls.Add(this.tableLayoutPanel4);
+            this.flowLayoutPanel2.Controls.Add(this.dtgwnguyenlieu);
+            this.foodmenutransition.SetDecoration(this.flowLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.flowLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(766, 606);
+            this.flowLayoutPanel2.TabIndex = 62;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 5;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.869565F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.043478F));
+            this.tableLayoutPanel2.Controls.Add(this.guna2Panel21, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btndeletect, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.guna2Panel23, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnrepairct, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnaddct, 1, 0);
+            this.guna2Transition1.SetDecoration(this.tableLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.tableLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(767, 70);
+            this.tableLayoutPanel2.TabIndex = 59;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // guna2Panel21
+            // 
+            this.guna2Panel21.Controls.Add(this.txtnewcategory);
+            this.guna2Panel21.Controls.Add(this.guna2Panel22);
+            this.guna2Panel21.Controls.Add(this.label7);
+            this.guna2Transition1.SetDecoration(this.guna2Panel21, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel21, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel21.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel21.Name = "guna2Panel21";
+            this.guna2Panel21.Size = new System.Drawing.Size(292, 62);
+            this.guna2Panel21.TabIndex = 67;
+            // 
+            // txtnewcategory
+            // 
+            this.txtnewcategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnewcategory.BorderThickness = 0;
+            this.txtnewcategory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtnewcategory, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.txtnewcategory, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtnewcategory.DefaultText = "";
+            this.txtnewcategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtnewcategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtnewcategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnewcategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnewcategory.FillColor = System.Drawing.SystemColors.Control;
+            this.txtnewcategory.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtnewcategory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtnewcategory.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtnewcategory.Location = new System.Drawing.Point(157, 15);
+            this.txtnewcategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtnewcategory.Name = "txtnewcategory";
+            this.txtnewcategory.PlaceholderText = "";
+            this.txtnewcategory.SelectedText = "";
+            this.txtnewcategory.Size = new System.Drawing.Size(115, 36);
+            this.txtnewcategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtnewcategory.TabIndex = 62;
+            // 
+            // guna2Panel22
+            // 
+            this.guna2Panel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel22.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Transition1.SetDecoration(this.guna2Panel22, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel22, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel22.Location = new System.Drawing.Point(159, 54);
+            this.guna2Panel22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel22.Name = "guna2Panel22";
+            this.guna2Panel22.Size = new System.Drawing.Size(127, 2);
+            this.guna2Panel22.TabIndex = 63;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.foodmenutransition.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.IndianRed;
+            this.label7.Location = new System.Drawing.Point(-5, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 23);
+            this.label7.TabIndex = 65;
+            this.label7.Text = "Tên loại món mới";
+            // 
+            // btndeletect
+            // 
+            this.btndeletect.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btndeletect, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btndeletect, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btndeletect.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btndeletect.Image = global::quanlyquancafe.Properties.Resources.bin;
+            this.btndeletect.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btndeletect.ImageRotate = 0F;
+            this.btndeletect.ImageSize = new System.Drawing.Size(30, 30);
+            this.btndeletect.Location = new System.Drawing.Point(699, 2);
+            this.btndeletect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndeletect.Name = "btndeletect";
+            this.btndeletect.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btndeletect.Size = new System.Drawing.Size(57, 65);
+            this.btndeletect.TabIndex = 11;
+            this.btndeletect.Click += new System.EventHandler(this.btndeletect_Click);
+            // 
+            // guna2Panel23
+            // 
+            this.guna2Panel23.Controls.Add(this.txtcategory);
+            this.guna2Panel23.Controls.Add(this.guna2Panel24);
+            this.guna2Panel23.Controls.Add(this.label8);
+            this.guna2Transition1.SetDecoration(this.guna2Panel23, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel23, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel23.Location = new System.Drawing.Point(365, 4);
+            this.guna2Panel23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel23.Name = "guna2Panel23";
+            this.guna2Panel23.Size = new System.Drawing.Size(259, 62);
+            this.guna2Panel23.TabIndex = 68;
+            // 
+            // txtcategory
+            // 
+            this.txtcategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcategory.BorderThickness = 0;
+            this.txtcategory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtcategory, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.txtcategory, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtcategory.DefaultText = "";
+            this.txtcategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcategory.FillColor = System.Drawing.SystemColors.Control;
+            this.txtcategory.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtcategory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtcategory.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtcategory.Location = new System.Drawing.Point(127, 11);
+            this.txtcategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtcategory.Name = "txtcategory";
+            this.txtcategory.PlaceholderText = "";
+            this.txtcategory.SelectedText = "";
+            this.txtcategory.Size = new System.Drawing.Size(129, 36);
+            this.txtcategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtcategory.TabIndex = 59;
+            // 
+            // guna2Panel24
+            // 
+            this.guna2Panel24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel24.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Transition1.SetDecoration(this.guna2Panel24, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel24, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel24.Location = new System.Drawing.Point(129, 53);
+            this.guna2Panel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel24.Name = "guna2Panel24";
+            this.guna2Panel24.Size = new System.Drawing.Size(127, 2);
+            this.guna2Panel24.TabIndex = 60;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.foodmenutransition.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.IndianRed;
+            this.label8.Location = new System.Drawing.Point(3, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 23);
+            this.label8.TabIndex = 66;
+            this.label8.Text = "Tên loại món";
+            // 
+            // btnrepairct
+            // 
+            this.btnrepairct.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btnrepairct, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btnrepairct, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnrepairct.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnrepairct.Image = global::quanlyquancafe.Properties.Resources.support;
+            this.btnrepairct.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnrepairct.ImageRotate = 0F;
+            this.btnrepairct.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnrepairct.Location = new System.Drawing.Point(631, 2);
+            this.btnrepairct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnrepairct.Name = "btnrepairct";
+            this.btnrepairct.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnrepairct.Size = new System.Drawing.Size(57, 65);
+            this.btnrepairct.TabIndex = 10;
+            this.btnrepairct.Click += new System.EventHandler(this.btnrepairct_Click);
+            // 
+            // btnaddct
+            // 
+            this.btnaddct.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btnaddct, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btnaddct, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnaddct.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnaddct.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnaddct.Image = ((System.Drawing.Image)(resources.GetObject("btnaddct.Image")));
+            this.btnaddct.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnaddct.ImageRotate = 0F;
+            this.btnaddct.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnaddct.Location = new System.Drawing.Point(303, 2);
+            this.btnaddct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnaddct.Name = "btnaddct";
+            this.btnaddct.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnaddct.Size = new System.Drawing.Size(55, 66);
+            this.btnaddct.TabIndex = 9;
+            this.btnaddct.Click += new System.EventHandler(this.btnaddct_Click);
+            // 
+            // dtgwct
+            // 
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            this.dtgwct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle30;
+            this.dtgwct.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgwct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dtgwct.ColumnHeadersHeight = 4;
+            this.dtgwct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2Transition1.SetDecoration(this.dtgwct, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.dtgwct, Guna.UI2.AnimatorNS.DecorationType.None);
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgwct.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dtgwct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwct.Location = new System.Drawing.Point(4, 82);
+            this.dtgwct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgwct.Name = "dtgwct";
+            this.dtgwct.RowHeadersVisible = false;
+            this.dtgwct.RowHeadersWidth = 51;
+            this.dtgwct.Size = new System.Drawing.Size(767, 142);
+            this.dtgwct.TabIndex = 60;
+            this.dtgwct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgwct.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgwct.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgwct.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgwct.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgwct.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dtgwct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgwct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgwct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgwct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgwct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgwct.ThemeStyle.HeaderStyle.Height = 4;
+            this.dtgwct.ThemeStyle.ReadOnly = false;
+            this.dtgwct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgwct.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgwct.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgwct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgwct.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgwct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 5;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.34783F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.43478F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.13043F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.869565F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.043478F));
+            this.tableLayoutPanel4.Controls.Add(this.btndeletenl, 4, 0);
+            this.tableLayoutPanel4.Controls.Add(this.guna2Panel31, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.guna2Panel14, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.guna2Panel29, 2, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnupdatenl, 3, 0);
+            this.guna2Transition1.SetDecoration(this.tableLayoutPanel4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.tableLayoutPanel4, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 232);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(767, 70);
+            this.tableLayoutPanel4.TabIndex = 61;
+            // 
+            // btndeletenl
+            // 
+            this.btndeletenl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btndeletenl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btndeletenl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btndeletenl.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btndeletenl.Image = global::quanlyquancafe.Properties.Resources.bin;
+            this.btndeletenl.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btndeletenl.ImageRotate = 0F;
+            this.btndeletenl.ImageSize = new System.Drawing.Size(30, 30);
+            this.btndeletenl.Location = new System.Drawing.Point(699, 2);
+            this.btndeletenl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btndeletenl.Name = "btndeletenl";
+            this.btndeletenl.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btndeletenl.Size = new System.Drawing.Size(56, 65);
+            this.btndeletenl.TabIndex = 11;
+            this.btndeletenl.Click += new System.EventHandler(this.btndeletenl_Click);
+            // 
+            // guna2Panel31
+            // 
+            this.guna2Panel31.Controls.Add(this.txtdonvi);
+            this.guna2Panel31.Controls.Add(this.guna2Panel30);
+            this.guna2Panel31.Controls.Add(this.label13);
+            this.guna2Transition1.SetDecoration(this.guna2Panel31, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel31, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel31.Location = new System.Drawing.Point(344, 4);
+            this.guna2Panel31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel31.Name = "guna2Panel31";
+            this.guna2Panel31.Size = new System.Drawing.Size(195, 62);
+            this.guna2Panel31.TabIndex = 70;
+            // 
+            // txtdonvi
+            // 
+            this.txtdonvi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtdonvi.BorderThickness = 0;
+            this.txtdonvi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtdonvi, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.txtdonvi, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtdonvi.DefaultText = "";
+            this.txtdonvi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtdonvi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtdonvi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdonvi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdonvi.FillColor = System.Drawing.SystemColors.Control;
+            this.txtdonvi.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtdonvi.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtdonvi.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtdonvi.Location = new System.Drawing.Point(80, 9);
+            this.txtdonvi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtdonvi.Name = "txtdonvi";
+            this.txtdonvi.PlaceholderText = "";
+            this.txtdonvi.SelectedText = "";
+            this.txtdonvi.Size = new System.Drawing.Size(112, 36);
+            this.txtdonvi.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtdonvi.TabIndex = 59;
+            // 
+            // guna2Panel30
+            // 
+            this.guna2Panel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel30.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Transition1.SetDecoration(this.guna2Panel30, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel30, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel30.Location = new System.Drawing.Point(80, 50);
+            this.guna2Panel30.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel30.Name = "guna2Panel30";
+            this.guna2Panel30.Size = new System.Drawing.Size(107, 2);
+            this.guna2Panel30.TabIndex = 60;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.foodmenutransition.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label13, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.IndianRed;
+            this.label13.Location = new System.Drawing.Point(3, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(63, 23);
+            this.label13.TabIndex = 66;
+            this.label13.Text = "Đơn vị";
+            // 
+            // guna2Panel14
+            // 
+            this.guna2Panel14.Controls.Add(this.txtnguyenlieu);
+            this.guna2Panel14.Controls.Add(this.guna2Panel28);
+            this.guna2Panel14.Controls.Add(this.label12);
+            this.guna2Transition1.SetDecoration(this.guna2Panel14, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel14, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel14.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel14.Name = "guna2Panel14";
+            this.guna2Panel14.Size = new System.Drawing.Size(332, 62);
+            this.guna2Panel14.TabIndex = 67;
+            this.guna2Panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel14_Paint);
+            // 
+            // txtnguyenlieu
+            // 
+            this.txtnguyenlieu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtnguyenlieu.BorderThickness = 0;
+            this.txtnguyenlieu.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2Transition1.SetDecoration(this.txtnguyenlieu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.txtnguyenlieu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.txtnguyenlieu.DefaultText = "";
+            this.txtnguyenlieu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtnguyenlieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtnguyenlieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnguyenlieu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnguyenlieu.FillColor = System.Drawing.SystemColors.Control;
+            this.txtnguyenlieu.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtnguyenlieu.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtnguyenlieu.HoverState.BorderColor = System.Drawing.Color.Transparent;
+            this.txtnguyenlieu.Location = new System.Drawing.Point(191, 11);
+            this.txtnguyenlieu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtnguyenlieu.Name = "txtnguyenlieu";
+            this.txtnguyenlieu.PlaceholderText = "";
+            this.txtnguyenlieu.SelectedText = "";
+            this.txtnguyenlieu.Size = new System.Drawing.Size(129, 36);
+            this.txtnguyenlieu.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtnguyenlieu.TabIndex = 62;
+            // 
+            // guna2Panel28
+            // 
+            this.guna2Panel28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel28.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2Transition1.SetDecoration(this.guna2Panel28, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel28, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel28.Location = new System.Drawing.Point(191, 50);
+            this.guna2Panel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel28.Name = "guna2Panel28";
+            this.guna2Panel28.Size = new System.Drawing.Size(137, 2);
+            this.guna2Panel28.TabIndex = 63;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.foodmenutransition.SetDecoration(this.label12, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.label12, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.IndianRed;
+            this.label12.Location = new System.Drawing.Point(13, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 23);
+            this.label12.TabIndex = 65;
+            this.label12.Text = "Tên nguyên liệu";
+            // 
+            // guna2Panel29
+            // 
+            this.guna2Panel29.Controls.Add(this.btnaddnl);
+            this.guna2Transition1.SetDecoration(this.guna2Panel29, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.guna2Panel29, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Panel29.Location = new System.Drawing.Point(547, 4);
+            this.guna2Panel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel29.Name = "guna2Panel29";
+            this.guna2Panel29.Size = new System.Drawing.Size(77, 62);
+            this.guna2Panel29.TabIndex = 68;
+            // 
+            // btnaddnl
+            // 
+            this.btnaddnl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btnaddnl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btnaddnl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnaddnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnaddnl.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnaddnl.Image = ((System.Drawing.Image)(resources.GetObject("btnaddnl.Image")));
+            this.btnaddnl.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnaddnl.ImageRotate = 0F;
+            this.btnaddnl.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnaddnl.Location = new System.Drawing.Point(0, 0);
+            this.btnaddnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnaddnl.Name = "btnaddnl";
+            this.btnaddnl.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnaddnl.Size = new System.Drawing.Size(77, 62);
+            this.btnaddnl.TabIndex = 9;
+            this.btnaddnl.Click += new System.EventHandler(this.btnaddnl_Click);
+            // 
+            // btnupdatenl
+            // 
+            this.btnupdatenl.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2Transition1.SetDecoration(this.btnupdatenl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.btnupdatenl, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnupdatenl.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnupdatenl.Image = global::quanlyquancafe.Properties.Resources.support;
+            this.btnupdatenl.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnupdatenl.ImageRotate = 0F;
+            this.btnupdatenl.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnupdatenl.Location = new System.Drawing.Point(631, 2);
+            this.btnupdatenl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnupdatenl.Name = "btnupdatenl";
+            this.btnupdatenl.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnupdatenl.Size = new System.Drawing.Size(57, 65);
+            this.btnupdatenl.TabIndex = 10;
+            this.btnupdatenl.Click += new System.EventHandler(this.btnupdatenl_Click);
+            // 
+            // dtgwnguyenlieu
+            // 
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.White;
+            this.dtgwnguyenlieu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            this.dtgwnguyenlieu.BackgroundColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgwnguyenlieu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            this.dtgwnguyenlieu.ColumnHeadersHeight = 4;
+            this.dtgwnguyenlieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2Transition1.SetDecoration(this.dtgwnguyenlieu, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.foodmenutransition.SetDecoration(this.dtgwnguyenlieu, Guna.UI2.AnimatorNS.DecorationType.None);
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgwnguyenlieu.DefaultCellStyle = dataGridViewCellStyle35;
+            this.dtgwnguyenlieu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwnguyenlieu.Location = new System.Drawing.Point(4, 310);
+            this.dtgwnguyenlieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgwnguyenlieu.Name = "dtgwnguyenlieu";
+            this.dtgwnguyenlieu.RowHeadersVisible = false;
+            this.dtgwnguyenlieu.RowHeadersWidth = 51;
+            this.dtgwnguyenlieu.Size = new System.Drawing.Size(767, 220);
+            this.dtgwnguyenlieu.TabIndex = 62;
+            this.dtgwnguyenlieu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgwnguyenlieu.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtgwnguyenlieu.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtgwnguyenlieu.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtgwnguyenlieu.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtgwnguyenlieu.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dtgwnguyenlieu.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtgwnguyenlieu.ThemeStyle.HeaderStyle.Height = 4;
+            this.dtgwnguyenlieu.ThemeStyle.ReadOnly = false;
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.Height = 22;
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtgwnguyenlieu.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // paneltable
             // 
             this.paneltable.Controls.Add(this.dtgwtable);
@@ -1282,42 +1878,44 @@
             this.foodmenutransition.SetDecoration(this.paneltable, Guna.UI2.AnimatorNS.DecorationType.None);
             this.paneltable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.paneltable.Location = new System.Drawing.Point(0, 0);
+            this.paneltable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.paneltable.Name = "paneltable";
-            this.paneltable.Size = new System.Drawing.Size(575, 493);
+            this.paneltable.Size = new System.Drawing.Size(766, 606);
             this.paneltable.TabIndex = 9;
             // 
             // dtgwtable
             // 
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            this.dtgwtable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            this.dtgwtable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dtgwtable.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgwtable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgwtable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dtgwtable.ColumnHeadersHeight = 4;
             this.dtgwtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2Transition1.SetDecoration(this.dtgwtable, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.dtgwtable, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgwtable.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgwtable.DefaultCellStyle = dataGridViewCellStyle38;
             this.dtgwtable.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgwtable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwtable.Location = new System.Drawing.Point(0, 57);
+            this.dtgwtable.Location = new System.Drawing.Point(0, 70);
+            this.dtgwtable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtgwtable.Name = "dtgwtable";
             this.dtgwtable.RowHeadersVisible = false;
             this.dtgwtable.RowHeadersWidth = 51;
-            this.dtgwtable.Size = new System.Drawing.Size(575, 436);
+            this.dtgwtable.Size = new System.Drawing.Size(766, 536);
             this.dtgwtable.TabIndex = 61;
             this.dtgwtable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgwtable.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1346,7 +1944,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.06493F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.93507F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
             this.tableLayoutPanel3.Controls.Add(this.guna2Panel20, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Panel18, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.guna2Panel26, 1, 0);
@@ -1354,10 +1952,11 @@
             this.foodmenutransition.SetDecoration(this.tableLayoutPanel3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(575, 57);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(766, 70);
             this.tableLayoutPanel3.TabIndex = 62;
             // 
             // guna2Panel20
@@ -1368,9 +1967,10 @@
             this.guna2Panel20.Controls.Add(this.label9);
             this.guna2Transition1.SetDecoration(this.guna2Panel20, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel20, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel20.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel20.Location = new System.Drawing.Point(4, 4);
+            this.guna2Panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel20.Name = "guna2Panel20";
-            this.guna2Panel20.Size = new System.Drawing.Size(203, 50);
+            this.guna2Panel20.Size = new System.Drawing.Size(267, 62);
             this.guna2Panel20.TabIndex = 67;
             // 
             // btndeletetable
@@ -1383,11 +1983,11 @@
             this.btndeletetable.ImageOffset = new System.Drawing.Point(0, 0);
             this.btndeletetable.ImageRotate = 0F;
             this.btndeletetable.ImageSize = new System.Drawing.Size(30, 30);
-            this.btndeletetable.Location = new System.Drawing.Point(159, 8);
-            this.btndeletetable.Margin = new System.Windows.Forms.Padding(2);
+            this.btndeletetable.Location = new System.Drawing.Point(212, 10);
+            this.btndeletetable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btndeletetable.Name = "btndeletetable";
             this.btndeletetable.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btndeletetable.Size = new System.Drawing.Size(43, 37);
+            this.btndeletetable.Size = new System.Drawing.Size(57, 46);
             this.btndeletetable.TabIndex = 66;
             this.btndeletetable.Click += new System.EventHandler(this.btndeletetable_Click);
             // 
@@ -1407,12 +2007,12 @@
             this.txttable.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txttable.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txttable.Location = new System.Drawing.Point(84, 7);
-            this.txttable.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txttable.Location = new System.Drawing.Point(108, 9);
+            this.txttable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txttable.Name = "txttable";
             this.txttable.PlaceholderText = "";
             this.txttable.SelectedText = "";
-            this.txttable.Size = new System.Drawing.Size(70, 29);
+            this.txttable.Size = new System.Drawing.Size(93, 36);
             this.txttable.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txttable.TabIndex = 62;
             // 
@@ -1422,10 +2022,10 @@
             this.guna2Panel25.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel25, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel25, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel25.Location = new System.Drawing.Point(78, 41);
-            this.guna2Panel25.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel25.Location = new System.Drawing.Point(100, 50);
+            this.guna2Panel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel25.Name = "guna2Panel25";
-            this.guna2Panel25.Size = new System.Drawing.Size(70, 2);
+            this.guna2Panel25.Size = new System.Drawing.Size(93, 2);
             this.guna2Panel25.TabIndex = 63;
             // 
             // label9
@@ -1436,10 +2036,9 @@
             this.guna2Transition1.SetDecoration(this.label9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.IndianRed;
-            this.label9.Location = new System.Drawing.Point(11, 17);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(11, 21);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 19);
+            this.label9.Size = new System.Drawing.Size(72, 23);
             this.label9.TabIndex = 65;
             this.label9.Text = "Tên bàn";
             // 
@@ -1451,9 +2050,10 @@
             this.guna2Panel18.Controls.Add(this.label5);
             this.guna2Transition1.SetDecoration(this.guna2Panel18, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel18, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel18.Location = new System.Drawing.Point(382, 3);
+            this.guna2Panel18.Location = new System.Drawing.Point(504, 4);
+            this.guna2Panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel18.Name = "guna2Panel18";
-            this.guna2Panel18.Size = new System.Drawing.Size(184, 50);
+            this.guna2Panel18.Size = new System.Drawing.Size(245, 62);
             this.guna2Panel18.TabIndex = 69;
             // 
             // btnaddtb
@@ -1466,11 +2066,11 @@
             this.btnaddtb.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnaddtb.ImageRotate = 0F;
             this.btnaddtb.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnaddtb.Location = new System.Drawing.Point(140, 2);
-            this.btnaddtb.Margin = new System.Windows.Forms.Padding(2);
+            this.btnaddtb.Location = new System.Drawing.Point(187, 2);
+            this.btnaddtb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnaddtb.Name = "btnaddtb";
             this.btnaddtb.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnaddtb.Size = new System.Drawing.Size(42, 53);
+            this.btnaddtb.Size = new System.Drawing.Size(56, 65);
             this.btnaddtb.TabIndex = 66;
             this.btnaddtb.Click += new System.EventHandler(this.btnaddtb_Click);
             // 
@@ -1490,12 +2090,12 @@
             this.txtnewtable.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtnewtable.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtnewtable.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtnewtable.Location = new System.Drawing.Point(66, 12);
-            this.txtnewtable.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtnewtable.Location = new System.Drawing.Point(88, 15);
+            this.txtnewtable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtnewtable.Name = "txtnewtable";
             this.txtnewtable.PlaceholderText = "";
             this.txtnewtable.SelectedText = "";
-            this.txtnewtable.Size = new System.Drawing.Size(70, 29);
+            this.txtnewtable.Size = new System.Drawing.Size(93, 36);
             this.txtnewtable.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtnewtable.TabIndex = 62;
             // 
@@ -1505,10 +2105,10 @@
             this.guna2Panel19.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel19, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel19, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel19.Location = new System.Drawing.Point(66, 43);
-            this.guna2Panel19.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel19.Location = new System.Drawing.Point(88, 53);
+            this.guna2Panel19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel19.Name = "guna2Panel19";
-            this.guna2Panel19.Size = new System.Drawing.Size(70, 2);
+            this.guna2Panel19.Size = new System.Drawing.Size(93, 2);
             this.guna2Panel19.TabIndex = 63;
             // 
             // label5
@@ -1519,10 +2119,9 @@
             this.guna2Transition1.SetDecoration(this.label5, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.IndianRed;
-            this.label5.Location = new System.Drawing.Point(2, 19);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 23);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 19);
+            this.label5.Size = new System.Drawing.Size(77, 23);
             this.label5.TabIndex = 65;
             this.label5.Text = "Bàn mới";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -1536,9 +2135,10 @@
             this.guna2Panel26.Controls.Add(this.label10);
             this.guna2Transition1.SetDecoration(this.guna2Panel26, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel26, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel26.Location = new System.Drawing.Point(212, 3);
+            this.guna2Panel26.Location = new System.Drawing.Point(279, 4);
+            this.guna2Panel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel26.Name = "guna2Panel26";
-            this.guna2Panel26.Size = new System.Drawing.Size(164, 50);
+            this.guna2Panel26.Size = new System.Drawing.Size(217, 62);
             this.guna2Panel26.TabIndex = 68;
             // 
             // txtstatus
@@ -1557,12 +2157,12 @@
             this.txtstatus.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtstatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtstatus.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtstatus.Location = new System.Drawing.Point(83, 10);
-            this.txtstatus.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtstatus.Location = new System.Drawing.Point(109, 12);
+            this.txtstatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatus.Name = "txtstatus";
             this.txtstatus.PlaceholderText = "";
             this.txtstatus.SelectedText = "";
-            this.txtstatus.Size = new System.Drawing.Size(70, 29);
+            this.txtstatus.Size = new System.Drawing.Size(93, 36);
             this.txtstatus.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtstatus.TabIndex = 59;
             // 
@@ -1572,10 +2172,10 @@
             this.guna2Panel27.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel27, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel27, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel27.Location = new System.Drawing.Point(86, 41);
-            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel27.Location = new System.Drawing.Point(113, 50);
+            this.guna2Panel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel27.Name = "guna2Panel27";
-            this.guna2Panel27.Size = new System.Drawing.Size(70, 2);
+            this.guna2Panel27.Size = new System.Drawing.Size(93, 2);
             this.guna2Panel27.TabIndex = 60;
             // 
             // label10
@@ -1586,288 +2186,11 @@
             this.guna2Transition1.SetDecoration(this.label10, Guna.UI2.AnimatorNS.DecorationType.None);
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.IndianRed;
-            this.label10.Location = new System.Drawing.Point(2, 17);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(1, 21);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 19);
+            this.label10.Size = new System.Drawing.Size(92, 23);
             this.label10.TabIndex = 66;
             this.label10.Text = "Trạng thái";
-            // 
-            // paneldanhmucmon
-            // 
-            this.paneldanhmucmon.Controls.Add(this.dtgwct);
-            this.paneldanhmucmon.Controls.Add(this.tableLayoutPanel2);
-            this.guna2Transition1.SetDecoration(this.paneldanhmucmon, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.paneldanhmucmon, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.paneldanhmucmon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.paneldanhmucmon.Location = new System.Drawing.Point(0, 0);
-            this.paneldanhmucmon.Margin = new System.Windows.Forms.Padding(2);
-            this.paneldanhmucmon.Name = "paneldanhmucmon";
-            this.paneldanhmucmon.Size = new System.Drawing.Size(575, 493);
-            this.paneldanhmucmon.TabIndex = 59;
-            // 
-            // dtgwct
-            // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            this.dtgwct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle30;
-            this.dtgwct.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgwct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            this.dtgwct.ColumnHeadersHeight = 4;
-            this.dtgwct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2Transition1.SetDecoration(this.dtgwct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.dtgwct, Guna.UI2.AnimatorNS.DecorationType.None);
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgwct.DefaultCellStyle = dataGridViewCellStyle32;
-            this.dtgwct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgwct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwct.Location = new System.Drawing.Point(0, 57);
-            this.dtgwct.Name = "dtgwct";
-            this.dtgwct.RowHeadersVisible = false;
-            this.dtgwct.RowHeadersWidth = 51;
-            this.dtgwct.Size = new System.Drawing.Size(575, 436);
-            this.dtgwct.TabIndex = 60;
-            this.dtgwct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgwct.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dtgwct.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dtgwct.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dtgwct.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dtgwct.ThemeStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.dtgwct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtgwct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgwct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgwct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgwct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dtgwct.ThemeStyle.HeaderStyle.Height = 4;
-            this.dtgwct.ThemeStyle.ReadOnly = false;
-            this.dtgwct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgwct.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtgwct.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgwct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dtgwct.ThemeStyle.RowsStyle.Height = 22;
-            this.dtgwct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtgwct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.78261F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.869565F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.043478F));
-            this.tableLayoutPanel2.Controls.Add(this.guna2Panel21, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btndeletect, 4, 0);
-            this.tableLayoutPanel2.Controls.Add(this.guna2Panel23, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnrepairct, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnaddct, 1, 0);
-            this.guna2Transition1.SetDecoration(this.tableLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.tableLayoutPanel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(575, 57);
-            this.tableLayoutPanel2.TabIndex = 59;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
-            // 
-            // guna2Panel21
-            // 
-            this.guna2Panel21.Controls.Add(this.txtnewcategory);
-            this.guna2Panel21.Controls.Add(this.guna2Panel22);
-            this.guna2Panel21.Controls.Add(this.label7);
-            this.guna2Transition1.SetDecoration(this.guna2Panel21, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.guna2Panel21, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel21.Location = new System.Drawing.Point(3, 3);
-            this.guna2Panel21.Name = "guna2Panel21";
-            this.guna2Panel21.Size = new System.Drawing.Size(219, 51);
-            this.guna2Panel21.TabIndex = 67;
-            // 
-            // txtnewcategory
-            // 
-            this.txtnewcategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtnewcategory.BorderThickness = 0;
-            this.txtnewcategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.txtnewcategory, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.txtnewcategory, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtnewcategory.DefaultText = "";
-            this.txtnewcategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtnewcategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtnewcategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnewcategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtnewcategory.FillColor = System.Drawing.SystemColors.Control;
-            this.txtnewcategory.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtnewcategory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtnewcategory.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtnewcategory.Location = new System.Drawing.Point(118, 9);
-            this.txtnewcategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtnewcategory.Name = "txtnewcategory";
-            this.txtnewcategory.PlaceholderText = "";
-            this.txtnewcategory.SelectedText = "";
-            this.txtnewcategory.Size = new System.Drawing.Size(92, 29);
-            this.txtnewcategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtnewcategory.TabIndex = 62;
-            // 
-            // guna2Panel22
-            // 
-            this.guna2Panel22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel22.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Transition1.SetDecoration(this.guna2Panel22, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.guna2Panel22, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel22.Location = new System.Drawing.Point(118, 41);
-            this.guna2Panel22.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel22.Name = "guna2Panel22";
-            this.guna2Panel22.Size = new System.Drawing.Size(98, 2);
-            this.guna2Panel22.TabIndex = 63;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.foodmenutransition.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.label7, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.IndianRed;
-            this.label7.Location = new System.Drawing.Point(-4, 13);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 19);
-            this.label7.TabIndex = 65;
-            this.label7.Text = "Tên loại món mới";
-            // 
-            // btndeletect
-            // 
-            this.btndeletect.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2Transition1.SetDecoration(this.btndeletect, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.btndeletect, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btndeletect.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btndeletect.Image = global::quanlyquancafe.Properties.Resources.bin;
-            this.btndeletect.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btndeletect.ImageRotate = 0F;
-            this.btndeletect.ImageSize = new System.Drawing.Size(30, 30);
-            this.btndeletect.Location = new System.Drawing.Point(524, 2);
-            this.btndeletect.Margin = new System.Windows.Forms.Padding(2);
-            this.btndeletect.Name = "btndeletect";
-            this.btndeletect.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btndeletect.Size = new System.Drawing.Size(43, 53);
-            this.btndeletect.TabIndex = 11;
-            this.btndeletect.Click += new System.EventHandler(this.btndeletect_Click);
-            // 
-            // guna2Panel23
-            // 
-            this.guna2Panel23.Controls.Add(this.txtcategory);
-            this.guna2Panel23.Controls.Add(this.guna2Panel24);
-            this.guna2Panel23.Controls.Add(this.label8);
-            this.guna2Transition1.SetDecoration(this.guna2Panel23, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.guna2Panel23, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel23.Location = new System.Drawing.Point(274, 3);
-            this.guna2Panel23.Name = "guna2Panel23";
-            this.guna2Panel23.Size = new System.Drawing.Size(194, 50);
-            this.guna2Panel23.TabIndex = 68;
-            // 
-            // txtcategory
-            // 
-            this.txtcategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtcategory.BorderThickness = 0;
-            this.txtcategory.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2Transition1.SetDecoration(this.txtcategory, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.txtcategory, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.txtcategory.DefaultText = "";
-            this.txtcategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtcategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtcategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtcategory.FillColor = System.Drawing.SystemColors.Control;
-            this.txtcategory.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtcategory.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtcategory.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtcategory.Location = new System.Drawing.Point(93, 7);
-            this.txtcategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtcategory.Name = "txtcategory";
-            this.txtcategory.PlaceholderText = "";
-            this.txtcategory.SelectedText = "";
-            this.txtcategory.Size = new System.Drawing.Size(94, 29);
-            this.txtcategory.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtcategory.TabIndex = 59;
-            // 
-            // guna2Panel24
-            // 
-            this.guna2Panel24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel24.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Transition1.SetDecoration(this.guna2Panel24, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.guna2Panel24, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel24.Location = new System.Drawing.Point(98, 37);
-            this.guna2Panel24.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel24.Name = "guna2Panel24";
-            this.guna2Panel24.Size = new System.Drawing.Size(92, 2);
-            this.guna2Panel24.TabIndex = 60;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.foodmenutransition.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.label8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.IndianRed;
-            this.label8.Location = new System.Drawing.Point(2, 13);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 19);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "Tên loại món";
-            // 
-            // btnrepairct
-            // 
-            this.btnrepairct.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2Transition1.SetDecoration(this.btnrepairct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.btnrepairct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnrepairct.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnrepairct.Image = global::quanlyquancafe.Properties.Resources.support;
-            this.btnrepairct.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnrepairct.ImageRotate = 0F;
-            this.btnrepairct.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnrepairct.Location = new System.Drawing.Point(473, 2);
-            this.btnrepairct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnrepairct.Name = "btnrepairct";
-            this.btnrepairct.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnrepairct.Size = new System.Drawing.Size(43, 53);
-            this.btnrepairct.TabIndex = 10;
-            this.btnrepairct.Click += new System.EventHandler(this.btnrepairct_Click);
-            // 
-            // btnaddct
-            // 
-            this.btnaddct.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2Transition1.SetDecoration(this.btnaddct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.foodmenutransition.SetDecoration(this.btnaddct, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnaddct.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnaddct.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnaddct.Image = ((System.Drawing.Image)(resources.GetObject("btnaddct.Image")));
-            this.btnaddct.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnaddct.ImageRotate = 0F;
-            this.btnaddct.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnaddct.Location = new System.Drawing.Point(227, 2);
-            this.btnaddct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnaddct.Name = "btnaddct";
-            this.btnaddct.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnaddct.Size = new System.Drawing.Size(41, 53);
-            this.btnaddct.TabIndex = 9;
-            this.btnaddct.Click += new System.EventHandler(this.btnaddct_Click);
             // 
             // panelcontrol
             // 
@@ -1879,9 +2202,9 @@
             this.foodmenutransition.SetDecoration(this.panelcontrol, Guna.UI2.AnimatorNS.DecorationType.None);
             this.panelcontrol.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelcontrol.Location = new System.Drawing.Point(0, 0);
-            this.panelcontrol.Margin = new System.Windows.Forms.Padding(2);
+            this.panelcontrol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelcontrol.Name = "panelcontrol";
-            this.panelcontrol.Size = new System.Drawing.Size(575, 493);
+            this.panelcontrol.Size = new System.Drawing.Size(766, 606);
             this.panelcontrol.TabIndex = 5;
             // 
             // guna2Panel12
@@ -1891,11 +2214,11 @@
             this.guna2Transition1.SetDecoration(this.guna2Panel12, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel12, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel12.Location = new System.Drawing.Point(368, 146);
-            this.guna2Panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel12.Location = new System.Drawing.Point(491, 180);
+            this.guna2Panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel12.Name = "guna2Panel12";
-            this.guna2Panel12.Padding = new System.Windows.Forms.Padding(4);
-            this.guna2Panel12.Size = new System.Drawing.Size(207, 347);
+            this.guna2Panel12.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2Panel12.Size = new System.Drawing.Size(275, 426);
             this.guna2Panel12.TabIndex = 2;
             // 
             // chartPie
@@ -1914,8 +2237,8 @@
             legend3.MaximumAutoSize = 30F;
             legend3.Name = "Legend1";
             this.chartPie.Legends.Add(legend3);
-            this.chartPie.Location = new System.Drawing.Point(4, 4);
-            this.chartPie.Margin = new System.Windows.Forms.Padding(2);
+            this.chartPie.Location = new System.Drawing.Point(5, 5);
+            this.chartPie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartPie.Name = "chartPie";
             this.chartPie.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series3.BorderColor = System.Drawing.Color.White;
@@ -1927,7 +2250,7 @@
             series3.Legend = "Legend1";
             series3.Name = "TyLeMon";
             this.chartPie.Series.Add(series3);
-            this.chartPie.Size = new System.Drawing.Size(199, 339);
+            this.chartPie.Size = new System.Drawing.Size(265, 416);
             this.chartPie.TabIndex = 3;
             this.chartPie.Text = "chart2";
             title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -1944,11 +2267,11 @@
             this.guna2Transition1.SetDecoration(this.guna2Panel13, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel13, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel13.Location = new System.Drawing.Point(0, 146);
-            this.guna2Panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel13.Location = new System.Drawing.Point(0, 180);
+            this.guna2Panel13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel13.Name = "guna2Panel13";
-            this.guna2Panel13.Padding = new System.Windows.Forms.Padding(8);
-            this.guna2Panel13.Size = new System.Drawing.Size(368, 347);
+            this.guna2Panel13.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.guna2Panel13.Size = new System.Drawing.Size(491, 426);
             this.guna2Panel13.TabIndex = 3;
             // 
             // chartDoanhthu
@@ -1968,8 +2291,8 @@
             legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend4.Name = "Legend1";
             this.chartDoanhthu.Legends.Add(legend4);
-            this.chartDoanhthu.Location = new System.Drawing.Point(8, 8);
-            this.chartDoanhthu.Margin = new System.Windows.Forms.Padding(2);
+            this.chartDoanhthu.Location = new System.Drawing.Point(11, 10);
+            this.chartDoanhthu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartDoanhthu.Name = "chartDoanhthu";
             series4.BorderWidth = 2;
             series4.ChartArea = "ChartArea1";
@@ -1978,7 +2301,7 @@
             series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series4.Name = "Doanh Thu";
             this.chartDoanhthu.Series.Add(series4);
-            this.chartDoanhthu.Size = new System.Drawing.Size(352, 331);
+            this.chartDoanhthu.Size = new System.Drawing.Size(469, 406);
             this.chartDoanhthu.TabIndex = 2;
             this.chartDoanhthu.Text = "chart1";
             title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -2006,9 +2329,9 @@
             this.foodmenutransition.SetDecoration(this.guna2Panel6, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel6.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(575, 146);
+            this.guna2Panel6.Size = new System.Drawing.Size(766, 180);
             this.guna2Panel6.TabIndex = 0;
             // 
             // guna2GradientButton4
@@ -2022,9 +2345,10 @@
             this.guna2GradientButton4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(429, 6);
+            this.guna2GradientButton4.Location = new System.Drawing.Point(572, 7);
+            this.guna2GradientButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.Size = new System.Drawing.Size(76, 38);
+            this.guna2GradientButton4.Size = new System.Drawing.Size(101, 47);
             this.guna2GradientButton4.TabIndex = 8;
             this.guna2GradientButton4.Text = "last mont";
             // 
@@ -2039,9 +2363,10 @@
             this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton3.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(344, 6);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(459, 7);
+            this.guna2GradientButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.Size = new System.Drawing.Size(76, 38);
+            this.guna2GradientButton3.Size = new System.Drawing.Size(101, 47);
             this.guna2GradientButton3.TabIndex = 7;
             this.guna2GradientButton3.Text = "This month";
             this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
@@ -2057,9 +2382,10 @@
             this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(262, 6);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(349, 7);
+            this.guna2GradientButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.Size = new System.Drawing.Size(76, 38);
+            this.guna2GradientButton2.Size = new System.Drawing.Size(101, 47);
             this.guna2GradientButton2.TabIndex = 6;
             this.guna2GradientButton2.Text = "Today";
             this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
@@ -2075,9 +2401,10 @@
             this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(94, 46);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(125, 57);
+            this.guna2GradientButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
-            this.guna2GradientButton1.Size = new System.Drawing.Size(76, 38);
+            this.guna2GradientButton1.Size = new System.Drawing.Size(101, 47);
             this.guna2GradientButton1.TabIndex = 5;
             this.guna2GradientButton1.Text = "Lọc";
             this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click);
@@ -2089,11 +2416,12 @@
             this.foodmenutransition.SetDecoration(this.dateden, Guna.UI2.AnimatorNS.DecorationType.None);
             this.dateden.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateden.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateden.Location = new System.Drawing.Point(132, 6);
+            this.dateden.Location = new System.Drawing.Point(176, 7);
+            this.dateden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateden.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateden.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateden.Name = "dateden";
-            this.dateden.Size = new System.Drawing.Size(124, 36);
+            this.dateden.Size = new System.Drawing.Size(165, 44);
             this.dateden.TabIndex = 3;
             this.dateden.Value = new System.DateTime(2025, 11, 27, 22, 53, 16, 208);
             // 
@@ -2104,11 +2432,12 @@
             this.foodmenutransition.SetDecoration(this.datetu, Guna.UI2.AnimatorNS.DecorationType.None);
             this.datetu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.datetu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetu.Location = new System.Drawing.Point(9, 6);
+            this.datetu.Location = new System.Drawing.Point(12, 7);
+            this.datetu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datetu.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datetu.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.datetu.Name = "datetu";
-            this.datetu.Size = new System.Drawing.Size(120, 36);
+            this.datetu.Size = new System.Drawing.Size(160, 44);
             this.datetu.TabIndex = 2;
             this.datetu.Value = new System.DateTime(2025, 11, 27, 22, 53, 19, 840);
             // 
@@ -2117,10 +2446,10 @@
             this.guna2Panel10.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Transition1.SetDecoration(this.guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel10, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel10.Location = new System.Drawing.Point(9, 79);
-            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel10.Location = new System.Drawing.Point(12, 97);
+            this.guna2Panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(90, 41);
+            this.guna2Panel10.Size = new System.Drawing.Size(120, 50);
             this.guna2Panel10.TabIndex = 1;
             // 
             // guna2Panel11
@@ -2128,10 +2457,10 @@
             this.guna2Panel11.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Transition1.SetDecoration(this.guna2Panel11, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel11, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel11.Location = new System.Drawing.Point(467, 79);
-            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel11.Location = new System.Drawing.Point(623, 97);
+            this.guna2Panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel11.Name = "guna2Panel11";
-            this.guna2Panel11.Size = new System.Drawing.Size(90, 41);
+            this.guna2Panel11.Size = new System.Drawing.Size(120, 50);
             this.guna2Panel11.TabIndex = 1;
             // 
             // guna2Panel8
@@ -2139,10 +2468,10 @@
             this.guna2Panel8.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Transition1.SetDecoration(this.guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel8, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel8.Location = new System.Drawing.Point(175, 79);
-            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel8.Location = new System.Drawing.Point(233, 97);
+            this.guna2Panel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(90, 41);
+            this.guna2Panel8.Size = new System.Drawing.Size(120, 50);
             this.guna2Panel8.TabIndex = 0;
             // 
             // guna2Panel9
@@ -2150,10 +2479,10 @@
             this.guna2Panel9.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.guna2Transition1.SetDecoration(this.guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None);
             this.foodmenutransition.SetDecoration(this.guna2Panel9, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel9.Location = new System.Drawing.Point(330, 79);
-            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel9.Location = new System.Drawing.Point(440, 97);
+            this.guna2Panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(90, 41);
+            this.guna2Panel9.Size = new System.Drawing.Size(120, 50);
             this.guna2Panel9.TabIndex = 1;
             this.guna2Panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel9_Paint);
             // 
@@ -2166,28 +2495,28 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizSlide;
             this.guna2Transition1.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation3;
+            animation4.AnimateOnlyDifferences = true;
+            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
+            animation4.LeafCoeff = 0F;
+            animation4.MaxTime = 1F;
+            animation4.MinTime = 0F;
+            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
+            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
+            animation4.MosaicSize = 0;
+            animation4.Padding = new System.Windows.Forms.Padding(0);
+            animation4.RotateCoeff = 0F;
+            animation4.RotateLimit = 0F;
+            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
+            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
+            animation4.TimeCoeff = 0F;
+            animation4.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation4;
             // 
             // admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 539);
+            this.ClientSize = new System.Drawing.Size(1037, 663);
             this.Controls.Add(this.panelcontent);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel7);
@@ -2195,7 +2524,7 @@
             this.foodmenutransition.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "admin";
             this.Text = "admin";
             this.Load += new System.EventHandler(this.admin_Load);
@@ -2218,8 +2547,23 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panelcontent.ResumeLayout(false);
             this.Panelkho.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgwnl)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.paneldanhmucmon.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.guna2Panel21.ResumeLayout(false);
+            this.guna2Panel21.PerformLayout();
+            this.guna2Panel23.ResumeLayout(false);
+            this.guna2Panel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgwct)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.guna2Panel31.ResumeLayout(false);
+            this.guna2Panel31.PerformLayout();
+            this.guna2Panel14.ResumeLayout(false);
+            this.guna2Panel14.PerformLayout();
+            this.guna2Panel29.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgwnguyenlieu)).EndInit();
             this.paneltable.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgwtable)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -2229,13 +2573,6 @@
             this.guna2Panel18.PerformLayout();
             this.guna2Panel26.ResumeLayout(false);
             this.guna2Panel26.PerformLayout();
-            this.paneldanhmucmon.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgwct)).EndInit();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.guna2Panel21.ResumeLayout(false);
-            this.guna2Panel21.PerformLayout();
-            this.guna2Panel23.ResumeLayout(false);
-            this.guna2Panel23.PerformLayout();
             this.panelcontrol.ResumeLayout(false);
             this.guna2Panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartPie)).EndInit();
@@ -2350,5 +2687,20 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel14;
+        private Guna.UI2.WinForms.Guna2TextBox txtnguyenlieu;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel28;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2ImageButton btnupdatenl;
+        private Guna.UI2.WinForms.Guna2ImageButton btnaddnl;
+        private Guna.UI2.WinForms.Guna2DataGridView dtgwnguyenlieu;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel29;
+        private Guna.UI2.WinForms.Guna2ImageButton btndeletenl;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel31;
+        private Guna.UI2.WinForms.Guna2TextBox txtdonvi;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel30;
+        private System.Windows.Forms.Label label13;
     }
 }
