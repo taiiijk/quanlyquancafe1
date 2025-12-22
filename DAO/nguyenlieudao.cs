@@ -65,5 +65,16 @@ namespace quanlyquancafe.DAO
             }
             return "";
         }
+        public int getsoluong(int id)
+        {
+            string sql = "SELECT tonkho FROM NguyenLieu WHERE MaNL = @id";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(sql, new object[] { id });
+
+            if (dt.Rows.Count > 0)
+                return Convert.ToInt32(dt.Rows[0]["tonkho"]);
+            else
+                return 0; 
+        }
+
     }
 }

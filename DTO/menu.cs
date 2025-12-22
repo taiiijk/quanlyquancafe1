@@ -1,39 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace quanlyquancafe.DTO
 {
     public class menu
     {
-        public menu(string foodname,int count,float price,float totalprice)
+        public menu(DataRow row)
         {
-            this.foodname = foodname;   
-            this.count = count;
-            this.price = price;
-            this.totalprice = totalprice;
-               
-        }
-        public menu(DataRow row) {
-            this.foodname = row["realname"] == DBNull.Value ? "" : row["realname"].ToString();
-            this.count = (int)row["count"];
-            this.price = Convert.ToSingle(row["realprice"]);
-            this.totalprice = Convert.ToSingle(row["totalprice"]);
+            idfood = Convert.ToInt32(row["idfood"]);
+            foodname = row["realname"].ToString();
+            count = Convert.ToInt32(row["count"]);
+            price = Convert.ToDecimal(row["realprice"]);
+            totalprice = Convert.ToDecimal(row["totalprice"]);
+            note = row.Table.Columns.Contains("note") ? row["note"].ToString() : "";
+          
 
+          
         }
+
+        private int idfood;
+        public int Idfood { get { return idfood; } }
+
         private string foodname;
-        public string Foodname
-        {
-            get { return foodname; }
-        }
+        public string Foodname { get { return foodname; } }
+
         private int count;
         public int Count { get { return count; } }
-        private float price;
-        public float Price { get { return price; } }
-        private float totalprice;
-        public float Totalprice { get { return totalprice; } }
+
+        private decimal price;
+        public decimal Price { get { return price; } }
+
+        private decimal totalprice;
+        public decimal Totalprice { get { return totalprice; } }
+
+        private string note;
+        public string Note { get { return note; } }
+
+        private bool ismain;
+        public bool IsMain { get { return ismain; } }
+        
+        public List<menu> Toppings { get; set; }
+       
     }
 }

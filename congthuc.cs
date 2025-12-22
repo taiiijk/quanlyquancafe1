@@ -26,6 +26,7 @@
                 UserControl2 dong = new UserControl2();
                 flowLayoutPanel1.Controls.Add(dong);
                 dong.idfood = idfood;
+            dong.loadcombobox();
             }
 
             private void guna2Button3_Click(object sender, EventArgs e)
@@ -45,6 +46,7 @@
                     {
                         int manl = item.manl;
                         decimal soluong = item.SoLuong;
+
                         congthucdao.Instance.insertcongthuc(idfood, manl, soluong);
                     }
                 }

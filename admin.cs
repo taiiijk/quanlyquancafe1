@@ -29,6 +29,15 @@ namespace quanlyquancafe
         {
 
             InitializeComponent();
+            ;
+
+
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dtgwfood.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dtgwct.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+            dtgwnl.CellBorderStyle = DataGridViewCellBorderStyle.Single;
+
+
 
             this.tm = tm;
             dtgwfood.DataSource = foodlist;
@@ -41,7 +50,6 @@ namespace quanlyquancafe
 
         void load()
         {
-
 
             tm.loadcategory();
             tm.ReloadFoodBySelectedCategory();
@@ -64,8 +72,17 @@ namespace quanlyquancafe
 
         void loadlistbillbydate(DateTime checkin, DateTime checkout)
         {
-            guna2DataGridView1.DataSource = billdao.Instance.getbillbydate(checkin, checkout);
 
+
+            DataTable dt = billdao.Instance.getbillbydate(checkin, checkout);
+            FillEmptyRows(dt);
+            guna2DataGridView1.DataSource = dt;
+
+
+            guna2DataGridView1.Columns["id"].HeaderText = "Mã bàn";
+            guna2DataGridView1.Columns["ten"].HeaderText = "Tên bàn";
+            guna2DataGridView1.Columns["datecheckin"].HeaderText = "Date check-in";
+            guna2DataGridView1.Columns["datecheckout"].HeaderText = "Date check-out";
             guna2DataGridView1.Columns["chitiet"].DisplayIndex = guna2DataGridView1.Columns.Count - 1;
 
         }
@@ -120,20 +137,40 @@ namespace quanlyquancafe
         }
         void loadlistfood()
         {
-            foodlist.DataSource = fooddao.Instance.getfood();
+            DataTable dt = fooddao.Instance.getfood();
+            fillemptyfoodrows(dt);
+            foodlist.DataSource = dt;
+            dtgwfood.Columns["id"].HeaderText = "Mã món";
+            dtgwfood.Columns["name"].HeaderText = "Tên món";
+            dtgwfood.Columns["idcategory"].HeaderText = "Danh mục";
+            dtgwfood.Columns["price"].HeaderText = "Giá";
         }
         void loadlistcategory()
         {
-            foodcategorylist.DataSource = categorydao.Instance.getlistcategory();
+           DataTable dt= categorydao.Instance.getlistcate();
+            
+            foodcategorylist.DataSource = dt;
+            fillrowemptyctrows(dt);
+            dtgwct.Columns["id"].HeaderText = "Mã danh mục";
+            dtgwct.Columns["name"].HeaderText = "Tên danh mục";
+
+
         }
         public void loadnguyenlieu()
         {
-            dtgwnl.DataSource = nguyenlieudao.Instance.getnguyenlieu();
-            nguyenlieu.DataSource = nguyenlieudao.Instance.getnguyenlieu();
+            DataTable dt= nguyenlieudao.Instance.getnguyenlieu();
+            fillemptynlrows(dt);
+            dtgwnl.DataSource = dt;
+            nguyenlieu.DataSource = dt;
+            dtgwnl.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
+            dtgwnl.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
+            dtgwnl.Columns["DonVi"].HeaderText = "Đơn vị";
+
         }
         void loadcategory()
         {
             comboBox1.DataSource = categorydao.Instance.getlistcategory();
+
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
         }
@@ -189,6 +226,8 @@ namespace quanlyquancafe
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
             if (e.RowIndex < 0) return;
 
             if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "chitiet")
@@ -196,8 +235,11 @@ namespace quanlyquancafe
                 var tenCell = guna2DataGridView1.Rows[e.RowIndex].Cells["ten"].Value;
                 var idcell = guna2DataGridView1.Rows[e.RowIndex].Cells["id"].Value;
 
-                if (tenCell == null) return; // kiểm tra trước khi Convert
-                if (idcell == null) return;  // nếu muốn bỏ qua ô trống
+                if (tenCell == null || tenCell == DBNull.Value ||
+          idcell == null || idcell == DBNull.Value)
+                {
+                    return;
+                }
                 string tenban = tenCell.ToString();
                 int idbill = Convert.ToInt32(idcell);
 
@@ -238,7 +280,7 @@ namespace quanlyquancafe
             paneltable.Hide();
         }
 
-     
+
 
 
 
@@ -310,17 +352,16 @@ namespace quanlyquancafe
                     foreach (DataRow row in dt.Rows)
                     {
                         UserControl2 uc = new UserControl2();
+
                         uc.idfood = idfood;
 
-                        // THÊM control trước rồi mới gọi LoadFull
-                        c.flowLayoutPanel1.Controls.Add(uc);
+                        uc.cboNguyenLieu.SelectedValue = row["MaNL"];
+                        uc.txtsoluong.Text = row["SoLuongCan"].ToString();
 
-                        // Load dữ liệu vào control
-                        uc.LoadFull(
-                            Convert.ToInt32(row["MaNL"]),
-                            Convert.ToDecimal(row["SoLuongCan"])
-                        );
+
+                        c.flowLayoutPanel1.Controls.Add(uc);
                     }
+
                     c.ShowDialog();
                     MessageBox.Show("Sửa món thành công");
                 }
@@ -530,6 +571,7 @@ namespace quanlyquancafe
             panelthongke.Hide();
             paneldanhmucmon.Show();
             paneltable.Hide();
+            Panelkho.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -633,19 +675,19 @@ namespace quanlyquancafe
             string name = txtname.Text;
             int id = (comboBox1.SelectedItem as category).Id;
             float price = Convert.ToSingle(txtprice.Text);
-            int idfood=fooddao.Instance.maxidfood();
+            int idfood = fooddao.Instance.maxidfood();
             if (fooddao.Instance.insertfood(name, id, price))
             {
                 congthuc congthuc = new congthuc(idfood);
                 UserControl2 dong = new UserControl2();
                 congthuc.flowLayoutPanel1.Controls.Add(dong);
 
-              
+
                 congthuc.ShowDialog();
                 MessageBox.Show("Thông báo ", "Thêm món thành công");
             }
             load();
-            
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -659,7 +701,88 @@ namespace quanlyquancafe
             paneltable.Hide();
 
         }
+
+        private void guna2DataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (guna2DataGridView1.Columns[e.ColumnIndex].Name == "chitiet")
+            {
+                var row = guna2DataGridView1.Rows[e.RowIndex];
+
+
+                if (row.Cells["id"].Value != null && row.Cells["id"].Value != DBNull.Value)
+                {
+                    e.Value = "Xem chi tiết";
+                }
+                else
+                {
+                    e.Value = "";
+                }
+
+                e.FormattingApplied = true;
+            }
+        }
+
+
+        void FillEmptyRows(DataTable dt)
+        {
+            int rowHeight = guna2DataGridView1.RowTemplate.Height;
+            int headerHeight = guna2DataGridView1.ColumnHeadersHeight;
+
+            int visibleRows =
+                (guna2DataGridView1.Height - headerHeight) / rowHeight;
+
+            int need = visibleRows - dt.Rows.Count;
+
+            for (int i = 0; i < need; i++)
+            {
+                dt.Rows.Add(dt.NewRow());
+            }
+
+        }
+        void fillemptyfoodrows(DataTable dt)
+        {
+            int rowHeight = dtgwfood.RowTemplate.Height;
+            int headerHeight = dtgwfood.ColumnHeadersHeight;
+            int visibleRows =
+                (dtgwfood.Height - headerHeight) / rowHeight;
+            int need = visibleRows - dt.Rows.Count;
+            for (int i = 0; i < need; i++)
+            {
+                dt.Rows.Add(dt.NewRow());
+            }
+        }
+       
+        
+    
+        void fillrowemptyctrows(DataTable dt)
+        {
+
+            int rowHeight = dtgwct.RowTemplate.Height;
+            int headerHeight = dtgwct.ColumnHeadersHeight;
+            int visibleRows =
+                (dtgwct.Height - headerHeight) / rowHeight;
+            int need = visibleRows - dt.Rows.Count;
+            for (int i = 0; i < need; i++)
+            {
+                dt.Rows.Add(dt.NewRow());
+            }
+        }
+
+
+            void fillemptynlrows(DataTable dt)
+            {
+                int rowHeight = dtgwnl.RowTemplate.Height;
+                int headerHeight = dtgwnl.ColumnHeadersHeight;
+                int visibleRows =
+                    (dtgwnl.Height - headerHeight) / rowHeight;
+                int need = visibleRows - dt.Rows.Count;
+                for (int i = 0; i < need; i++)
+                {
+                    dt.Rows.Add(dt.NewRow());
+                }
+            }
+        }
     }
-}
+
 
 

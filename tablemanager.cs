@@ -1,20 +1,23 @@
-﻿using Guna.UI2.WinForms;
-using quanlyquancafe.DAO;
-using quanlyquancafe.DTO;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Windows.Forms;
+﻿    using Guna.UI2.WinForms;
+    using quanlyquancafe.DAO;
+    using quanlyquancafe.DTO;
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Globalization;
+    using System.Windows.Forms;
 
 namespace quanlyquancafe
 {
     public partial class tablemanager : Form
     {
+
         public tablemanager()
         {
             InitializeComponent();
+
+            guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             loadtable();
             loadtablelist();
             loadcategory();
@@ -42,8 +45,8 @@ namespace quanlyquancafe
                 btn.ImageAlign = HorizontalAlignment.Center;
 
                 // Icon bill nếu có
-               
-                  
+
+
 
                 // Màu trạng thái
                 switch (tb.Status)
@@ -58,7 +61,7 @@ namespace quanlyquancafe
 
                 // Hover effect
                 btn.HoverState.FillColor = Color.DarkGray;
-               
+
 
                 btn.Click += Btn_Click;
 
@@ -83,37 +86,47 @@ namespace quanlyquancafe
         #endregion
 
         #region Xử lý hóa đơn
-        void showbill(int id,int idbill)
+        void showbill(int idtable, int idbill)
         {
-            listView1.Items.Clear();
-            int Idbill = billdao.Instance.getbillbyidtable(id);
-            List<menu> listbillif = menudao.Instance.getlist(id,idbill);
-            float totalprice = 0;
+            DataTable dt = menudao.Instance.getlistbillinfo(idbill, idtable);
 
-            foreach (menu item in listbillif)
+            fillemptyrows(dt);
+
+            guna2DataGridView1.AutoGenerateColumns = true;
+            guna2DataGridView1.DataSource = dt;
+
+            guna2DataGridView1.Columns["realname"].HeaderText = "Tên món";
+            guna2DataGridView1.Columns["count"].HeaderText = "Số lượng";
+            guna2DataGridView1.Columns["realprice"].HeaderText = "Đơn giá";
+            guna2DataGridView1.Columns["totalprice"].HeaderText = "Thành tiền";
+            guna2DataGridView1.Columns["note"].HeaderText = "Ghi chú";
+          
+            guna2DataGridView1.Columns["note"].DefaultCellStyle.WrapMode =
+                DataGridViewTriState.True;
+
+            guna2DataGridView1.AutoSizeRowsMode =
+                DataGridViewAutoSizeRowsMode.AllCells;
+            decimal totalprice = 0;
+            foreach (DataRow r in dt.Rows)
             {
-                ListViewItem lsv = new ListViewItem(item.Foodname.ToString());
-                lsv.SubItems.Add(item.Count.ToString());
-                lsv.SubItems.Add(item.Price.ToString());
-                lsv.SubItems.Add(item.Totalprice.ToString());
-                totalprice += item.Totalprice;
-                listView1.Items.Add(lsv);
+                if (r["totalprice"] != DBNull.Value)
+                    totalprice += Convert.ToDecimal(r["totalprice"]);
             }
 
-            CultureInfo culture = new CultureInfo("vi-VN");
-            lbltotal.Text = totalprice.ToString("c", culture);
+            lbltotal.Text = totalprice.ToString("c", new CultureInfo("vi-VN"));
         }
 
-       
+
+
         #endregion
 
         #region Sự kiện điều khiển
         private void Btn_Click(object sender, EventArgs e)
         {
             int tableid = ((sender as Guna2Button).Tag as table).Id;
-            listView1.Tag = (sender as Guna2Button).Tag;
+            guna2DataGridView1.Tag = (sender as Guna2Button).Tag;
             int idbill = billdao.Instance.getbillbyidtable(tableid);
-            showbill(tableid,idbill);
+            showbill(tableid, idbill);
         }
 
         public void ReloadFoodBySelectedCategory()
@@ -144,17 +157,17 @@ namespace quanlyquancafe
         }
         #endregion
 
-        
-       
+
+
         void loadtablelist()
         {
-            cbxtable.DataSource=tabledao.Inststace.Loadtablelist();
+            cbxtable.DataSource = tabledao.Inststace.Loadtablelist();
             cbxtable.DisplayMember = "Name";
         }
-      
 
-     
-       
+
+
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -175,30 +188,59 @@ namespace quanlyquancafe
 
         private void btnadd_Click(object sender, EventArgs e)
         {
-            table table = listView1.Tag as table;
+
+
+            table table = guna2DataGridView1.Tag as table;
 
             int idbill = billdao.Instance.getbillbyidtable(table.Id);
             int idfood = (cbxfood.SelectedItem as food).Id;
-            int count = (int)guna2NumericUpDown1.Value;
-
+            if (!KiemTraNguyenLieu(idfood))
+            {
+                MessageBox.Show("Không đủ nguyên liệu cho món chính ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return; // thoát, không thêm món
+            }
+            tuychon t = new tuychon(idfood);
+           
+            t.ShowDialog();
             if (idbill == -1)
             {
                 billdao.Instance.insertbill(table.Id);
-                billinfodao.Instance.insertbillinfo(billdao.Instance.maxidbill(), idfood, count);
                 idbill = billdao.Instance.maxidbill();
             }
-            else
+
+
+            int idBillInfoMain = billinfodao.Instance.insertMainFood(
+                idbill,
+                idfood,
+                t.SoLuong,
+                t.Note
+               
+
+            );
+            decimal price = (decimal)t.TongGia/t.SoLuong;
+            updaterealprice(idBillInfoMain, price);
+
+            foreach (food topping in t.ToppingsChon)
             {
-                billinfodao.Instance.insertbillinfo(idbill, idfood, count);
+                billinfodao.Instance.insertTopping(
+                    idbill,
+                    topping.Id,
+                    t.SoLuong,
+                    idBillInfoMain
+                );
             }
 
             showbill(table.Id, idbill);
             loadtable();
         }
-
+        void updaterealprice(int id,decimal price)
+        {
+           
+            billinfodao.Instance.updaterealprice(id,price);
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            table table = listView1.Tag as table;
+            table table = guna2DataGridView1.Tag as table;
 
             int idbill = billdao.Instance.getbillbyidtable(table.Id);
             hoadon f = new hoadon(table.Id, idbill);
@@ -218,7 +260,7 @@ namespace quanlyquancafe
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
-            if (listView1.Tag == null)
+            if (guna2DataGridView1.Tag == null)
             {
                 MessageBox.Show("Vui lòng chọn bàn nguồn để chuyển!", "Thông báo");
                 return;
@@ -230,7 +272,7 @@ namespace quanlyquancafe
                 return;
             }
 
-            int id1 = (listView1.Tag as table).Id;
+            int id1 = (guna2DataGridView1.Tag as table).Id;
             int id2 = (cbxtable.SelectedItem as table).Id;
 
             if (id1 == id2)
@@ -243,5 +285,38 @@ namespace quanlyquancafe
             loadtable();
             MessageBox.Show("Chuyển bàn thành công!", "Thông báo");
         }
+
+        void fillemptyrows(DataTable dt)
+        {
+            int rowHeight = guna2DataGridView1.RowTemplate.Height;
+            int headerHeight = guna2DataGridView1.ColumnHeadersHeight;
+            int visibleRows =
+                (guna2DataGridView1.Height - headerHeight) / rowHeight;
+            int need = visibleRows - dt.Rows.Count;
+            for (int i = 0; i < need; i++)
+            {
+                dt.Rows.Add(dt.NewRow());
+            }
+
+        }
+        private bool KiemTraNguyenLieu(int idfood)
+        {
+     
+           
+                int soluong = congthucdao.Instance.getSoluongMonConLai(idfood);
+
+                if (soluong<=0) return false;
+            
+
+           
+
+            return true;
+        }
+
+        private void btnupdatenl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

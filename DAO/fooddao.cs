@@ -75,6 +75,13 @@ namespace quanlyquancafe.DAO
                 return maxid;
             }
             return -1;
-        } }
+        } 
+  public DataTable gettopping()
+        {
+          
+            return DataProvider.Instance.ExecuteQuery("select f.id,f.name,f.price from food f join foodcategory fc on fc.id=f.idcategory where fc.name='Topping'");
+        }
+
     }
+}
 

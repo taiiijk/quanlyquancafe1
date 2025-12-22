@@ -37,6 +37,14 @@ namespace quanlyquancafe.DAO
 
             return list;
         }
+        public DataTable getlistcate()
+        {
+           
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from foodcategory");
+            
+
+            return data;
+        }
         public bool insertcategory(string name)
         {
           return  DataProvider.Instance.ExecuteNonQuery("insert into foodcategory (name) values (N'" + name + "')")>0;
@@ -55,5 +63,6 @@ namespace quanlyquancafe.DAO
             return data.Rows.Count > 0;
 
         }
+       
     }
 }

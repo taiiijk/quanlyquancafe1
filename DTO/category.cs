@@ -24,5 +24,10 @@ namespace quanlyquancafe.DTO
             this.id = (int)row["id"];
 
         } 
+        public category()
+        {
+
+        }
+
     }
 }

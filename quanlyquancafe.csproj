@@ -156,6 +156,12 @@
     <Compile Include="tablemanager.Designer.cs">
       <DependentUpon>tablemanager.cs</DependentUpon>
     </Compile>
+    <Compile Include="tuychon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tuychon.Designer.cs">
+      <DependentUpon>tuychon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="tablemanager.resx">
       <DependentUpon>tablemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tuychon.resx">
+      <DependentUpon>tuychon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>

@@ -22,27 +22,13 @@ namespace quanlyquancafe
         {
  
             InitializeComponent();
-            
-            
+
+            loadcombobox();
 
         }
-        private int _initialManl = -1;
-        public void SetNguyenLieu(int manl)
-        {
-            _initialManl = manl; // Chỉ lưu giá trị
-                                 // Không gán trực tiếp SelectedValue ở đây nữa
-        }
-        private void UserControl2_Load(object sender, EventArgs e)
-        {
-            if (_initialManl != -1)
-            {
-                // Kiểm tra xem dữ liệu đã được load chưa, 
-                // vì loadcombobox() đã được gọi trong constructor nên ta có thể gán.
-                // Để chắc chắn hơn, bạn có thể kiểm tra: if (cboNguyenLieu.DataSource != null)
-                cboNguyenLieu.SelectedValue = _initialManl;
-            }
-        }
-
+    
+      
+     
         public int idfood
         {
             get; set;
@@ -66,7 +52,7 @@ namespace quanlyquancafe
         public decimal SoLuong
         {
             get => Convert.ToDecimal(txtsoluong.Text);
-            set => txtsoluong.Text = value.ToString();
+          
         }
        
         public int manl
@@ -161,36 +147,9 @@ namespace quanlyquancafe
 
 
         }
-        public void LoadFull(int manl, decimal soluong)
-        {
-            loadcombobox();
+       
 
-            // Đặt breakpoint ở đây, xem:
-            // 1. cboNguyenLieu.Items có gì?
-            // 2. manl có đúng không?
-            for (int i = 0; i < cboNguyenLieu.Items.Count; i++)
-            {
-                if (cboNguyenLieu.Items[i] is DataRowView row)
-                {
-                    int currentManl = Convert.ToInt32(row["MaNL"]);
-
-                    // Breakpoint: kiểm tra currentManl và manl
-                    if (currentManl == manl)
-                    {
-                        cboNguyenLieu.SelectedIndex = i;
-
-                        // THÊM: Kiểm tra xem đã chọn chưa
-                        if (cboNguyenLieu.SelectedIndex == i)
-                        {
-                            MessageBox.Show($"Đã chọn index {i}: {row["TenNL"]}");
-                        }
-
-                        break;
-                    }
-                }
-            }
-
-            txtsoluong.Text = soluong.ToString();
-        }
+           
+        
     }
 }

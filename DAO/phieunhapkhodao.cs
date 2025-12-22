@@ -46,5 +46,6 @@ namespace quanlyquancafe.DAO
         {
             DataProvider.Instance.ExecuteNonQuery("exec insertchitietphieunhapkho @mapn , @manl , @soluong , @dongia", new object[] { mapn, manl, soluong, dongia });
         }
+
     }
 }

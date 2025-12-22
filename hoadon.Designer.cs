@@ -44,7 +44,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(394, 369);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+           
             // 
             // hoadon
             // 
@@ -56,7 +56,7 @@
             this.Name = "hoadon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "hoadon";
-            this.Load += new System.EventHandler(this.hoadon_Load);
+
             this.ResumeLayout(false);
 
         }

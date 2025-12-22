@@ -41,17 +41,73 @@ namespace quanlyquancafe.DAO
         {
             return DataProvider.Instance.ExecuteQuery("exec phantramfood @date1, @date2", new object[] { date1, date2 });
         }
-        public void insertbillinfo(int idbill, int idfood, int count)
+        public int insertMainFood(int idbill, int idfood, int count, string note)
         {
             food f = fooddao.Instance.getfoodbyid(idfood);
 
-            string query = "exec insertbillinfo @idbill, @idfood, @count, @price, @name, @idcategory";
+            string query = "exec insert_main_food @idbill, @idfood, @count, @realname, @realidcategory, @realprice, @note";
 
-            DataProvider.Instance.ExecuteNonQuery(
-                query,
-                new object[] { idbill, idfood, count, f.Price, f.Name, f.Categoryid }
+            return Convert.ToInt32(
+                DataProvider.Instance.ExecuteScalar(
+                    query,
+                    new object[]
+                    {
+                idbill,
+                idfood,
+                count,
+                f.Name,
+                f.Categoryid,
+                (int)f.Price,
+                note,
+           
+                    }
+                )
             );
         }
 
+        public void insertTopping(int idbill, int idfood,int count, int idparent)
+        {
+            food f = fooddao.Instance.getfoodbyid(idfood);
+
+            string query = "exec insert_topping @idbill, @idfood, @count, @realname, @realidcategory, @realprice, @idparent";
+
+            DataProvider.Instance.ExecuteNonQuery(
+                query,
+                new object[]
+                {
+            idbill,
+            idfood,
+            count,
+            f.Name,
+            f.Categoryid,
+            (int)f.Price,
+            idparent
+                }
+            );
+        }
+
+
+        public void updateNote(int idbill, int idfood, string note)
+        {
+            string sql = @"UPDATE BILLINFO 
+                   SET NOTE = @note 
+                   WHERE idbill = @idbill 
+                     AND idfood = @idfood 
+                     AND ISMAIN = 1";
+
+            DataProvider.Instance.ExecuteNonQuery(
+                sql,
+                new object[] { note, idbill, idfood }
+            );
+        }
+
+        public void updaterealprice(int id, decimal realprice)
+        {
+            string sql = "UPDATE BILLINFO SET REALPRICE = @realprice  WHERE id = @id AND ISMAIN = 1";
+            DataProvider.Instance.ExecuteNonQuery(
+                sql,
+                new object[] { realprice, id, realprice }
+            );
+        }
     }
 }
