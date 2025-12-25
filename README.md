@@ -128,16 +128,8 @@ Integrated Security=True
 
 ---
 
-## 7. Lưu ý
+## 7. Sinh viên thực hiện
 
-- Project sử dụng NuGet PackageReference, không cần đưa DLL Guna UI lên GitHub
-- Database không lưu trực tiếp trên GitHub, cần chạy file .sql
-- Không commit các thư mục bin, obj, .vs
-
----
-
-## 8. Sinh viên thực hiện
-
-22520294 Vũ Quang Dũng
-24521562 Võ Ngọc Tài
-22520831 Nguyễn Ngạn Lực
+- 22520294 Vũ Quang Dũng
+- 24521562 Võ Ngọc Tài
+- 22520831 Nguyễn Ngạn Lực
