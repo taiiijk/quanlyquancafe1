@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-
+using System.Configuration;
 namespace quanlyquancafe.DTO
 {
     public class DataProvider
     {
         private static DataProvider instance;
-        private string connectionStr =
-            @"Data Source=LAPTOP-13V5CBTM\SQLEXPRESS01;Initial Catalog=phanmemquanly;Integrated Security=True;TrustServerCertificate=True";
+        private string connectionStr = ConfigurationManager.ConnectionStrings["phanmemquanly"].ConnectionString;
 
         public static DataProvider Instance
         {
