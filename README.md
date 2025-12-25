@@ -127,6 +127,12 @@ Integrated Security=True
 
 ---
 
+## 7. Sinh viên thực hiện
+
+- 22520294 Vũ Quang Dũng
+- 24521562 Võ Ngọc Tài
+- 22520831 Nguyễn Ngạn Lực
+
 ## ⚠️ Lỗi build MSB3821 (.resx bị chặn – Mark of the Web)
 
 ## Cách khắc phục (bắt buộc làm 1 lần)
@@ -139,9 +145,6 @@ Integrated Security=True
 ```powershell
 Get-ChildItem -Recurse | Unblock-File
 Get-ChildItem -Recurse | Unblock-File
-## 7. Sinh viên thực hiện
 
-- 22520294 Vũ Quang Dũng
-- 24521562 Võ Ngọc Tài
-- 22520831 Nguyễn Ngạn Lực
+
 ```
