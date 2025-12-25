@@ -1,155 +1,160 @@
 ﻿using Guna.UI2.WinForms;
 using quanlyquancafe.DAO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace quanlyquancafe
 {
-
     public partial class UserControl2 : UserControl
     {
-        BindingSource nguyenlieulist = new BindingSource();
-   
-
         public UserControl2()
         {
- 
             InitializeComponent();
+            txtsoluong.GotFocus += (s, e) =>
+            {
+                txtsoluong.SelectionStart = txtsoluong.Text.Length;
+                txtsoluong.SelectionLength = 0;
+            };
+            txtsoluong.TextChanged += (s, e) =>
+            {
+                if (!string.IsNullOrWhiteSpace(txtsoluong.Text))
+                    LabelLen(lblsoluong, txtsoluong);
+                else
+                    LabelXuong(lblsoluong, txtsoluong);
+            };
 
             loadcombobox();
+            CapNhatTrangThaiLabel();
+        }
 
-        }
-    
-      
-     
-        public int idfood
-        {
-            get; set;
-        }
-       
+        public int idfood { get; set; }
+
         public void loadcombobox()
         {
             DataTable dt = nguyenlieudao.Instance.getnguyenlieu();
             cboNguyenLieu.DataSource = dt;
             cboNguyenLieu.DisplayMember = "TenNL";
             cboNguyenLieu.ValueMember = "MaNL";
-
         }
-        
-    
 
-       
-     
-       
+        void LabelLen(Guna2HtmlLabel lbl, Control txt)
+        {
+            lbl.Location = new Point(lbl.Left, txt.Top - 12);
+            lbl.Font = new Font("Segoe UI", 8);
+            lbl.ForeColor = Color.Blue;
+        }
+
+        void LabelXuong(Guna2HtmlLabel lbl, Control txt)
+        {
+            lbl.Location = new Point(lbl.Left, txt.Top + 6);
+            lbl.Font = new Font("Segoe UI", 10);
+            lbl.ForeColor = Color.Gray;
+        }
+
+        void CapNhatTrangThaiLabel()
+        {
+            if (!string.IsNullOrWhiteSpace(txtsoluong.Text))
+                LabelLen(lblsoluong, txtsoluong);
+            else
+                LabelXuong(lblsoluong, txtsoluong);
+
+            if (!string.IsNullOrWhiteSpace(txtdonvi.Text))
+                LabelLen(lbldonvi, txtdonvi);
+            else
+                LabelXuong(lbldonvi, txtdonvi);
+
+            if (cboNguyenLieu.SelectedIndex != -1)
+                LabelLen(lblNguyenLieu, cboNguyenLieu);
+            else
+                LabelXuong(lblNguyenLieu, cboNguyenLieu);
+        }
 
         public decimal SoLuong
         {
-            get => Convert.ToDecimal(txtsoluong.Text);
-          
-        }
-       
-        public int manl
-        {
-            get => nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
+            get
+            {
+
+                if (string.IsNullOrWhiteSpace(txtsoluong.Text))
+                    return -1;
+                if (!decimal.TryParse(txtsoluong.Text, out decimal sl))
+                    return -1;
+                return sl;
+            }
+
+            set
+            {
+                txtsoluong.Text = value.ToString();
+                LabelLen(lblsoluong, txtsoluong);
+            }
         }
 
-        private void txtsoluong_Leave_1(object sender, EventArgs e)
+        public int manl
         {
-            if (txtsoluong.Text == "")
+            get
             {
-                lblsoluong.Location = new Point(lblsoluong.Left, txtsoluong.Top + 6);
-                lblsoluong.Font = new Font("Segoe UI", 10);
-                lblsoluong.ForeColor = Color.Gray;
+                if (string.IsNullOrWhiteSpace(cboNguyenLieu.Text))
+                    return -1;
+                return nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
             }
         }
 
         private void txtsoluong_Enter_1(object sender, EventArgs e)
         {
-            if (txtsoluong.Text == "")
-                guna2Transition1.SetDecoration(lblsoluong, Guna.UI2.AnimatorNS.DecorationType.None);
-            lblsoluong.Location = new Point(lblsoluong.Left, txtsoluong.Top - 12);
-            lblsoluong.Font = new Font("Segoe UI", 8);
-            lblsoluong.ForeColor = Color.Blue;
-
+            LabelLen(lblsoluong, txtsoluong);
         }
 
-        private void txtdonvi_Leave_1(object sender, EventArgs e)
+        private void txtsoluong_Leave_1(object sender, EventArgs e)
         {
-            if (txtdonvi.Text == "")
-            {
-                lbldonvi.Location = new Point(lbldonvi.Left, txtdonvi.Top + 6);
-                lbldonvi.Font = new Font("Segoe UI", 10);
-                lbldonvi.ForeColor = Color.Gray;
-            }
+            if (string.IsNullOrWhiteSpace(txtsoluong.Text))
+                LabelXuong(lblsoluong, txtsoluong);
         }
 
         private void txtdonvi_Enter_1(object sender, EventArgs e)
         {
-            if (txtdonvi.Text == "")
-                guna2Transition1.SetDecoration(lbldonvi, Guna.UI2.AnimatorNS.DecorationType.None);
-            lbldonvi.Location = new Point(lbldonvi.Left, txtdonvi.Top - 12);
-            lbldonvi.Font = new Font("Segoe UI", 8);
-            lbldonvi.ForeColor = Color.Blue;
+            LabelLen(lbldonvi, txtdonvi);
         }
 
-        private void cboNguyenLieu_Enter(object sender, EventArgs e)
+        private void txtdonvi_Leave_1(object sender, EventArgs e)
         {
-
-            if (cboNguyenLieu.SelectedIndex == -1)
-                guna2Transition1.SetDecoration(lblNguyenLieu, Guna.UI2.AnimatorNS.DecorationType.None);
-
-            lblNguyenLieu.Location = new Point(lblNguyenLieu.Left, cboNguyenLieu.Top - 12);
-            lblNguyenLieu.Font = new Font("Segoe UI", 8);
-            lblNguyenLieu.ForeColor = Color.Blue;
-
-           
+            if (string.IsNullOrWhiteSpace(txtdonvi.Text))
+                LabelXuong(lbldonvi, txtdonvi);
         }
 
-        private void cboNguyenLieu_Leave(object sender, EventArgs e)
+        private void cboNguyenLieu_Enter_1(object sender, EventArgs e)
+        {
+            LabelLen(lblNguyenLieu, cboNguyenLieu);
+        }
+
+        private void cboNguyenLieu_Leave_1(object sender, EventArgs e)
         {
             if (cboNguyenLieu.SelectedIndex == -1)
-            {
-                lblNguyenLieu.Location = new Point(lblNguyenLieu.Left, cboNguyenLieu.Top + 6);
-                lblNguyenLieu.Font = new Font("Segoe UI", 10);
-                lblNguyenLieu.ForeColor = Color.Gray;
-            }
+                LabelXuong(lblNguyenLieu, cboNguyenLieu);
         }
 
-        private void cboNguyenLieu_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cboNguyenLieu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboNguyenLieu.SelectedItem is DataRowView row)
-            {
                 txtdonvi.Text = row["DonVi"].ToString();
-            }
             else
                 txtdonvi.Text = "";
 
-            lbldonvi.Location = new Point(lbldonvi.Left, cboNguyenLieu.Top - 12);
-            lbldonvi.Font = new Font("Segoe UI", 8);
-            lbldonvi.ForeColor = Color.Blue;
-
+            LabelLen(lblNguyenLieu, cboNguyenLieu);
+            LabelLen(lbldonvi, txtdonvi);
         }
 
         private void btndelete_Click(object sender, EventArgs e)
-
         {
-            int idfood = this.idfood;
-                int manl = nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
+            int manl = nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
             congthucdao.Instance.deletecongthuc(idfood, manl);
 
-
-
+            Control parent = this.Parent;
+            if (parent != null)
+            {
+                parent.Controls.Remove(this);
+                this.Dispose();
+            }
         }
-       
-
-           
-        
     }
 }

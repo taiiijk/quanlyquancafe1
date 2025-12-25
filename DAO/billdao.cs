@@ -74,5 +74,34 @@ namespace quanlyquancafe.DAO
         {
             return DataProvider.Instance.ExecuteQuery("exec doanhthu @date1, @date2", new object[] { date1, date2 });
         }
+        public decimal GetTongDoanhThu(DateTime tuNgay, DateTime denNgay)
+        {
+            object result = DataProvider.Instance.ExecuteScalar(
+                "exec tongdoanhthu @TuNgay, @DenNgay",
+                new object[] { tuNgay, denNgay }
+            );
+
+            if (result == null || result == DBNull.Value)
+                return 0;
+
+            return Convert.ToDecimal(result);
+        }
+public void updatediscount(int idbill, int discount)
+        {
+            DataProvider.Instance.ExecuteNonQuery("update bill set discount=@discount where id=@idbill", new object[] { discount, idbill });
+        }
+        public int GetDiscountByIdBill(int idbill)
+        {
+            object result = DataProvider.Instance.ExecuteScalar(
+                "SELECT discount FROM bill WHERE id = @idbill",
+                new object[] { idbill }
+            );
+
+            if (result == null || result == DBNull.Value)
+                return 0;
+
+            return Convert.ToInt32(result);
+        }
+
     }
 }

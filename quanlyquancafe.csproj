@@ -94,6 +94,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addaccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addaccount.Designer.cs">
+      <DependentUpon>addaccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,7 +119,7 @@
     <Compile Include="DAO\congthucdao.cs" />
     <Compile Include="DAO\Dataprovider.cs" />
     <Compile Include="DAO\fooddao.cs" />
-    <Compile Include="DAO\menudao.cs" />
+    <Compile Include="DAO\showbilldao.cs" />
     <Compile Include="DAO\nguyenlieudao.cs" />
     <Compile Include="DAO\phieunhapkhodao.cs" />
     <Compile Include="DAO\tabledao.cs" />
@@ -121,7 +127,8 @@
     <Compile Include="DTO\billinfo.cs" />
     <Compile Include="DTO\category.cs" />
     <Compile Include="DTO\food.cs" />
-    <Compile Include="DTO\menu.cs" />
+    <Compile Include="DTO\session.cs" />
+    <Compile Include="DTO\showbill.cs" />
     <Compile Include="DTO\nguyenlieu.cs" />
     <Compile Include="DTO\table.cs" />
     <Compile Include="hoadon.cs">
@@ -174,6 +181,9 @@
     <Compile Include="UserControl2.Designer.cs">
       <DependentUpon>UserControl2.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addaccount.resx">
+      <DependentUpon>addaccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +252,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bin1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blend1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting_94096641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accounting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dining-table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password-protection1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForRetailers1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

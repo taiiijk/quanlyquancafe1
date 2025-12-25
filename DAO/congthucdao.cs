@@ -29,6 +29,14 @@ namespace quanlyquancafe.DAO
 
 
 
+        public bool congthuchaveidNguyenLieu(int manl)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "select 1 from congthuc where MaNL = @manl",
+                new object[] { manl }
+            );
+            return data.Rows.Count > 0;
+        }
 
         public bool insertcongthuc(int idfood, int MaNL, decimal SoLuongCan)
         {

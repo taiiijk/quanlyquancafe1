@@ -42,7 +42,7 @@
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(739, 420);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -60,14 +60,16 @@
             // 
             // guna2Button1
             // 
+            this.guna2Button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.FillColor = System.Drawing.Color.Silver;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(237, 428);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Location = new System.Drawing.Point(252, 428);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(240, 55);
             this.guna2Button1.TabIndex = 1;
@@ -76,11 +78,13 @@
             // 
             // guna2Button2
             // 
+            this.guna2Button2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.FillColor = System.Drawing.Color.Silver;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.Location = new System.Drawing.Point(0, 493);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4);
@@ -92,11 +96,13 @@
             // 
             // guna2Button3
             // 
+            this.guna2Button3.BackColor = System.Drawing.SystemColors.ControlLight;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button3.FillColor = System.Drawing.Color.Silver;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Location = new System.Drawing.Point(499, 493);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(4);
@@ -115,9 +121,12 @@
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Nhaphang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhaphang";
+           
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

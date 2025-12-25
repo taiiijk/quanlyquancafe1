@@ -19,12 +19,15 @@ namespace quanlyquancafe
             this.idtable = idtable;
             this.idbill = idbill;
 
-            showbill();
+            int discount = billdao.Instance.GetDiscountByIdBill(idbill);
+            ShowBill(discount);
         }
 
-        void showbill()
+        void ShowBill(int discount)
         {
-            List<menu> listbill = menudao.Instance.getlist(idbill, idtable);
+            List<showbill> listbill =
+                showbilldao.Instance.getlist(idbill, idtable);
+
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("            HÓA ĐƠN THANH TOÁN");
@@ -37,21 +40,20 @@ namespace quanlyquancafe
 
             decimal total = 0;
 
-            foreach (menu item in listbill)
+            foreach (showbill item in listbill)
             {
-                // DÒNG MÓN CHÍNH
                 sb.AppendLine(
-                    $"{item.Foodname}  | SL: {item.Count}  | Giá: {item.Price:0,0}  | TT: {item.Totalprice:0,0}"
+                    $"{item.Foodname} | SL: {item.Count} | Giá: {item.Price:0,0} | TT: {item.Totalprice:0,0}"
                 );
 
-                // DÒNG GHI CHÚ + TOPPING
                 List<string> extras = new List<string>();
 
                 if (!string.IsNullOrWhiteSpace(item.Note))
                     extras.Add("Ghi chú: " + item.Note);
 
                 if (item.Toppings != null && item.Toppings.Count > 0)
-                    extras.Add("Topping: " + string.Join(", ", item.Toppings.Select(t => t.Foodname)));
+                    extras.Add("Topping: " +
+                        string.Join(", ", item.Toppings.Select(t => t.Foodname)));
 
                 if (extras.Count > 0)
                     sb.AppendLine("  → " + string.Join(" | ", extras));
@@ -61,7 +63,13 @@ namespace quanlyquancafe
             }
 
             sb.AppendLine("----------------------------------------");
-            sb.AppendLine("Tổng cộng: " + total.ToString("0,0") + " VNĐ");
+            sb.AppendLine($"Tổng cộng: {total:0,0} VNĐ");
+
+            sb.AppendLine($"Discount: {discount}%");
+
+            decimal finalTotal = total - (total * discount / 100m);
+            sb.AppendLine($"Thành tiền: {finalTotal:0,0} VNĐ");
+
             sb.AppendLine();
             sb.AppendLine("Cảm ơn quý khách! Hẹn gặp lại!");
 

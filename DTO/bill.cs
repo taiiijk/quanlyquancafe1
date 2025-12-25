@@ -5,6 +5,8 @@ namespace quanlyquancafe.DTO
 {
     public class Bill
     {
+        private int discount;
+                public int Discount { get { return discount; } set { discount = value; } }
         private int id;
         public int Id { get { return id; } }
 

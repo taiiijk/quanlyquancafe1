@@ -44,13 +44,15 @@ namespace quanlyquancafe
             dtgwct.DataSource = foodcategorylist;
             dtgwtable.DataSource = tablelist;
             dtgwnguyenlieu.DataSource = nguyenlieu;
+           
             load();
 
         }
 
         void load()
         {
-
+            loadslfood();
+            loadslcategory();
             tm.loadcategory();
             tm.ReloadFoodBySelectedCategory();
             loadcategory();
@@ -68,6 +70,7 @@ namespace quanlyquancafe
             loadlistbillbydate(guna2DateTimePicker1checkin.Value, guna2DateTimePickercheckout.Value);
             loadchart();
             loadnguyenlieu();
+            LoadThuChi();
         }
 
         void loadlistbillbydate(DateTime checkin, DateTime checkout)
@@ -79,7 +82,7 @@ namespace quanlyquancafe
             guna2DataGridView1.DataSource = dt;
 
 
-            guna2DataGridView1.Columns["id"].HeaderText = "Mã bàn";
+            guna2DataGridView1.Columns["id"].HeaderText = "Mã bill";
             guna2DataGridView1.Columns["ten"].HeaderText = "Tên bàn";
             guna2DataGridView1.Columns["datecheckin"].HeaderText = "Date check-in";
             guna2DataGridView1.Columns["datecheckout"].HeaderText = "Date check-out";
@@ -125,15 +128,21 @@ namespace quanlyquancafe
         void tablebinding()
         {
             txttable.DataBindings.Clear();
-            txttable.DataBindings.Add(new Binding("Text", tablelist, "name", true, DataSourceUpdateMode.Never));
+            txttable.DataBindings.Add(new Binding("Text", tablelist, "ten", true, DataSourceUpdateMode.Never));
             txtstatus.DataBindings.Clear();
-            txtstatus.DataBindings.Add(new Binding("Text", tablelist, "status", true, DataSourceUpdateMode.Never));
+            txtstatus.DataBindings.Add(new Binding("Text", tablelist, "trangthai", true, DataSourceUpdateMode.Never));
 
 
         }
         void loadtablelist()
         {
-            tablelist.DataSource = tabledao.Inststace.Loadtablelist();
+            DataTable dt = tabledao.Inststace.listtable();
+            fillemptytablerows(dt);
+            tablelist.DataSource = dt;
+            dtgwtable.Columns["ten"].HeaderText = "Tên bàn";
+            dtgwtable.Columns["trangthai"].HeaderText = "Trạng thái";
+
+
         }
         void loadlistfood()
         {
@@ -147,8 +156,8 @@ namespace quanlyquancafe
         }
         void loadlistcategory()
         {
-           DataTable dt= categorydao.Instance.getlistcate();
-            
+            DataTable dt = categorydao.Instance.getlistcate();
+
             foodcategorylist.DataSource = dt;
             fillrowemptyctrows(dt);
             dtgwct.Columns["id"].HeaderText = "Mã danh mục";
@@ -158,18 +167,19 @@ namespace quanlyquancafe
         }
         public void loadnguyenlieu()
         {
-            DataTable dt= nguyenlieudao.Instance.getnguyenlieu();
+            DataTable dt = nguyenlieudao.Instance.getnguyenlieu();
             fillemptynlrows(dt);
+       
             dtgwnl.DataSource = dt;
             nguyenlieu.DataSource = dt;
-            dtgwnl.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
-            dtgwnl.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
-            dtgwnl.Columns["DonVi"].HeaderText = "Đơn vị";
+                dtgwnguyenlieu.Columns["MaNL"].HeaderText = "Mã nguyên liệu";
+            dtgwnguyenlieu.Columns["TenNL"].HeaderText = "Tên nguyên liệu";
+            dtgwnguyenlieu.Columns["DonVi"].HeaderText = "Đơn vị";
 
         }
         void loadcategory()
         {
-            comboBox1.DataSource = categorydao.Instance.getlistcategory();
+            comboBox1.DataSource = categorydao.Instance.getlistcategory2();
 
             comboBox1.DisplayMember = "name";
             comboBox1.ValueMember = "id";
@@ -269,6 +279,8 @@ namespace quanlyquancafe
             paneldanhmucmon.Hide();
             panelthongke.Hide();
             paneltable.Hide();
+            panelnguyenlieu.Hide();
+            Panelkho.Hide();
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -278,6 +290,8 @@ namespace quanlyquancafe
             paneldanhmucmon.Hide();
             panelthongke.Show();
             paneltable.Hide();
+            panelnguyenlieu.Hide();
+            Panelkho.Hide();
         }
 
 
@@ -297,6 +311,9 @@ namespace quanlyquancafe
             panelthongke.Hide();
             paneldanhmucmon.Hide();
             paneltable.Hide();
+            panelnguyenlieu.Hide();
+            Panelkho.Hide();
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -357,6 +374,7 @@ namespace quanlyquancafe
 
                         uc.cboNguyenLieu.SelectedValue = row["MaNL"];
                         uc.txtsoluong.Text = row["SoLuongCan"].ToString();
+                       
 
 
                         c.flowLayoutPanel1.Controls.Add(uc);
@@ -373,6 +391,7 @@ namespace quanlyquancafe
                 MessageBox.Show("Bill đang có món không thể sửa");
             }
         }
+
         //void loadchart()
         //{
 
@@ -395,80 +414,128 @@ namespace quanlyquancafe
         //}
         void loadchart()
         {
-            DateTime date1 = datetu.Value.Date; // 00:00:00
-            DateTime date2 = dateden.Value.Date.AddDays(1).AddSeconds(-1); // 23:59:59
+            DateTime date1 = datetu.Value.Date;
+            DateTime date2 = dateden.Value.Date.AddDays(1).AddSeconds(-1);
 
-
-            // Lấy dữ liệu từ SP, có thể truyền date1, date2
+            // ===== BIỂU ĐỒ DOANH THU =====
             DataTable dt = billdao.Instance.doanhthu(date1, date2);
 
             chartDoanhthu.Series["Doanh Thu"].Points.Clear();
 
-            // Kiểm tra cột trong dt để xác định mốc thời gian
-            if (dt.Columns.Contains("Nam") && dt.Columns.Contains("Thang"))
+            if (dt != null && dt.Rows.Count > 0)
             {
-                // Hiển thị theo tháng
-                foreach (DataRow row in dt.Rows)
+                if (dt.Columns.Contains("Nam") && dt.Columns.Contains("Thang"))
                 {
-                    string label = row["Thang"].ToString() + "/" + row["Nam"].ToString();
-                    double tongthu = Convert.ToDouble(row["TongThu"]);
-                    chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string label = row["Thang"].ToString() + "/" + row["Nam"].ToString();
+
+                        double tongthu = row["TongThu"] == DBNull.Value
+                            ? 0
+                            : Convert.ToDouble(row["TongThu"]);
+
+                        chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    }
                 }
-            }
-            else if (dt.Columns.Contains("Ngay") && dt.Columns.Contains("Gio"))
-            {
-                // Hiển thị theo giờ trong ngày
-                foreach (DataRow row in dt.Rows)
+                else if (dt.Columns.Contains("Ngay") && dt.Columns.Contains("Gio"))
                 {
-                    string label = row["Gio"].ToString() + ":00";
-                    double tongthu = Convert.ToDouble(row["TongThu"]);
-                    chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string label = row["Gio"].ToString() + ":00";
+
+                        double tongthu = row["TongThu"] == DBNull.Value
+                            ? 0
+                            : Convert.ToDouble(row["TongThu"]);
+
+                        chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    }
                 }
-            }
-            else if (dt.Columns.Contains("Ngay"))
-            {
-                // Hiển thị theo ngày
-                foreach (DataRow row in dt.Rows)
+                else if (dt.Columns.Contains("Ngay"))
                 {
-                    string label = Convert.ToDateTime(row["Ngay"]).ToString("dd/MM/yyyy");
-                    double tongthu = Convert.ToDouble(row["TongThu"]);
-                    chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string label = Convert.ToDateTime(row["Ngay"]).ToString("dd/MM/yyyy");
+
+                        decimal tongthu = row["TongThu"] == DBNull.Value
+                            ? 0
+                            : Convert.ToDecimal(row["TongThu"]);
+
+                        chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    }
                 }
-            }
-            else
-            {
-                // Chỉ 1 cột thời gian (ví dụ năm)
-                foreach (DataRow row in dt.Rows)
+                else if (dt.Columns.Contains("Nam"))
                 {
-                    string label = row["Nam"].ToString();
-                    double tongthu = Convert.ToDouble(row["TongThu"]);
-                    chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        string label = row["Nam"].ToString();
+
+                        double tongthu = row["TongThu"] == DBNull.Value
+                            ? 0
+                            : Convert.ToDouble(row["TongThu"]);
+
+                        chartDoanhthu.Series["Doanh Thu"].Points.AddXY(label, tongthu);
+                    }
                 }
             }
 
             chartDoanhthu.ChartAreas[0].AxisX.Interval = 1;
+
+            // ===== BIỂU ĐỒ PIE TỶ LỆ MÓN =====
             DataTable DT = billinfodao.Instance.phantramfood(date1, date2);
+
             chartPie.Series["TyLeMon"].Points.Clear();
-            foreach (DataRow r in DT.Rows)
+
+            if (DT != null && DT.Rows.Count > 0)
             {
-                chartPie.Series["TyLeMon"].Points.AddXY(
-                    r["TenMon"].ToString(),
-                    Convert.ToDouble(r["PhanTram"])
-                );
+                foreach (DataRow r in DT.Rows)
+                {
+                    string tenmon = r["TenMon"].ToString();
+
+                    double phantram = r["PhanTram"] == DBNull.Value
+                        ? 0
+                        : Convert.ToDouble(r["PhanTram"]);
+
+                    if (phantram > 0) // tránh vẽ lát 0%
+                    {
+                        chartPie.Series["TyLeMon"].Points.AddXY(tenmon, phantram);
+                    }
+                }
             }
 
             var series = chartPie.Series["TyLeMon"];
-
             series.IsValueShownAsLabel = true;
-            series.Label = "#PERCENT{P0}";          // Chỉ hiện %    
-            series.LegendText = "#VALX";            // Tên hiện ở Legend
-            series.Font = new Font("Segoe UI", 8);  // Chữ nhỏ để đẹp
+            series.Label = "#PERCENT{P0}";
+            series.LegendText = "#VALX";
+            series.Font = new Font("Segoe UI", 8);
 
-            // Làm pie to hơn
             chartPie.ChartAreas[0].InnerPlotPosition.Auto = false;
             chartPie.ChartAreas[0].InnerPlotPosition = new ElementPosition(5, 5, 90, 90);
+        }
+
+        void loadslfood()
+        {
+            int sl=fooddao.Instance.soluongfood();
+            buttonslmon.Text= $"MÓN ĂN"+ Environment.NewLine + sl.ToString();
 
         }
+        void loadslcategory()
+        {
+            int sl = categorydao.Instance.soluongcategory();
+            Buttonslcategory.Text=$"DANH MỤC"+ Environment.NewLine + sl.ToString();
+        }
+        void LoadThuChi()
+        {
+            DateTime tu = datetu.Value.Date;
+            DateTime den = dateden.Value.Date.AddDays(1).AddSeconds(-1);
+
+            decimal doanhThu = billdao.Instance.GetTongDoanhThu(tu, den);
+            decimal tienChi = phieunhapkhodao.Instance.GetTongTienChi(tu, den);
+
+            buttomndoanhthu.Text = $"DOANH THU\n{doanhThu:N0} đ";
+            Buttonchi.Text = $"TIỀN CHI\n{tienChi:N0} đ";
+        }
+
+
 
         private void panelfoodmenu_SizeChanged(object sender, EventArgs e)
         {
@@ -485,26 +552,10 @@ namespace quanlyquancafe
 
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-            loadchart();
-        }
+      
 
-        private void guna2GradientButton2_Click(object sender, EventArgs e)
-        {
-            datetu.Value = DateTime.Now;
-            dateden.Value = DateTime.Now;
-            loadchart();
-        }
 
-        private void guna2GradientButton3_Click(object sender, EventArgs e)
-        {
-            datetu.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
-
-            dateden.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month,
-                         DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
-            loadchart();
-        }
+       
 
         private void guna2Panel7_Paint(object sender, PaintEventArgs e)
         {
@@ -531,38 +582,10 @@ namespace quanlyquancafe
 
         }
 
-        private void btnaddct_Click(object sender, EventArgs e)
-        {
-            string name = txtnewcategory.Text;
+      
 
-            if (categorydao.Instance.insertcategory(name))
-                MessageBox.Show("Thông báo ", "Thêm món thành công");
-            load();
-        }
-
-        private void btnrepairct_Click(object sender, EventArgs e)
-        {
-            string name = txtcategory.Text;
-            int idcategory = Convert.ToInt32(dtgwct.CurrentRow.Cells["id"].Value);
-            if (categorydao.Instance.updatecategory(idcategory, name))
-                MessageBox.Show("Sửa món thành công");
-            load();
-        }
-
-        private void btndeletect_Click(object sender, EventArgs e)
-        {
-            int idcategory = Convert.ToInt32(dtgwct.CurrentRow.Cells["id"].Value);
-            if (categorydao.Instance.categoryhavefood(idcategory))
-            {
-                MessageBox.Show("Danh mục đang có món không thể xóa");
-            }
-            else
-            {
-                if (categorydao.Instance.deletecategory(idcategory))
-                    MessageBox.Show("Xóa món thành công");
-            }
-            load();
-        }
+     
+      
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
@@ -572,6 +595,7 @@ namespace quanlyquancafe
             paneldanhmucmon.Show();
             paneltable.Hide();
             Panelkho.Hide();
+            panelnguyenlieu.Hide();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -611,6 +635,8 @@ namespace quanlyquancafe
             panelthongke.Hide();
             paneldanhmucmon.Hide();
             paneltable.Show();
+            panelnguyenlieu.Hide();
+            Panelkho.Hide();
         }
 
         void insertphieunhap()
@@ -629,46 +655,9 @@ namespace quanlyquancafe
 
         }
 
-        private void btnaddnl_Click(object sender, EventArgs e)
-        {
 
-            string tennl = txtnguyenlieu.Text;
-            string donvi = txtdonvi.Text;
-            int tonkho = 0;
-            if (nguyenlieudao.Instance.insertnguyenlieu(tennl, donvi, tonkho))
-            {
-                MessageBox.Show("Thêm nguyên liệu thành công");
-                loadnguyenlieu();
-
-            }
-        }
-
-        private void btnupdatenl_Click(object sender, EventArgs e)
-        {
-
-            int manl = Convert.ToInt32(dtgwnl.CurrentRow.Cells["MaNL"].Value);
-            string tennl = txtnguyenlieu.Text;
-            string donvi = txtdonvi.Text;
-            if (nguyenlieudao.Instance.updatenguyenlieu(manl, tennl, donvi))
-            {
-                MessageBox.Show("Sửa nguyên liệu thành công");
-                loadnguyenlieu();
-            }
-        }
-
-        private void btndeletenl_Click(object sender, EventArgs e)
-        {
-
-            int manl = Convert.ToInt32(dtgwnl.CurrentRow.Cells["MaNL"].Value);
-
-
-            if (nguyenlieudao.Instance.deletenguyenlieu(manl))
-            {
-                MessageBox.Show("Xóa nguyên liệu thành công");
-                loadnguyenlieu();
-            }
-
-        }
+ 
+   
 
         private void btnadd_Click_1(object sender, EventArgs e)
         {
@@ -699,6 +688,7 @@ namespace quanlyquancafe
             panelcontrol.Hide();
             paneldanhmucmon.Hide();
             paneltable.Hide();
+            panelnguyenlieu.Hide();
 
         }
 
@@ -751,9 +741,9 @@ namespace quanlyquancafe
                 dt.Rows.Add(dt.NewRow());
             }
         }
-       
-        
-    
+
+
+
         void fillrowemptyctrows(DataTable dt)
         {
 
@@ -769,20 +759,264 @@ namespace quanlyquancafe
         }
 
 
-            void fillemptynlrows(DataTable dt)
+        void fillemptynlrows(DataTable dt)
+        {
+            int rowHeight = dtgwnl.RowTemplate.Height;
+            int headerHeight = dtgwnl.ColumnHeadersHeight;
+            int visibleRows =
+                (dtgwnl.Height - headerHeight) / rowHeight;
+            int need = visibleRows - dt.Rows.Count;
+            for (int i = 0; i < need; i++)
             {
-                int rowHeight = dtgwnl.RowTemplate.Height;
-                int headerHeight = dtgwnl.ColumnHeadersHeight;
-                int visibleRows =
-                    (dtgwnl.Height - headerHeight) / rowHeight;
-                int need = visibleRows - dt.Rows.Count;
-                for (int i = 0; i < need; i++)
-                {
-                    dt.Rows.Add(dt.NewRow());
-                }
+                dt.Rows.Add(dt.NewRow());
             }
         }
+
+        void fillemptytablerows(DataTable dt)
+        {
+            int rowHeight = dtgwtable.RowTemplate.Height;
+            int headerHeight = dtgwtable.ColumnHeadersHeight;
+            int visibleRows =
+                (dtgwtable.Height - headerHeight) / rowHeight;
+            int need = visibleRows - dt.Rows.Count;
+            for (int i = 0; i < need; i++)
+            {
+                dt.Rows.Add(dt.NewRow());
+            }
+        }
+
+        private void guna2GradientButton3_Click_1(object sender, EventArgs e)
+        {
+            datetu.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+
+            dateden.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month,
+                         DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month));
+            loadchart();
+            LoadThuChi();
+        }
+
+        private void guna2GradientButton2_Click_1(object sender, EventArgs e)
+        {
+            datetu.Value = DateTime.Now;
+            dateden.Value = DateTime.Now;
+            loadchart();
+            LoadThuChi();
+        }
+
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
+        {
+            DateTime lastMonth = DateTime.Now.AddMonths(-1);
+
+            datetu.Value = new DateTime(lastMonth.Year, lastMonth.Month, 1);
+
+            dateden.Value = new DateTime(
+                lastMonth.Year,
+                lastMonth.Month,
+                DateTime.DaysInMonth(lastMonth.Year, lastMonth.Month)
+            );
+
+            loadchart();
+            LoadThuChi();
+        }
+
+        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
+        {
+            loadchart();
+            LoadThuChi();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            panelnguyenlieu.Show();
+            Panelkho.Hide();
+            panelthongke.Hide();
+            panelfoodmenu.Hide();
+            panelcontrol.Hide();
+            paneldanhmucmon.Hide();
+            paneltable.Hide();
+
+
+        }
+
+        private void btnrepairct_Click_1(object sender, EventArgs e)
+        {
+            string name = txtcategory.Text;
+            int idcategory = Convert.ToInt32(dtgwct.CurrentRow.Cells["id"].Value);
+            
+            if (categorydao.Instance.updatecategory(idcategory, name))
+                MessageBox.Show("Sửa món thành công");
+            load();
+        }
+
+        private void btnaddct_Click_1(object sender, EventArgs e)
+        {
+            string name = txtnewcategory.Text;
+
+            if (categorydao.Instance.insertcategory(name))
+                MessageBox.Show("Thông báo ", "Thêm món thành công");
+            load();
+        }
+
+        private void btndeletect_Click_1(object sender, EventArgs e)
+        {
+            int idcategory = Convert.ToInt32(dtgwct.CurrentRow.Cells["id"].Value);
+            
+            if (categorydao.Instance.categoryhavefood(idcategory))
+            {
+                MessageBox.Show("Danh mục đang có món không thể xóa");
+            }
+            else if (idcategory == 9)
+            {
+                MessageBox.Show("Không thể xóa topping");
+            }
+            else
+            {
+                if (categorydao.Instance.deletecategory(idcategory))
+                    MessageBox.Show("Xóa món thành công");
+            }
+            load();
+        }
+
+        private void btnaddnl_Click_1(object sender, EventArgs e)
+        {
+            string tennl = txtnguyenlieu.Text;
+            string donvi = txtdonvi.Text;
+            int tonkho = 0;
+            if (nguyenlieudao.Instance.insertnguyenlieu(tennl, donvi, tonkho))
+            {
+                MessageBox.Show("Thêm nguyên liệu thành công");
+                loadnguyenlieu();
+
+            }
+        }
+
+        private void btnupdatenl_Click_1(object sender, EventArgs e)
+        {
+          int manl = Convert.ToInt32(dtgwnguyenlieu.CurrentRow.Cells["MaNL"].Value);
+
+            string tennl = txtnguyenlieu.Text;
+            string donvi = txtdonvi.Text;
+            if (nguyenlieudao.Instance.updatenguyenlieu(manl, tennl, donvi))
+            {
+                MessageBox.Show("Sửa nguyên liệu thành công");
+                loadnguyenlieu();
+            }
+        }
+
+        private void btndeletenl_Click_1(object sender, EventArgs e)
+        {
+            if (dtgwnguyenlieu.CurrentRow == null) return;
+
+           int manl = Convert.ToInt32(dtgwnguyenlieu.CurrentRow.Cells["MaNL"].Value);
+
+        
+
+            if (congthucdao.Instance.congthuchaveidNguyenLieu(manl))
+            {
+                MessageBox.Show("Nguyên liệu đang có trong công thức món không thể xóa");
+                return;
+            }
+
+            if (nguyenlieudao.Instance.deletenguyenlieu(manl))
+            {
+                MessageBox.Show("Xóa nguyên liệu thành công");
+                loadnguyenlieu();
+            }
+            else
+            {
+                MessageBox.Show("Xóa nguyên liệu thất bại");
+            }
+        }
+
+        string BoDau(string input)
+        {
+            string s = input.ToLower();
+            s = s.Normalize(NormalizationForm.FormD);
+
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in s)
+            {
+                if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c)
+                    != System.Globalization.UnicodeCategory.NonSpacingMark)
+                    sb.Append(c);
+            }
+            return sb.ToString();
+        }
+
+        private void btntimkiem_Click(object sender, EventArgs e)
+        {
+            string key = txttimkiem.Text.Trim();
+
+            if (key == "")
+            {
+                loadlistfood();
+                return;
+            }
+
+            DataTable dt = fooddao.Instance.getfood();
+            DataTable result = dt.Clone();
+
+            string keyKhongDau = BoDau(key);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                string tenMon = BoDau(row["name"].ToString());
+
+                if (tenMon.Contains(keyKhongDau))
+                    result.ImportRow(row);
+            }
+            fillemptyfoodrows(result);
+            foodlist.DataSource = result;   
+           
+        }
+
+        private void txttimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+                guna2Transition1.SetDecoration(lbltimkiem, Guna.UI2.AnimatorNS.DecorationType.None);
+            lbltimkiem.Location = new Point(lbltimkiem.Left, txttimkiem.Top - 12);
+                lbltimkiem.Font = new Font("Segoe UI", 8);
+            lbltimkiem.ForeColor = Color.Blue;
+        }
+
+        private void txttimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txttimkiem.Text == "")
+            {
+                lbltimkiem.Location = new Point(lbltimkiem.Left, txttimkiem.Top + 6);
+                lbltimkiem.Font = new Font("Segoe UI", 10);
+                lbltimkiem.ForeColor = Color.Gray;
+            }
+        }
+
+        private void buttonslmon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            guna2ContextMenuStrip1.Show(guna2Button6, new Point(0, guna2Button6.Height));
+        }
+
+        private void cậpNhậtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            profile profile = new profile();
+            profile.txbusername.Text = Session.username.ToString();
+            profile.txtpass.Text = Session.password.ToString();
+            profile.ActiveControl = null;
+
+
+            profile.ShowDialog();
+        }
+
+        private void thêmTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addaccount addaccount = new addaccount();
+            addaccount.ShowDialog();
+        }
     }
+}
 
 
 

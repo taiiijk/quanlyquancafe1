@@ -1,4 +1,5 @@
 ﻿using quanlyquancafe.DAO;
+using quanlyquancafe.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,13 +81,28 @@ namespace quanlyquancafe
 
             if (logincheck(username, password))
             {
+                DataTable dt = accountdao.Instance.GetAccountByUsername(username);
+
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow r = dt.Rows[0];
+
+                    Session.password = r["password"].ToString();
+                    Session.username = r["username"].ToString();
+                    Session.isadmin = Convert.ToInt32(r["type"]) == 1; // 1 = admin
+                }
+
                 tablemanager f = new tablemanager();
                 this.Hide();
                 f.ShowDialog();
                 this.Show();
             }
-            else MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo");
+            else
+            {
+                MessageBox.Show("Sai tài khoản hoặc mật khẩu", "Thông báo");
+            }
         }
+
 
         private void btnexxit_Click(object sender, EventArgs e)
         {

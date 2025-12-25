@@ -13,6 +13,10 @@ namespace quanlyquancafe.DTO
         private string name;
         private int categoryid;
         private float price;
+        private int totalprice;
+        public int Totalprice { get { return totalprice; } set { totalprice = value; } }
+        private int finalprice;
+        public int Finalprice { get { return finalprice; } set { finalprice = value; } }
         public int Id { get { return id; } set { id = value; } }
         public string Name { get { return name; } set { name = value; } }
         public int Categoryid { get { return categoryid; } set { categoryid = value; } }

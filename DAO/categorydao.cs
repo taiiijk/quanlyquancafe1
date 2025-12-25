@@ -28,6 +28,18 @@ namespace quanlyquancafe.DAO
         public List<category> getlistcategory()
         {
             List<category> list = new List<category>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from foodcategory where id!=9");
+            foreach (DataRow row in data.Rows)
+            {
+                category category = new category(row);
+                list.Add(category);
+            }
+
+            return list;
+        }
+        public List<category> getlistcategory2()
+        {
+            List<category> list = new List<category>();
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from foodcategory");
             foreach (DataRow row in data.Rows)
             {
@@ -63,6 +75,11 @@ namespace quanlyquancafe.DAO
             return data.Rows.Count > 0;
 
         }
-       
+        public int soluongcategory()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from foodcategory");
+            return data.Rows.Count;
+        }
+
     }
 }

@@ -61,6 +61,10 @@ namespace quanlyquancafe.DAO
                 return list;
 
         }
+        public DataTable listtable()
+        {
+            return DataProvider.Instance.ExecuteQuery("select * from tablefood");
+        }
         public bool inserttable(string name)
         {
           return  DataProvider.Instance.ExecuteNonQuery("insert into tablefood(ten,trangthai) values (N'"+name+"',N'Trống')")>0;

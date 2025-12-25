@@ -9,17 +9,17 @@ using System.Windows.Forms;
 
 namespace quanlyquancafe.DAO
 {
-    public class menudao
+    public class showbilldao
     {
-        private static menudao instance;
-        public static menudao Instance
+        private static showbilldao instance;
+        public static showbilldao Instance
         {
 
 
             get
             {
                 if (instance == null)
-                    instance = new menudao ();
+                    instance = new showbilldao ();
                 return instance;
 
             }
@@ -27,9 +27,9 @@ namespace quanlyquancafe.DAO
 
         }
 
-        public List<menu> getlist(int idbill, int idtable)
+        public List<showbill> getlist(int idbill, int idtable)
         {
-            List<menu> list = new List<menu>();
+            List<showbill> list = new List<showbill>();
 
             string query =
  "SELECT bin.idfood, bin.realname, bin.count, bin.realprice, " +
@@ -45,7 +45,7 @@ namespace quanlyquancafe.DAO
 
             foreach (DataRow dr in data.Rows)
             {
-                list.Add(new menu(dr));
+                list.Add(new showbill(dr));
             }
 
             return list;

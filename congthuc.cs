@@ -31,8 +31,10 @@
 
             private void guna2Button3_Click(object sender, EventArgs e)
             {
-
-                Close();
+            int MaPN = phieunhapkhodao.Instance.maxidphieunhapkho();
+            MessageBox.Show("Xác nhận lưu công thức?", "Xác nhận", MessageBoxButtons.YesNo);
+            
+            Close();
             }
 
             private void guna2Button2_Click(object sender, EventArgs e)
@@ -42,15 +44,24 @@
         
                 foreach (Control ctrl in flowLayoutPanel1.Controls)
                 {
-                    if (ctrl is UserControl2 item)   // chỉ xử lý UserControl1
+                    if (ctrl is UserControl2 item)   
                     {
-                        int manl = item.manl;
-                        decimal soluong = item.SoLuong;
 
-                        congthucdao.Instance.insertcongthuc(idfood, manl, soluong);
+                    decimal soluong = item.SoLuong;
+                    
+                    int manl = item.manl;
+                    if (soluong <= 0 || item.manl <= 0)
+                    {
+                        MessageBox.Show("Dữ liệu nhập chưa hợp lệ.", "Lỗi");
+                        return;
+                    }
+
+                    congthucdao.Instance.insertcongthuc(idfood, manl, soluong);
                     }
                 }
                 Close();
             }
-        }
+
+       
+    }
     }

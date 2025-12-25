@@ -50,7 +50,9 @@ namespace quanlyquancafe.DAO
             return result > 0;
         }
         public bool deletefood(int idfood)
+            
         {
+            DataProvider.Instance.ExecuteNonQuery("delete from congthuc where idfood=@idfood", new object[] { idfood });
             int result = DataProvider.Instance.ExecuteNonQuery("delete from food where id=@idfood", new object[] { idfood });
             return result > 0;
         }
@@ -81,6 +83,28 @@ namespace quanlyquancafe.DAO
           
             return DataProvider.Instance.ExecuteQuery("select f.id,f.name,f.price from food f join foodcategory fc on fc.id=f.idcategory where fc.name='Topping'");
         }
+        public int getidfoodbyname(string name)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from food where name=@name", new object[] { name });
+            if (data.Rows.Count > 0)
+            {
+                food f = new food(data.Rows[0]);
+                return f.Id;
+            }
+            return -1;
+        }
+
+        public int soluongfood()
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select count(*) from food");
+            if (data.Rows.Count > 0)
+            {
+                int soluong = (int)data.Rows[0][0];
+                return soluong;
+            }
+            return 0;
+        }
+       
 
     }
 }

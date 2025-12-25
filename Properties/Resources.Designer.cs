@@ -19,7 +19,7 @@ namespace quanlyquancafe.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -61,22 +61,22 @@ namespace quanlyquancafe.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] accounting_9409664 {
+        internal static System.Drawing.Bitmap accounting {
             get {
-                object obj = ResourceManager.GetObject("accounting_9409664", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("accounting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] accounting_9409665 {
+        internal static System.Drawing.Bitmap accounting_9409664 {
             get {
-                object obj = ResourceManager.GetObject("accounting_9409665", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("accounting_9409664", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -91,22 +91,92 @@ namespace quanlyquancafe.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] ForRetailers {
+        internal static System.Drawing.Bitmap blend {
             get {
-                object obj = ResourceManager.GetObject("ForRetailers", resourceCulture);
-                return ((byte[])(obj));
+                object obj = ResourceManager.GetObject("blend", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] menu_button {
+        internal static System.Drawing.Bitmap blend1 {
+            get {
+                object obj = ResourceManager.GetObject("blend1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dining_table {
+            get {
+                object obj = ResourceManager.GetObject("dining-table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drink {
+            get {
+                object obj = ResourceManager.GetObject("drink", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap drink1 {
+            get {
+                object obj = ResourceManager.GetObject("drink1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fast_food_11842837 {
+            get {
+                object obj = ResourceManager.GetObject("fast-food_11842837", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ForRetailers {
+            get {
+                object obj = ResourceManager.GetObject("ForRetailers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu {
+            get {
+                object obj = ResourceManager.GetObject("menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_button {
             get {
                 object obj = ResourceManager.GetObject("menu-button", resourceCulture);
-                return ((byte[])(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -121,22 +191,22 @@ namespace quanlyquancafe.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] more {
+        internal static System.Drawing.Bitmap more {
             get {
                 object obj = ResourceManager.GetObject("more", resourceCulture);
-                return ((byte[])(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] password_protection {
+        internal static System.Drawing.Bitmap password_protection {
             get {
                 object obj = ResourceManager.GetObject("password-protection", resourceCulture);
-                return ((byte[])(obj));
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -153,9 +223,39 @@ namespace quanlyquancafe.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap revenue {
+            get {
+                object obj = ResourceManager.GetObject("revenue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting {
+            get {
+                object obj = ResourceManager.GetObject("setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap side_table {
             get {
                 object obj = ResourceManager.GetObject("side_table", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spending {
+            get {
+                object obj = ResourceManager.GetObject("spending", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -171,12 +271,22 @@ namespace quanlyquancafe.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static byte[] user {
+        internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
-                return ((byte[])(obj));
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warehouse {
+            get {
+                object obj = ResourceManager.GetObject("warehouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

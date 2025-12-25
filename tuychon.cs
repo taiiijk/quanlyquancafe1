@@ -25,7 +25,20 @@ namespace quanlyquancafe
             InitializeComponent();
             this.idfood = idfood;
         }
+        public tuychon(int idfood, string note = null, int soLuong = 1)
+        {
+            InitializeComponent();
+            this.idfood = idfood;
+            this.Load += tuychon_Load;
 
+            // nếu sửa từ billinfo thì truyền note và số lượng
+            if (!string.IsNullOrEmpty(note))
+            {
+                LoadTuyChonFromNote(note);
+                this.guna2NumericUpDown1.Value = soLuong;
+              
+            }
+        }
         private void tuychon_Load(object sender, EventArgs e)
         {
             loadfood();
@@ -55,14 +68,45 @@ namespace quanlyquancafe
                 if (soluong <= 0) continue;
 
                 Guna2CheckBox cb = new Guna2CheckBox();
-                cb.Text = $"{ten} ( +{Convert.ToInt32(r["price"]):N0} đ )";
+                cb.Text = $"{ten} (+{Convert.ToInt32(r["price"]):N0} đ)";
                 cb.Tag = r;
                 cb.AutoSize = true;
                 cb.CheckedChanged += Topping_CheckedChanged;
 
+                // tick topping nếu có trong note
+                string tenTopping = ten;
+                if (toppingNamesFromNote.Contains(tenTopping))
+                    cb.Checked = true;
+
                 flowLayoutPanel1.Controls.Add(cb);
             }
+
+            // tick đá
+            if (!string.IsNullOrEmpty(iceFromNote))
+            {
+                switch (iceFromNote)
+                {
+                    case "Không đá": rb0da.Checked = true; break;
+                    case "Ít đá": rbit.Checked = true; break;
+                    case "Nhiều đá": rbnhieu.Checked = true; break;
+                }
+            }
+
+            // tick đường
+            if (!string.IsNullOrEmpty(sugarFromNote))
+            {
+                switch (sugarFromNote)
+                {
+                    case "0% đường": rb0.Checked = true; break;
+                    case "30% đường": rb30.Checked = true; break;
+                    case "50% đường": rb50.Checked = true; break;
+                    case "70% đường": rb70.Checked = true; break;
+                    case "100% đường": rb100.Checked = true; break;
+                }
+            }
         }
+
+        
         private bool isAdjusting = false;
 
 
@@ -197,6 +241,37 @@ namespace quanlyquancafe
             // Cập nhật tổng giá tiền
             UpdateTongGia();
         }
+        List<string> toppingNamesFromNote = new List<string>();
+        string iceFromNote = null;
+        string sugarFromNote = null;
 
+        // load note để tick lại topping và đá/đường
+        void LoadTuyChonFromNote(string note)
+        {
+            string[] lines = note.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+            if (lines.Length == 0) return;
+
+            // đá và đường
+            string[] parts = lines[0].Split('|');
+            if (parts.Length >= 2)
+            {
+                iceFromNote = parts[0].Trim();
+                sugarFromNote = parts[1].Trim();
+            }
+
+            // topping
+            toppingNamesFromNote.Clear();
+            for (int i = 1; i < lines.Length; i++)
+            {
+                string line = lines[i].Trim();
+                if (line.StartsWith("+"))
+                    toppingNamesFromNote.Add(line.Substring(1).Trim());
+            }
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

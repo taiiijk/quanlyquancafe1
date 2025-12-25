@@ -107,7 +107,36 @@ namespace quanlyquancafe.DAO
             DataProvider.Instance.ExecuteNonQuery(
                 sql,
                 new object[] { realprice, id, realprice }
-            );
+           
+                );
+        }
+        public int? GetIdBillInfo(int idTable, string Food, string note)
+        {
+            int idBill = billdao.Instance.getbillbyidtable(idTable);
+
+            string query = "SELECT id FROM billinfo WHERE idbill=@idbill AND realname=@Food AND note=@note";
+
+            object result = DataProvider.Instance.ExecuteScalar(query, new object[]
+            {
+        idBill,
+        Food,
+        note
+            });
+
+            if (result == null || result == DBNull.Value)
+                return null;
+
+            return Convert.ToInt32(result);
+        }
+      public  void deletebillinfo(int id)
+        {
+            DataProvider.Instance.ExecuteNonQuery("delete from billinfo where id =" + id );
+        }
+
+        public void updatebillinfo(int id, int count,string note)
+        {
+           
+            DataProvider.Instance.ExecuteNonQuery("update billinfo set count = @count, note = @note where id = @id", new object[] { count, note, id });
         }
     }
 }

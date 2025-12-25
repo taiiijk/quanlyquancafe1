@@ -16,59 +16,53 @@ namespace quanlyquancafe
         public tablemanager()
         {
             InitializeComponent();
-
+            menuStrip1.Visible = Session.isadmin;
             guna2DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Single;
             loadtable();
+            
             loadtablelist();
             loadcategory();
         }
-
+        
         #region Load dữ liệu
+        private Guna.UI2.WinForms.Guna2Button selectedButton = null;
+        bool firstload = true;
+        table selectedTable = null;
         void loadtable()
         {
             flowLayoutPanel1.Controls.Clear();
 
             List<table> tablelist = tabledao.Inststace.Loadtablelist();
+
             foreach (table tb in tablelist)
             {
-                Guna.UI2.WinForms.Guna2Button btn = new Guna.UI2.WinForms.Guna2Button();
+                Guna2Button btn = new Guna2Button();
                 btn.Width = tabledao.tbw;
                 btn.Height = tabledao.tbh;
                 btn.Tag = tb;
 
-                // Text
                 btn.Text = tb.Name + Environment.NewLine + tb.Status;
                 btn.TextAlign = HorizontalAlignment.Center;
 
-                // Ảnh bàn ở giữa
                 btn.Image = Properties.Resources.side_table;
                 btn.ImageAlign = HorizontalAlignment.Center;
 
-                // Icon bill nếu có
-
-
-
-                // Màu trạng thái
-                switch (tb.Status)
-                {
-                    case "Trống":
-                        btn.FillColor = Color.Gray;
-                        break;
-                    default:
-                        btn.FillColor = Color.Brown;
-                        break;
-                }
-
-                // Hover effect
+                btn.FillColor = tb.Status == "Trống" ? Color.Gray : Color.Brown;
                 btn.HoverState.FillColor = Color.DarkGray;
 
-
                 btn.Click += Btn_Click;
-
                 flowLayoutPanel1.Controls.Add(btn);
             }
 
+           
+            if (firstload && tablelist.Count > 0)
+            {
+                firstload = false;
+                Btn_Click(flowLayoutPanel1.Controls[0] as Guna2Button, null);
+            }
         }
+
+
 
         public void loadcategory()
         {
@@ -86,9 +80,10 @@ namespace quanlyquancafe
         #endregion
 
         #region Xử lý hóa đơn
+       
         void showbill(int idtable, int idbill)
         {
-            DataTable dt = menudao.Instance.getlistbillinfo(idbill, idtable);
+            DataTable dt = showbilldao.Instance.getlistbillinfo(idbill, idtable);
 
             fillemptyrows(dt);
 
@@ -123,10 +118,30 @@ namespace quanlyquancafe
         #region Sự kiện điều khiển
         private void Btn_Click(object sender, EventArgs e)
         {
-            int tableid = ((sender as Guna2Button).Tag as table).Id;
-            guna2DataGridView1.Tag = (sender as Guna2Button).Tag;
-            int idbill = billdao.Instance.getbillbyidtable(tableid);
-            showbill(tableid, idbill);
+            Guna.UI2.WinForms.Guna2Button btn = sender as Guna.UI2.WinForms.Guna2Button;
+            if (btn == null) return;
+
+            table tb = btn.Tag as table;
+            if (tb == null) return;
+
+            // Lưu bàn đang chọn
+            selectedTable = tb;
+
+            guna2DataGridView1.Tag = tb;
+
+            int idbill = billdao.Instance.getbillbyidtable(tb.Id);
+            showbill(tb.Id, idbill);
+
+            // Bỏ check bàn cũ
+            if (selectedButton != null)
+            {
+                table tbOld = selectedButton.Tag as table;
+                selectedButton.Text = tbOld.Name + Environment.NewLine + tbOld.Status;
+            }
+
+            // Check bàn mới
+            selectedButton = btn;
+            selectedButton.Text = tb.Name + Environment.NewLine + tb.Status + Environment.NewLine + "✓";
         }
 
         public void ReloadFoodBySelectedCategory()
@@ -139,17 +154,7 @@ namespace quanlyquancafe
         }
 
 
-        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            profile f = new profile();
-            f.ShowDialog();
-        }
-
+        
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             admin f = new admin(this);
@@ -243,6 +248,8 @@ namespace quanlyquancafe
             table table = guna2DataGridView1.Tag as table;
 
             int idbill = billdao.Instance.getbillbyidtable(table.Id);
+            int discount = (int)numgiamgia.Value;
+            billdao.Instance.updatediscount(idbill, discount);
             hoadon f = new hoadon(table.Id, idbill);
             f.ShowDialog();
 
@@ -250,10 +257,10 @@ namespace quanlyquancafe
             {
                 if (MessageBox.Show("Xác nhận thanh toán", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     billdao.Instance.checkout(idbill);
-                showbill(table.Id, idbill);
+               
 
                 loadtable();
-
+                showbill(table.Id, idbill);
 
             }
         }
@@ -316,6 +323,71 @@ namespace quanlyquancafe
         private void btnupdatenl_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+        private int rightClickRowIndex = -1;
+
+        private void guna2DataGridView1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hit = guna2DataGridView1.HitTest(e.X, e.Y);
+                if (hit.RowIndex >= 0)
+                {
+                    rightClickRowIndex = hit.RowIndex;
+
+                    guna2DataGridView1.ClearSelection();
+                    guna2DataGridView1.Rows[hit.RowIndex].Selected = true;
+
+                    guna2ContextMenuStrip1.Show(guna2DataGridView1, e.Location);
+                }
+            }
+        }
+
+        
+
+        private void xóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            int idTable = (guna2DataGridView1.Tag as table).Id;
+            string Food = (guna2DataGridView1.Rows[rightClickRowIndex].Cells["realname"].Value).ToString();
+            string note = guna2DataGridView1.Rows[rightClickRowIndex].Cells["note"].Value.ToString();
+            int idBillInfo = billinfodao.Instance.GetIdBillInfo(idTable, Food, note) ?? -1;
+
+            billinfodao.Instance.deletebillinfo(idBillInfo);
+            showbill(idTable, billdao.Instance.getbillbyidtable(idTable));
+
+        }
+
+        private void sửaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int idTable = (guna2DataGridView1.Tag as table).Id;
+            string Food = (guna2DataGridView1.Rows[rightClickRowIndex].Cells["realname"].Value).ToString();
+            string note = guna2DataGridView1.Rows[rightClickRowIndex].Cells["note"].Value.ToString();
+            int idBillInfo = billinfodao.Instance.GetIdBillInfo(idTable, Food, note) ?? -1;
+            int idfood = fooddao.Instance.getidfoodbyname(Food);
+            tuychon t = new tuychon(idfood, note, Convert.ToInt32(guna2DataGridView1.Rows[rightClickRowIndex].Cells["count"].Value));
+            t.ShowDialog();
+            billinfodao.Instance.updatebillinfo(
+                idBillInfo,
+                t.SoLuong,
+                t.Note
+                );
+            showbill(idTable, billdao.Instance.getbillbyidtable(idTable));
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        public int discount= 0;
+        private void numgiamgia_ValueChanged(object sender, EventArgs e)
+        {
+            discount = (int)numgiamgia.Value;
         }
     }
 }

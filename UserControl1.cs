@@ -132,19 +132,53 @@ namespace quanlyquancafe
         }
         public int SoLuong
         {
-            get => Convert.ToInt32(txtsoluong.Text);
+            get
+            {
+                if (string.IsNullOrWhiteSpace(txtsoluong.Text))
+                    return -1;
+
+                if (!int.TryParse(txtsoluong.Text, out int sl))
+                    return -1;
+
+                return sl;
+            }
             set => txtsoluong.Text = value.ToString();
         }
+
         public decimal dongia
         {
-            get => decimal.Parse(txtdongia.Text);
+            get
+            {
+                if (string.IsNullOrWhiteSpace(txtdongia.Text))
+                    return -1;
+
+                if (!decimal.TryParse(txtdongia.Text, out decimal dg))
+                    return -1;
+
+                return dg;
+            }
             set => txtdongia.Text = value.ToString();
-
-
         }
+
         public int manl
         {
-            get => nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
+            get
+            {
+                if (string.IsNullOrWhiteSpace(cboNguyenLieu.Text))
+                    return -1;
+
+                return nguyenlieudao.Instance.getidnguyenlieuByname(cboNguyenLieu.Text);
+            }
+        }
+
+        private void btndelete_Click(object sender, EventArgs e)
+        {
+            Control parent = this.Parent;
+            if (parent != null)
+            {
+                parent.Controls.Remove(this);
+                this.Dispose();
+            }
         }
     }
 }

@@ -46,6 +46,18 @@ namespace quanlyquancafe.DAO
         {
             DataProvider.Instance.ExecuteNonQuery("exec insertchitietphieunhapkho @mapn , @manl , @soluong , @dongia", new object[] { mapn, manl, soluong, dongia });
         }
+        public decimal GetTongTienChi(DateTime tuNgay, DateTime denNgay)
+        {
+            object result = DataProvider.Instance.ExecuteScalar(
+                "exec sp_TongTienChi @TuNgay , @DenNgay",
+                new object[] { tuNgay, denNgay }
+            );
+
+            if (result == null || result == DBNull.Value)
+                return 0;
+
+            return Convert.ToDecimal(result);
+        }
 
     }
 }

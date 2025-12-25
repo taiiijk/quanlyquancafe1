@@ -4,9 +4,9 @@ using System.Data;
 
 namespace quanlyquancafe.DTO
 {
-    public class menu
+    public class showbill
     {
-        public menu(DataRow row)
+        public showbill(DataRow row)
         {
             idfood = Convert.ToInt32(row["idfood"]);
             foodname = row["realname"].ToString();
@@ -14,12 +14,14 @@ namespace quanlyquancafe.DTO
             price = Convert.ToDecimal(row["realprice"]);
             totalprice = Convert.ToDecimal(row["totalprice"]);
             note = row.Table.Columns.Contains("note") ? row["note"].ToString() : "";
-          
+         
+            
 
-          
+
         }
 
         private int idfood;
+        
         public int Idfood { get { return idfood; } }
 
         private string foodname;
@@ -40,7 +42,7 @@ namespace quanlyquancafe.DTO
         private bool ismain;
         public bool IsMain { get { return ismain; } }
         
-        public List<menu> Toppings { get; set; }
+        public List<showbill> Toppings { get; set; }
        
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using quanlyquancafe.DAO;
+using quanlyquancafe.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,5 +33,18 @@ namespace quanlyquancafe
         {
             Close();
         }
+
+        private void btnupdate_Click(object sender, EventArgs e)
+        {
+            if (accountdao.Instance.updateaccount(txbusername.Text, txtnewpass.Text))
+            {
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật thất bại");
+            }
+        }
+        }
     }
-}
+
