@@ -33,22 +33,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnexxit = new Guna.UI2.WinForms.Guna2Button();
             this.btnlogin = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lbllogin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPass = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtlogin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,10 +64,10 @@
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.guna2Panel1);
             this.guna2Transition1.SetDecoration(this.panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.panel1.Location = new System.Drawing.Point(315, 170);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(420, 209);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(344, 217);
+            this.panel1.Size = new System.Drawing.Size(459, 267);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -81,10 +81,10 @@
             this.btnexxit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnexxit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnexxit.ForeColor = System.Drawing.Color.White;
-            this.btnexxit.Location = new System.Drawing.Point(208, 166);
-            this.btnexxit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnexxit.Location = new System.Drawing.Point(277, 204);
+            this.btnexxit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnexxit.Name = "btnexxit";
-            this.btnexxit.Size = new System.Drawing.Size(105, 27);
+            this.btnexxit.Size = new System.Drawing.Size(140, 33);
             this.btnexxit.TabIndex = 3;
             this.btnexxit.Text = "Thoát";
             this.btnexxit.Click += new System.EventHandler(this.btnexxit_Click);
@@ -98,13 +98,26 @@
             this.btnlogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(88, 166);
-            this.btnlogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnlogin.Location = new System.Drawing.Point(117, 204);
+            this.btnlogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogin.Name = "btnlogin";
-            this.btnlogin.Size = new System.Drawing.Size(105, 27);
+            this.btnlogin.Size = new System.Drawing.Size(140, 33);
             this.btnlogin.TabIndex = 2;
             this.btnlogin.Text = "Đăng nhập";
             this.btnlogin.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox2.Image = global::quanlyquancafe.Properties.Resources.user;
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(19, 23);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(43, 34);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 8;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // lbllogin
             // 
@@ -114,10 +127,10 @@
             this.lbllogin.Enabled = false;
             this.lbllogin.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllogin.ForeColor = System.Drawing.Color.Gray;
-            this.lbllogin.Location = new System.Drawing.Point(50, 19);
-            this.lbllogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbllogin.Location = new System.Drawing.Point(67, 23);
+            this.lbllogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbllogin.Name = "lbllogin";
-            this.lbllogin.Size = new System.Drawing.Size(142, 21);
+            this.lbllogin.Size = new System.Drawing.Size(189, 26);
             this.lbllogin.TabIndex = 0;
             this.lbllogin.Text = "Tên đăng nhập";
             this.lbllogin.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -126,10 +139,10 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel2.Location = new System.Drawing.Point(50, 45);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(67, 55);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(262, 2);
+            this.guna2Panel2.Size = new System.Drawing.Size(349, 2);
             this.guna2Panel2.TabIndex = 6;
             // 
             // lblPass
@@ -140,10 +153,10 @@
             this.lblPass.Enabled = false;
             this.lblPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPass.ForeColor = System.Drawing.Color.Gray;
-            this.lblPass.Location = new System.Drawing.Point(50, 80);
-            this.lblPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPass.Location = new System.Drawing.Point(67, 98);
+            this.lblPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblPass.Name = "lblPass";
-            this.lblPass.Size = new System.Drawing.Size(108, 21);
+            this.lblPass.Size = new System.Drawing.Size(144, 26);
             this.lblPass.TabIndex = 1;
             this.lblPass.Text = "Mật khẩu";
             this.lblPass.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
@@ -162,16 +175,29 @@
             this.txtlogin.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtlogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtlogin.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtlogin.Location = new System.Drawing.Point(40, 14);
-            this.txtlogin.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtlogin.Location = new System.Drawing.Point(53, 17);
+            this.txtlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtlogin.Name = "txtlogin";
             this.txtlogin.PlaceholderText = "";
             this.txtlogin.SelectedText = "";
-            this.txtlogin.Size = new System.Drawing.Size(273, 29);
+            this.txtlogin.Size = new System.Drawing.Size(364, 36);
             this.txtlogin.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtlogin.TabIndex = 0;
             this.txtlogin.Enter += new System.EventHandler(this.txtlogin_Enter);
             this.txtlogin.Leave += new System.EventHandler(this.txtlogin_Leave);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2PictureBox1.Image = global::quanlyquancafe.Properties.Resources.password_protection;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(19, 98);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(43, 34);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 4;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // txtPass
             // 
@@ -187,12 +213,12 @@
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.txtPass.Location = new System.Drawing.Point(40, 76);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPass.Location = new System.Drawing.Point(53, 94);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPass.Name = "txtPass";
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(273, 29);
+            this.txtPass.Size = new System.Drawing.Size(364, 36);
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 1;
             this.txtPass.UseSystemPasswordChar = true;
@@ -203,10 +229,10 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Transition1.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel1.Location = new System.Drawing.Point(50, 106);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Location = new System.Drawing.Point(67, 130);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(262, 2);
+            this.guna2Panel1.Size = new System.Drawing.Size(349, 2);
             this.guna2Panel1.TabIndex = 2;
             // 
             // guna2Transition1
@@ -237,10 +263,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel1, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(400, 42);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(533, 52);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(182, 64);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(243, 79);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Đăng nhập";
             // 
@@ -251,10 +277,10 @@
             this.guna2Transition1.SetDecoration(this.guna2HtmlLabel2, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(301, 95);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(401, 117);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(374, 42);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(499, 52);
             this.guna2HtmlLabel2.TabIndex = 3;
             this.guna2HtmlLabel2.Text = "Phần mềm quản lý quán cafe  ";
             // 
@@ -263,63 +289,38 @@
             this.guna2Transition1.SetDecoration(this.guna2PictureBox3, Guna.UI2.AnimatorNS.DecorationType.None);
             this.guna2PictureBox3.Image = global::quanlyquancafe.Properties.Resources.ForRetailers;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(9, 43);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(12, 53);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(272, 355);
+            this.guna2PictureBox3.Size = new System.Drawing.Size(363, 437);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox3.TabIndex = 4;
             this.guna2PictureBox3.TabStop = false;
             // 
-            // guna2PictureBox2
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox2.Image = global::quanlyquancafe.Properties.Resources.user;
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(14, 19);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(32, 28);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 8;
-            this.guna2PictureBox2.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2Transition1.SetDecoration(this.guna2PictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2PictureBox1.Image = global::quanlyquancafe.Properties.Resources.password_protection;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(14, 80);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(32, 28);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 4;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // login
             // 
             this.AcceptButton = this.btnlogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnexxit;
-            this.ClientSize = new System.Drawing.Size(691, 442);
+            this.ClientSize = new System.Drawing.Size(921, 544);
             this.Controls.Add(this.guna2PictureBox3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.panel1);
             this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.login_FormClosing);
             this.Load += new System.EventHandler(this.login_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
