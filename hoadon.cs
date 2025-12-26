@@ -31,12 +31,12 @@ namespace quanlyquancafe
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("            HÓA ĐƠN THANH TOÁN");
-            sb.AppendLine("----------------------------------------");
+            sb.AppendLine("------------------------------------------------");
             sb.AppendLine(
                 $"Bàn: {tabledao.Inststace.selectable(idtable).Name}    " +
                 $"Ngày: {DateTime.Now:dd/MM/yyyy}"
             );
-            sb.AppendLine("----------------------------------------");
+            sb.AppendLine("------------------------------------------------");
 
             decimal total = 0;
 
@@ -62,7 +62,7 @@ namespace quanlyquancafe
                 total += item.Totalprice;
             }
 
-            sb.AppendLine("----------------------------------------");
+            sb.AppendLine("------------------------------------------------");
             sb.AppendLine($"Tổng cộng: {total:0,0} VNĐ");
 
             sb.AppendLine($"Discount: {discount}%");

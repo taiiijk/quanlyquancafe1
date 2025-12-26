@@ -37,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.cbxdanhmuc = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnadd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.cbxfood = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbxtable = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,7 +53,6 @@
             this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sửaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnadd = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numgiamgia)).BeginInit();
@@ -65,10 +65,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 25);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 31);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(338, 448);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(451, 551);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -77,18 +77,19 @@
             this.panel1.Controls.Add(this.cbxdanhmuc);
             this.panel1.Controls.Add(this.btnadd);
             this.panel1.Controls.Add(this.cbxfood);
-            this.panel1.Location = new System.Drawing.Point(351, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(468, 31);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 72);
+            this.panel1.Size = new System.Drawing.Size(489, 89);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(178, 23);
+            this.label1.Location = new System.Drawing.Point(237, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 32);
+            this.label1.Size = new System.Drawing.Size(133, 39);
             this.label1.TabIndex = 11;
             this.label1.Text = "Thêm món";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,12 +106,28 @@
             this.cbxdanhmuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxdanhmuc.ItemHeight = 30;
             this.cbxdanhmuc.Location = new System.Drawing.Point(0, 1);
-            this.cbxdanhmuc.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxdanhmuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxdanhmuc.Name = "cbxdanhmuc";
-            this.cbxdanhmuc.Size = new System.Drawing.Size(159, 36);
+            this.cbxdanhmuc.Size = new System.Drawing.Size(211, 36);
             this.cbxdanhmuc.TabIndex = 0;
             this.cbxdanhmuc.SelectedIndexChanged += new System.EventHandler(this.cbxdanhmuc_SelectedIndexChanged);
             this.cbxdanhmuc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbxdanhmuc_MouseClick);
+            // 
+            // btnadd
+            // 
+            this.btnadd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnadd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnadd.Image = global::quanlyquancafe.Properties.Resources.more;
+            this.btnadd.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnadd.ImageRotate = 0F;
+            this.btnadd.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnadd.Location = new System.Drawing.Point(377, 28);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnadd.Name = "btnadd";
+            this.btnadd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnadd.Size = new System.Drawing.Size(64, 39);
+            this.btnadd.TabIndex = 10;
+            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // cbxfood
             // 
@@ -123,10 +140,10 @@
             this.cbxfood.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbxfood.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxfood.ItemHeight = 30;
-            this.cbxfood.Location = new System.Drawing.Point(0, 36);
-            this.cbxfood.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxfood.Location = new System.Drawing.Point(0, 44);
+            this.cbxfood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxfood.Name = "cbxfood";
-            this.cbxfood.Size = new System.Drawing.Size(159, 36);
+            this.cbxfood.Size = new System.Drawing.Size(211, 36);
             this.cbxfood.TabIndex = 4;
             // 
             // panel3
@@ -137,10 +154,10 @@
             this.panel3.Controls.Add(this.btnchuyen);
             this.panel3.Controls.Add(this.btnthanhtoan);
             this.panel3.Controls.Add(this.lbltotal);
-            this.panel3.Location = new System.Drawing.Point(353, 390);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Location = new System.Drawing.Point(471, 480);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(367, 83);
+            this.panel3.Size = new System.Drawing.Size(489, 102);
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -155,10 +172,10 @@
             this.cbxtable.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbxtable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbxtable.ItemHeight = 30;
-            this.cbxtable.Location = new System.Drawing.Point(5, 44);
-            this.cbxtable.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxtable.Location = new System.Drawing.Point(7, 54);
+            this.cbxtable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxtable.Name = "cbxtable";
-            this.cbxtable.Size = new System.Drawing.Size(96, 36);
+            this.cbxtable.Size = new System.Drawing.Size(127, 36);
             this.cbxtable.TabIndex = 11;
             // 
             // numgiamgia
@@ -166,17 +183,12 @@
             this.numgiamgia.BackColor = System.Drawing.Color.Transparent;
             this.numgiamgia.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numgiamgia.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.numgiamgia.Location = new System.Drawing.Point(157, 43);
-            this.numgiamgia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.numgiamgia.Location = new System.Drawing.Point(209, 53);
+            this.numgiamgia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numgiamgia.Name = "numgiamgia";
-            this.numgiamgia.Size = new System.Drawing.Size(70, 29);
+            this.numgiamgia.Size = new System.Drawing.Size(93, 36);
             this.numgiamgia.TabIndex = 9;
             this.numgiamgia.UpDownButtonFillColor = System.Drawing.Color.Silver;
-            this.numgiamgia.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numgiamgia.ValueChanged += new System.EventHandler(this.numgiamgia_ValueChanged);
             // 
             // guna2Button2
@@ -189,10 +201,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Silver;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(146, 2);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button2.Location = new System.Drawing.Point(195, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(94, 37);
+            this.guna2Button2.Size = new System.Drawing.Size(125, 46);
             this.guna2Button2.TabIndex = 8;
             this.guna2Button2.Text = "Giảm giá";
             // 
@@ -206,10 +218,10 @@
             this.btnchuyen.FillColor = System.Drawing.Color.Silver;
             this.btnchuyen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnchuyen.ForeColor = System.Drawing.Color.White;
-            this.btnchuyen.Location = new System.Drawing.Point(5, 2);
-            this.btnchuyen.Margin = new System.Windows.Forms.Padding(2);
+            this.btnchuyen.Location = new System.Drawing.Point(7, 2);
+            this.btnchuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnchuyen.Name = "btnchuyen";
-            this.btnchuyen.Size = new System.Drawing.Size(94, 37);
+            this.btnchuyen.Size = new System.Drawing.Size(125, 46);
             this.btnchuyen.TabIndex = 7;
             this.btnchuyen.Text = "Chuyển bàn";
             this.btnchuyen.Click += new System.EventHandler(this.guna2Button1_Click_1);
@@ -224,10 +236,10 @@
             this.btnthanhtoan.FillColor = System.Drawing.Color.Silver;
             this.btnthanhtoan.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthanhtoan.ForeColor = System.Drawing.Color.White;
-            this.btnthanhtoan.Location = new System.Drawing.Point(271, 30);
-            this.btnthanhtoan.Margin = new System.Windows.Forms.Padding(2);
+            this.btnthanhtoan.Location = new System.Drawing.Point(361, 37);
+            this.btnthanhtoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnthanhtoan.Name = "btnthanhtoan";
-            this.btnthanhtoan.Size = new System.Drawing.Size(94, 37);
+            this.btnthanhtoan.Size = new System.Drawing.Size(125, 46);
             this.btnthanhtoan.TabIndex = 6;
             this.btnthanhtoan.Text = "Thanh toán";
             this.btnthanhtoan.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -237,10 +249,10 @@
             this.lbltotal.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.lbltotal.BackColor = System.Drawing.Color.Silver;
             this.lbltotal.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.Location = new System.Drawing.Point(271, 0);
-            this.lbltotal.Margin = new System.Windows.Forms.Padding(2);
+            this.lbltotal.Location = new System.Drawing.Point(361, 0);
+            this.lbltotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(94, 25);
+            this.lbltotal.Size = new System.Drawing.Size(125, 31);
             this.lbltotal.TabIndex = 5;
             this.lbltotal.Text = "0";
             this.lbltotal.UseVisualStyleBackColor = false;
@@ -252,25 +264,25 @@
             this.adminToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(725, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(967, 28);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.adminToolStripMenuItem.Text = "admin";
             this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.guna2DataGridView1);
-            this.panel2.Location = new System.Drawing.Point(351, 101);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(468, 124);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(369, 284);
+            this.panel2.Size = new System.Drawing.Size(492, 350);
             this.panel2.TabIndex = 2;
             // 
             // guna2DataGridView1
@@ -304,6 +316,7 @@
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -321,7 +334,7 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             this.guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(369, 284);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(492, 350);
             this.guna2DataGridView1.TabIndex = 1;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -348,6 +361,7 @@
             // 
             // guna2ContextMenuStrip1
             // 
+            this.guna2ContextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.guna2ContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.xóaToolStripMenuItem,
             this.sửaToolStripMenuItem});
@@ -361,50 +375,35 @@
             this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(95, 48);
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(105, 52);
             // 
             // xóaToolStripMenuItem
             // 
             this.xóaToolStripMenuItem.Name = "xóaToolStripMenuItem";
-            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.xóaToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click);
             // 
             // sửaToolStripMenuItem
             // 
             this.sửaToolStripMenuItem.Name = "sửaToolStripMenuItem";
-            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
+            this.sửaToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.sửaToolStripMenuItem.Text = "sửa";
             this.sửaToolStripMenuItem.Click += new System.EventHandler(this.sửaToolStripMenuItem_Click);
             // 
-            // btnadd
-            // 
-            this.btnadd.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnadd.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnadd.Image = global::quanlyquancafe.Properties.Resources.more;
-            this.btnadd.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnadd.ImageRotate = 0F;
-            this.btnadd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnadd.Location = new System.Drawing.Point(283, 23);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnadd.Name = "btnadd";
-            this.btnadd.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnadd.Size = new System.Drawing.Size(48, 32);
-            this.btnadd.TabIndex = 10;
-            this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
-            // 
             // tablemanager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(725, 476);
+            this.ClientSize = new System.Drawing.Size(967, 586);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "tablemanager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý quán cafe";
