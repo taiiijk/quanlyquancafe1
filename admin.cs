@@ -664,9 +664,10 @@ namespace quanlyquancafe
             string name = txtname.Text;
             int id = (comboBox1.SelectedItem as category).Id;
             float price = Convert.ToSingle(txtprice.Text);
-            int idfood = fooddao.Instance.maxidfood();
+            
             if (fooddao.Instance.insertfood(name, id, price))
             {
+                int idfood = fooddao.Instance.maxidfood();
                 congthuc congthuc = new congthuc(idfood);
                 UserControl2 dong = new UserControl2();
                 congthuc.flowLayoutPanel1.Controls.Add(dong);

@@ -345,6 +345,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cafe.ico" />
+    <None Include="Resources\project-management.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

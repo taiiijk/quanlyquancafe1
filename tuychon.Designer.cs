@@ -283,7 +283,7 @@
             this.guna2GroupBox3.Location = new System.Drawing.Point(16, 367);
             this.guna2GroupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2GroupBox3.Name = "guna2GroupBox3";
-            this.guna2GroupBox3.Size = new System.Drawing.Size(547, 127);
+            this.guna2GroupBox3.Size = new System.Drawing.Size(547, 173);
             this.guna2GroupBox3.TabIndex = 5;
             this.guna2GroupBox3.Text = "Topping";
             // 
@@ -292,18 +292,18 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 40);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(547, 87);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(547, 133);
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 519);
+            this.label3.Location = new System.Drawing.Point(31, 555);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(144, 38);
@@ -319,7 +319,7 @@
             this.btnadd.FillColor = System.Drawing.SystemColors.ControlDark;
             this.btnadd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnadd.ForeColor = System.Drawing.Color.White;
-            this.btnadd.Location = new System.Drawing.Point(187, 593);
+            this.btnadd.Location = new System.Drawing.Point(202, 629);
             this.btnadd.Margin = new System.Windows.Forms.Padding(4);
             this.btnadd.Name = "btnadd";
             this.btnadd.Size = new System.Drawing.Size(240, 55);
@@ -332,7 +332,7 @@
             this.lblTongTien.BackColor = System.Drawing.SystemColors.Control;
             this.lblTongTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTongTien.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTongTien.Location = new System.Drawing.Point(181, 519);
+            this.lblTongTien.Location = new System.Drawing.Point(196, 555);
             this.lblTongTien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(144, 38);
@@ -365,7 +365,7 @@
             this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
             this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(395, 513);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(410, 549);
             this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2NumericUpDown1.Minimum = new decimal(new int[] {
             1,
@@ -388,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 663);
+            this.ClientSize = new System.Drawing.Size(579, 699);
             this.Controls.Add(this.guna2NumericUpDown1);
             this.Controls.Add(this.lblgia);
             this.Controls.Add(this.lbltenmon);
