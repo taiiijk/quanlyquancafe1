@@ -16,12 +16,17 @@ namespace quanlyquancafe
         public hoadon(int idtable, int idbill)
         {
             InitializeComponent();
+
             this.idtable = idtable;
             this.idbill = idbill;
 
-            int discount = billdao.Instance.GetDiscountByIdBill(idbill);
-            ShowBill(discount);
+            richTextBox1.Multiline = true;
+            richTextBox1.ScrollBars = RichTextBoxScrollBars.Vertical;
+            richTextBox1.WordWrap = true;
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Dock = DockStyle.Fill;
         }
+
 
         void ShowBill(int discount)
         {
@@ -31,12 +36,12 @@ namespace quanlyquancafe
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("            HÓA ĐƠN THANH TOÁN");
-            sb.AppendLine("------------------------------------------------");
+            sb.AppendLine("----------------------------------------------");
             sb.AppendLine(
                 $"Bàn: {tabledao.Inststace.selectable(idtable).Name}    " +
                 $"Ngày: {DateTime.Now:dd/MM/yyyy}"
             );
-            sb.AppendLine("------------------------------------------------");
+            sb.AppendLine("----------------------------------------------");
 
             decimal total = 0;
 
@@ -62,9 +67,8 @@ namespace quanlyquancafe
                 total += item.Totalprice;
             }
 
-            sb.AppendLine("------------------------------------------------");
+            sb.AppendLine("----------------------------------------------");
             sb.AppendLine($"Tổng cộng: {total:0,0} VNĐ");
-
             sb.AppendLine($"Discount: {discount}%");
 
             decimal finalTotal = total - (total * discount / 100m);
@@ -73,7 +77,18 @@ namespace quanlyquancafe
             sb.AppendLine();
             sb.AppendLine("Cảm ơn quý khách! Hẹn gặp lại!");
 
-            richTextBox1.Text = sb.ToString();
+           
+            richTextBox1.Clear();
+            richTextBox1.AppendText(sb.ToString());
+
+            richTextBox1.SelectionStart = 0;
+            richTextBox1.ScrollToCaret();
+        }
+
+        private void hoadon_Shown_1(object sender, EventArgs e)
+        {
+            int discount = billdao.Instance.GetDiscountByIdBill(idbill);
+            ShowBill(discount);
         }
     }
 }

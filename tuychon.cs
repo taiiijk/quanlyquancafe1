@@ -217,8 +217,9 @@ namespace quanlyquancafe
             TongGia = giaMonChinh * (int)guna2NumericUpDown1.Value;
             foreach (var t in ToppingsChon)
                 TongGia += t.Price * (int)guna2NumericUpDown1.Value;
+            this.DialogResult = DialogResult.OK;
+            this.Close();
 
-            Close();
         }
 
         private void guna2NumericUpDown1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -271,6 +272,12 @@ namespace quanlyquancafe
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void tuychon_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
 
         }
     }

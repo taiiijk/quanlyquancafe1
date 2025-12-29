@@ -202,11 +202,16 @@ namespace quanlyquancafe
             if (!KiemTraNguyenLieu(idfood))
             {
                 MessageBox.Show("Không đủ nguyên liệu cho món chính ", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return; // thoát, không thêm món
+                return; 
             }
             tuychon t = new tuychon(idfood);
-           
-            t.ShowDialog();
+
+            if (t.ShowDialog() != DialogResult.OK)
+                return; 
+
+            if (t.SoLuong <= 0)
+                return;
+
             if (idbill == -1)
             {
                 billdao.Instance.insertbill(table.Id);
@@ -214,6 +219,7 @@ namespace quanlyquancafe
             }
 
 
+            decimal price = (decimal)t.TongGia / t.SoLuong;
             int idBillInfoMain = billinfodao.Instance.insertMainFood(
                 idbill,
                 idfood,
@@ -222,7 +228,9 @@ namespace quanlyquancafe
                
 
             );
-            decimal price = (decimal)t.TongGia/t.SoLuong;
+            
+            
+
             updaterealprice(idBillInfoMain, price);
 
             foreach (food topping in t.ToppingsChon)

@@ -405,6 +405,7 @@
             this.Name = "tuychon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "tuychon";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.tuychon_FormClosing);
             this.Load += new System.EventHandler(this.tuychon_Load);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
