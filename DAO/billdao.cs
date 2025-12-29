@@ -103,5 +103,15 @@ public void updatediscount(int idbill, int discount)
             return Convert.ToInt32(result);
         }
 
+        public DateTime getdatecheckin(int idbill)
+        {
+            object result = DataProvider.Instance.ExecuteScalar(
+                "SELECT datecheckin FROM bill WHERE id = @idbill",
+                new object[] { idbill }
+            );
+            if (result == null || result == DBNull.Value)
+                return DateTime.MinValue;
+            return Convert.ToDateTime(result);
+        }
     }
 }

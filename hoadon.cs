@@ -32,14 +32,14 @@ namespace quanlyquancafe
         {
             List<showbill> listbill =
                 showbilldao.Instance.getlist(idbill, idtable);
-
+            DateTime datecheckin= billdao.Instance.getdatecheckin(idbill);
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("            HÓA ĐƠN THANH TOÁN");
             sb.AppendLine("----------------------------------------------");
             sb.AppendLine(
                 $"Bàn: {tabledao.Inststace.selectable(idtable).Name}    " +
-                $"Ngày: {DateTime.Now:dd/MM/yyyy}"
+                $"Ngày: {datecheckin:dd/MM/yyyy}"
             );
             sb.AppendLine("----------------------------------------------");
 
